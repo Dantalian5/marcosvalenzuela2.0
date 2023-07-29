@@ -1,0 +1,13 @@
+{
+  "name": "portfolio2.0",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "sass": "^1.64.1"
+  }
+}
