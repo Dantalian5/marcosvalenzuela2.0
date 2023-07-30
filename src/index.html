@@ -7,10 +7,15 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" >
 		<meta
 			name="description"
-			content="This is the portfolio webpage of Marcos Valenzuela"
+			content="Empower your digital projects with Marcos Valenzuela, a skilled web developer. Expertly coded websites for all. Let's create exceptional online experiences together!"
 		>
 		<!-- Title of the page -->
 		<title>Marcos Valenzuela | Portfolio</title>
+		<meta property="og:title" content="Marcos Valenzuela | Portfolio" >
+		<meta property="og:type" content="website" >
+		<meta property="og:description" content="Empower your digital projects with a skilled web developer. Expertly coded websites for all. Let's create exceptional online experiences together!" >
+		<meta property="og:url" content="https://marcosvalenzuela.netlify.app" >
+		<meta property="og:image" content="assets/img/screenshot-og.jpeg" >
 		<!-- Favicons setup -->
 		<link
 			rel="icon"
@@ -594,6 +599,7 @@
 							id="name"
 							type="text"
 							placeholder="your name here"
+							required
 						>
 					</div>
 					<div class="contact-box styled-box">
@@ -601,12 +607,13 @@
 							>Email:</label
 						>
 						<input
-							class="contact-box__input contact-box__input--pattern font-p font-p--big"
+							class="contact-box__input font-p font-p--big"
 							name="email"
 							id="email"
 							type="email"
 							placeholder="youremail@example.com"
 							pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+							required
 						>
 					</div>
 				</div>
@@ -620,6 +627,7 @@
 						id="message"
 						rows="5"
 						placeholder="your message here :)"
+						required
 					></textarea>
 				</div>
 				<div class="contact__btn-wrapper row">
