@@ -1,0 +1,26 @@
+// Fonts loading...
+@font-face {
+	font-family: "Fira Code";
+	font-style: normal;
+	font-weight: 400;
+	src: url(../fonts/FiraCode-Regular.ttf);
+	font-display: swap;
+}
+@font-face {
+	font-family: "Fira Code";
+	font-style: normal;
+	font-weight: 500;
+	src: url(../fonts/FiraCode-Medium.ttf);
+	font-display: swap;
+}
+@font-face {
+	font-family: "Fira Code";
+	font-style: normal;
+	font-weight: 600;
+	src: url(../fonts/FiraCode-Bold.ttf);
+	font-display: swap;
+}
+
+// Fonts declare variable...
+$f_family-firacode: "Fira Code", monospace;
+$f_family-ocr: "ocr", monospace;

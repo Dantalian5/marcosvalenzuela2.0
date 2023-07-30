@@ -1,0 +1,24 @@
+* {
+	box-sizing: border-box;
+}
+a {
+	cursor: pointer;
+	color: inherit;
+}
+a:visited {
+	appearance: none;
+}
+body {
+	min-height: 100vh;
+	min-height: 100svh;
+	background: $c-dark-blue;
+}
+img,
+svg {
+	max-width: 100%;
+	color: inherit;
+	font-size: inherit;
+}
+img {
+	width: 100%;
+}

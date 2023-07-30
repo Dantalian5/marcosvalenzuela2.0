@@ -3,11 +3,25 @@
   "version": "1.0.0",
   "description": "",
   "source": "src/index.html",
-  "scripts": {},
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build --no-source-maps --no-content-hash --public-url ./ --dist-dir public"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.9.3",
+    "@parcel/transformer-sass": "^2.9.3",
+    "@parcel/transformer-webmanifest": "^2.9.3",
     "parcel": "^2.9.3",
+    "parcel-namer-custom": "^0.2.0",
     "sass": "^1.64.1"
+  },
+  "parcel-namer-custom": {
+    ".css$": "assets/style/[name].[type]",
+    ".js$":"assets/js/[name].[type]",
+    ".ttf$":"assets/fonts/[name].[type]",
+    ".svg$|.jpg$|.png$|.webp$|.webmanifest$": "assets/images/[name].[type]",
+    ".pdf$":"assets/docs/[name].[type]"
   }
 }
