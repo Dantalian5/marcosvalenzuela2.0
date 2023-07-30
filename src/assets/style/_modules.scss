@@ -364,7 +364,7 @@
 		&:focus {
 			color: $c-dark-blue;
 		}
-		&--pattern:invalid {
+		&:required:focus:invalid {
 			border-color: red;
 		}
 	}
