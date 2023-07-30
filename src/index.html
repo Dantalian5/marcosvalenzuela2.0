@@ -582,8 +582,7 @@
 			<h2 class="section-title font-h2 font-h2--big">
 				<span class="guides"></span>Contact me
 			</h2>
-			<form action=""></form>
-			<div class="contact__wrapper row wrap">
+			<form name="contact" method="POST" data-netlify="true" action="" class="contact__wrapper row wrap">
 				<div class="contact__wrapper__inner row wrap">
 					<div class="contact-box styled-box">
 						<label class="styled-box__title font-p font-p--big" for="name"
@@ -593,19 +592,19 @@
 							class="contact-box__input font-p font-p--big"
 							name="name"
 							id="name"
-							type="email"
+							type="text"
 							placeholder="your name here"
 						>
 					</div>
 					<div class="contact-box styled-box">
-						<label class="styled-box__title font-p font-p--big" for="mail"
-							>Mail:</label
+						<label class="styled-box__title font-p font-p--big" for="email"
+							>Email:</label
 						>
 						<input
 							class="contact-box__input contact-box__input--pattern font-p font-p--big"
-							name="mail"
-							id="mail"
-							type="text"
+							name="email"
+							id="email"
+							type="email"
 							placeholder="youremail@example.com"
 							pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
 						>
@@ -624,11 +623,11 @@
 					></textarea>
 				</div>
 				<div class="contact__btn-wrapper row">
-					<a class="button font-h2 font-h2--small" href="#">
-						<p class="button__text">Send</p></a
-					>
+					<button type="submit" class="button font-h2 font-h2--small">
+						<p class="button__text">Send</p>
+					</button>
 				</div>
-			</div>
+			  </form>
 		</section>
 		<footer class="section footer row wrap">
 			<div class="footer__logo row column">
