@@ -18,10 +18,10 @@
     "sass": "^1.64.1"
   },
   "parcel-namer-custom": {
-    ".css$": "assets/style/[name].[type]",
-    ".js$":"assets/js/[name].[type]",
-    ".ttf$":"assets/fonts/[name].[type]",
-    ".svg$|.jpg$|.png$|.webp$|.webmanifest$": "assets/images/[name].[type]",
-    ".pdf$":"assets/docs/[name].[type]"
+    ".css$": "assets/style/[name].[hash].[type]",
+    ".js$":"assets/js/[name].[hash].[type]",
+    ".ttf$":"assets/fonts/[name].[hash].[type]",
+    ".svg$|.jpg$|.png$|.webp$|.webmanifest$": "assets/images/[name].[hash].[type]",
+    ".pdf$":"assets/docs/[name].[hash].[type]"
   }
 }
