@@ -1,27 +1,26 @@
 {
-  "name": "portfolio2.0",
-  "version": "1.0.0",
-  "description": "",
-  "source": "src/index.html",
-  "scripts": {
-    "dev": "parcel",
-    "build": "parcel build --no-source-maps --no-content-hash --public-url ./ --dist-dir public"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@parcel/packager-raw-url": "^2.9.3",
-    "@parcel/transformer-sass": "^2.9.3",
-    "@parcel/transformer-webmanifest": "^2.9.3",
-    "parcel": "^2.9.3",
-    "parcel-namer-custom": "^0.2.0",
-    "sass": "^1.64.1"
-  },
-  "parcel-namer-custom": {
-    ".css$": "assets/style/[name].[hash].[type]",
-    ".js$":"assets/js/[name].[hash].[type]",
-    ".ttf$":"assets/fonts/[name].[hash].[type]",
-    ".svg$|.jpg$|.png$|.webp$|.webmanifest$": "assets/images/[name].[hash].[type]",
-    ".pdf$":"assets/docs/[name].[hash].[type]"
-  }
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "My personal portfolio",
+	"source": "src/index.html",
+	"scripts": {
+		"dev": "parcel",
+		"build": "parcel build --no-source-maps --no-content-hash --public-url ./ --dist-dir public"
+	},
+	"author": "Marcos Valenzuela",
+	"license": "MIT",
+	"devDependencies": {
+		"@parcel/packager-raw-url": "^2.10.2",
+		"@parcel/transformer-sass": "^2.10.2",
+		"@parcel/transformer-webmanifest": "^2.10.2",
+		"parcel": "^2.10.2",
+		"parcel-namer-custom": "^0.2.0"
+	},
+	"parcel-namer-custom": {
+		".css$": "assets/style/[name].[hash].[type]",
+		".js$": "assets/js/[name].[hash].[type]",
+		".ttf$": "assets/fonts/[name].[hash].[type]",
+		".svg$|.jpg$|.png$|.webp$|.webmanifest$": "assets/images/[name].[hash].[type]",
+		".pdf$": "assets/docs/[name].[hash].[type]"
+	}
 }
