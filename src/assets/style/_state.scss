@@ -1,3 +1,4 @@
+@use "base/colors" as *;
 .sotolined {
 	position: relative;
 	&::before {
@@ -49,7 +50,7 @@
 		border-color: $c-green-cyan;
 	}
 }
-@media (hover:hover){
+@media (hover: hover) {
 	.project-card {
 		transition: transform 300ms;
 		&:hover {
