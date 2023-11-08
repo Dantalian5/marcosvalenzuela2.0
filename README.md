@@ -1,79 +1,182 @@
-# Marcos Valenzuela | Portfolio
+<a name="readme-top"></a>
 
-This is the first version of my personal portfolio.
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-## Table of contents
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/Dantalian5/marcosvalenzuela2.0">
+    <img src="src/assets/favicon/android-chrome-512x512.png" alt="Logo" width="80" height="80">
+  </a>
 
-- [Marcos Valenzuela | Portfolio](#marcos-valenzuela-|-portfolio)
-  - [Table of contents](#table-of-contents)
-  - [Overview](#overview)
-    - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
-    - [Links](#links)
-  - [My process](#my-process)
-    - [Built with](#built-with)
-    - [What I learned](#what-i-learned)
-    - [Continued development](#continued-development)
-    - [Useful resources](#useful-resources)
-  - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
+<h3 align="center">Marcos Valenzuela's Portfolio</h3>
 
-## Overview
+  <p align="center">
+    This is my personal portfolio
+    <br />
+    <a href="https://github.com/Dantalian5/marcosvalenzuela2.0"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://marcosvalenzuela.netlify.app">View Live Site</a>
+    ·
+    <a href="https://github.com/Dantalian5/marcosvalenzuela2.0/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Dantalian5/marcosvalenzuela2.0/issues">Request Feature</a>
+  </p>
+</div>
 
-### The challenge
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-Create a functional portfolio, using only what I have learned so far (HTML and CSS as a foundation). It must meet the requirements of "mobile first" and "responsive design", be appealing to the user, intuitive in navigation, and mostly "accessible".
+<!-- ABOUT THE PROJECT -->
 
-### Screenshot
+## About The Project
 
-![](./screenshot-desktop.jpg) 
+<div align="center" >
+    <img src="./screenshot-desktop.jpg" alt="Logo" width="auto" height="500">
+    <img src="./screenshot-mobile.jpg" alt="Logo" width="autoi" height="500">
+</div>
 
-### Links
+This is my personal portfolio, where you can find my current situation, knowledge, progress, skills, and abilities, as well as a showcase of my best works, and, above all, a way to contact me.
 
-- Solution URL: [Github repo](https://github.com/Dantalian5/marcosvalenzuela.git)
-- Live Site URL: [marcosvalenzuela.netlify.app](https://marcosvalenzuela.netlify.app)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## My process
-
-### Built with
+### Built With
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Sass/Scss
-- Mobile-first workflow & Responsive Design
+- Flexbox
+- Javascript
+- Mobile-first workflow
+- [ParcelJS (bundler)][parceljs-url]
 
+- Figma
+- Github
+- Netlify
 
 After creating the design in Figma, I opted for a "vanilla" approach, where the only framework used was SCSS, with the idea of solidifying what I have learned from the ground up, without resorting to faster solutions like Bootstrap, Tailwind, or Astra, purely for educational purposes.
-
-### What I learned
-
-- Html
-- Css
-- Bootstrap
-- Tailwind
-- Figma
-- Git/Github
-
 Starting from responsive design to the concepts of "Mobile first" and "Accessible web", building upon the foundation of HTML and CSS, their various frameworks, and their proper usage. Additionally, including the use of Git and GitHub as version control systems and Netlify and GitHub Pages as methods of publishing web pages.
 
-### Continued development
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-As a future project, I would like to focus on using JavaScript to enhance this portfolio, improve its accessibility, add a communication form, and if possible, enhance the overall design.
+<!-- GETTING STARTED -->
 
-### Useful resources
+## Getting Started
 
-- [interneting is hard](https://internetingishard.netlify.app)
-- [Conquering Responsive Layouts](https://courses.kevinpowell.co/conquering-responsive-layouts)
-- [Frontendmentor.io](https://www.frontendmentor.io/)
+### Prerequisites
 
-## Author
+- node - npm
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Dantalian5/marcosvalenzuela2.0.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run the dev mode on parceljs bundler
+   ```js
+   npm run dev
+   ```
+4. Run the build mode on parceljs bundler
+   ```js
+   npm run build
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+
+## Roadmap
+
+- [x] Design the Portfolio
+- [x] Program the Portfolio
+  - [x] Html & Css
+  - [x] Javascript Basic
+  - [ ] Javascript Advanced
+- [x] Mount the portfolio on a server
+
+See the [open issues](https://github.com/Dantalian5/marcosvalenzuela2.0/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE.md` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
 
 - Website - [Marcos Valenzuela](https://marcosvalenzuela.netlify.app)
 - Frontend Mentor - [@Dantalian5](https://www.frontendmentor.io/profile/Dantalian5)
 - Github - [@Dantalian5](https://github.com/Dantalian5)
-- Linkedin - [Marcos Valenzuela](www.linkedin.com/in/marcos-valenzuela-coding)
+- Linkedin - [Marcos Valenzuela](https://www.linkedin.com/in/marcos-valenzuela-coding)
+- Twitter - [@Dantalian5](https://www.twitter.com/Dantalian5)
+
+Made and designed with love by [me](https://marcosvalenzuela.netlify.app).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
 
-- [Start2impact University](https://www.start2impact.it) 
-- [Frontend Mentor](https://www.frontendmentor.io)
+- [start2impact University](https://www.start2impact.it)
+- [Frontendmentor.io](https://www.frontendmentor.io/)
+- [interneting is hard](https://internetingishard.netlify.app)
+- [Conquering Responsive Layouts](https://courses.kevinpowell.co/conquering-responsive-layouts)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/Dantalian5/marcosvalenzuela2.0.svg?style=for-the-badge
+[contributors-url]: https://github.com/Dantalian5/marcosvalenzuela2.0/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Dantalian5/marcosvalenzuela2.0.svg?style=for-the-badge
+[forks-url]: https://github.com/Dantalian5/marcosvalenzuela2.0/network/members
+[stars-shield]: https://img.shields.io/github/stars/Dantalian5/marcosvalenzuela2.0.svg?style=for-the-badge
+[stars-url]: https://github.com/Dantalian5/marcosvalenzuela2.0/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Dantalian5/marcosvalenzuela2.0.svg?style=for-the-badge
+[issues-url]: https://github.com/Dantalian5/marcosvalenzuela2.0/issues
+[license-shield]: https://img.shields.io/github/license/Dantalian5/marcosvalenzuela2.0.svg?style=for-the-badge
+[license-url]: https://github.com/Dantalian5/marcosvalenzuela2.0/blob/master/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/marcos-valenzuela-coding
+[desktop-screenshot]: ./screenshot-desktop.jpg
+[mobile-screenshot]: ./screenshot-mobile.jpg
