@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
-		<meta charset="UTF-8" >
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
-		<meta name="apple-mobile-web-app-capable" content="yes" >
-		<meta name="apple-mobile-web-app-status-bar-style" content="black" >
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		<meta
 			name="description"
 			content="Empower your digital projects with a skilled web developer. Expertly coded websites for all. Let's create exceptional online experiences together!"
-		>
+		/>
 		<!-- Title of the page -->
 		<title>Marcos Valenzuela | Portfolio</title>
-		<meta name="author" content="Marcos Valenzuela">
-		<meta property="og:title" content="Marcos Valenzuela | Portfolio" >
-		<meta property="og:type" content="website" >
-		<meta property="og:description" content="Empower your digital projects with a skilled web developer. Expertly coded websites for all. Let's create exceptional online experiences together!" >
-		<meta property="og:url" content="https://marcosvalenzuela.netlify.app" >
-		<meta property="og:image" content="https://marcosvalenzuela.netlify.app/assets/images/screenshot-og.jpg" >
-		<meta property="og:image:alt" content="a small screenshot of a web portfolio" >
+		<meta name="author" content="Marcos Valenzuela" />
+		<meta property="og:title" content="Marcos Valenzuela | Portfolio" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:description"
+			content="Empower your digital projects with a skilled web developer. Expertly coded websites for all. Let's create exceptional online experiences together!"
+		/>
+		<meta property="og:url" content="https://marcosvalenzuela.netlify.app" />
+		<meta
+			property="og:image"
+			content="https://marcosvalenzuela.netlify.app/assets/images/screenshot-og.jpg"
+		/>
+		<meta
+			property="og:image:alt"
+			content="a small screenshot of a web portfolio"
+		/>
 		<!-- Favicons setup -->
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
 			href="assets/favicon/favicon-32x32.png"
-		>
+		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
 			href="assets/favicon/favicon-16x16.png"
-		>
+		/>
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
 			href="assets/favicon/apple-touch-icon.png"
-		>
-		<link rel="manifest" href="assets/favicon/site.webmanifest" >
+		/>
+		<link rel="manifest" href="assets/favicon/site.webmanifest" />
 		<link
 			rel="mask-icon"
 			href="assets/favicon/safari-pinned-tab.svg"
 			color="#5bbad5"
-		>
-		<meta name="msapplication-TileColor" content="#da532c" >
+		/>
+		<meta name="msapplication-TileColor" content="#da532c" />
 		<!-- Stylesheet setup -->
-		<link rel="stylesheet" href="assets/style/style.scss" >
+		<link rel="stylesheet" href="assets/style/style.scss" />
 	</head>
 	<body>
 		<div class="navbar">
@@ -66,14 +75,9 @@
 						M_<span class="blink">V</span>
 					</p>
 				</a>
+
 				<div class="menubar">
-					<input
-						class="hamburger__checkbox"
-						type="checkbox"
-						id="hamburger"
-						aria-label="Toggle Navigation"
-					>
-					<label for="hamburger" class="hamburger__icon">
+					<button id="js-hamburgerMenu" class="hamburger">
 						<svg
 							class="hamburger__box font-h2 font-h2--big"
 							xmlns="http://www.w3.org/2000/svg"
@@ -107,8 +111,8 @@
 								rx="2"
 							></rect>
 						</svg>
-					</label>
-					<ul class="menubar__wrapper row">
+					</button>
+					<ul id="js-menuItems" class="menubar__wrapper row">
 						<li class="menubar__link font-h2 font-h2--big">
 							<a class="sotolined blinked" href="#about">About</a>
 						</li>
@@ -167,10 +171,24 @@
 				</div>
 			</div>
 			<div class="hero__img">
-				<img
-					src="assets/img/Website-Creator-amico.svg"
-					alt="illustration of a person showing a program"
-				>
+				<picture>
+					<source
+						srcset="
+							assets/img/Dan/Dan_coding@600.webp  1x,
+							assets/img/Dan/Dan_coding@1024.webp 2x
+						"
+						type="image/webp"
+					/>
+					<img
+						srcset="
+							assets/img/Dan/Dan_coding@600.jpg  1x,
+							assets/img/Dan/Dan_coding@1024.jpg 2x
+						"
+						src="assets/img/Dan/Dan_coding@600.jpg"
+						alt="illustration of a person showing a program"
+					/>
+				</picture>
+				<div class="hero__img__bg"></div>
 			</div>
 		</header>
 		<section id="about" class="section about row wrap">
@@ -179,47 +197,54 @@
 			</h2>
 			<div class="about__wrapper row wrap">
 				<div class="info-block">
-					<input
-						class="read-more__btn"
-						type="checkbox"
-						id="read-more__btn"
-						aria-label="Toggle read more"
+					<button
+						id="js-buttonReadMore"
+						class="read-more__btn font-p font-p--big"
 					>
-					<label for="read-more__btn" class="read-more__label font-p font-p--big ">
-					</label>
+						Read More
+					</button>
 					<p class="info-block__text font-p font-p--big">
 						<span class="guides"></span>Hi there! I'm Marcos Valenzuela, a web
 						developer based in Italy. My passion for design and programming has
-						led me to dive into the exciting world of web development. <br><span class="info-block__alt">With experience in HTML and CSS, I enjoy creating visually appealing and
-							functional web designs. Although my journey is still relatively short,
-							I am eager to continue learning and improving my skills in the field
-							of web development. My goal is to create intuitive and visually
-							engaging websites that provide a great user experience. I love taking
-							on new challenges and finding creative solutions to overcome them. If
-							you're looking for an enthusiastic web developer ready to grow
-							alongside your project, feel free to contact me! I'm excited to be
-							part of new projects and contribute my HTML and CSS skills. I look
-							forward to the opportunity to work with you and bring your digital
-							vision to life!</span>
+						led me to dive into the exciting world of web development.
+						<br /><span class="info-block__alt"
+							>With experience in HTML and CSS, I enjoy creating visually
+							appealing and functional web designs. Although my journey is still
+							relatively short, I am eager to continue learning and improving my
+							skills in the field of web development. My goal is to create
+							intuitive and visually engaging websites that provide a great user
+							experience. I love taking on new challenges and finding creative
+							solutions to overcome them. If you're looking for an enthusiastic
+							web developer ready to grow alongside your project, feel free to
+							contact me! I'm excited to be part of new projects and contribute
+							my HTML and CSS skills. I look forward to the opportunity to work
+							with you and bring your digital vision to life!</span
+						>
 					</p>
 				</div>
 				<div class="img-block">
 					<div class="img-block__container">
-						<picture>          
-							<source 
-							srcset="assets/img/my@600w.webp 1x, 
-									assets/img/my@1200w.webp 2x" 
-							type="image/webp"> 
-							<img 
-							srcset="assets/img/my@600w.jpg 1x, 
-									assets/img/my@1200w.jpg 2x" 
-							src="assets/img/my@600w.jpg" 
-							alt="webpage screenshot"
-							loading="lazy">
+						<picture>
+							<source
+								srcset="
+									assets/img/Dan/Dan_stand@600.webp  1x,
+									assets/img/Dan/Dan_stand@1024.webp 2x
+								"
+								type="image/webp"
+							/>
+							<img
+								srcset="
+									assets/img/Dan/Dan_stand@600.jpg  1x,
+									assets/img/Dan/Dan_stand@1024.jpg 2x
+								"
+								src="assets/img/Dan/Dan_stand@600.jpg"
+								alt="webpage screenshot"
+								loading="lazy"
+							/>
 						</picture>
 					</div>
 				</div>
-			</div>			
+			</div>
 		</section>
 		<section id="skills" class="section skills">
 			<h2 class="section-title font-h2 font-h2--big">
@@ -367,17 +392,23 @@
 						<h3 class="font-p font-p--big">Name: Art Gallery Website</h3>
 					</div>
 					<div class="project-card__image-wrapper">
-						<picture>          
-							<source 
-							srcset="assets/img/art-gallery-screenshot@300w.webp 1x, 
-									assets/img/art-gallery-screenshot@600w.webp 2x" 
-							type="image/webp"> 
-							<img 
-							srcset="assets/img/art-gallery-screenshot@300w.jpg 1x, 
-									assets/img/art-gallery-screenshot@600w.jpg 2x" 
-							src="assets/img/art-gallery-screenshot@300w.jpg" 
-							alt="webpage screenshot"
-							loading="lazy">
+						<picture>
+							<source
+								srcset="
+									assets/img/art-gallery-screenshot@300w.webp 1x,
+									assets/img/art-gallery-screenshot@600w.webp 2x
+								"
+								type="image/webp"
+							/>
+							<img
+								srcset="
+									assets/img/art-gallery-screenshot@300w.jpg 1x,
+									assets/img/art-gallery-screenshot@600w.jpg 2x
+								"
+								src="assets/img/art-gallery-screenshot@300w.jpg"
+								alt="webpage screenshot"
+								loading="lazy"
+							/>
 						</picture>
 						<a
 							class="project-card__github-btn"
@@ -434,17 +465,23 @@
 						<h3 class="font-p font-p--big">Name: Typemaster landing page</h3>
 					</div>
 					<div class="project-card__image-wrapper">
-						<picture>          
-							<source 
-							srcset="assets/img/typemaster-landing-screenshot@300w.webp 1x, 
-									assets/img/typemaster-landing-screenshot@600w.webp 2x" 
-							type="image/webp"> 
-							<img 
-							srcset="assets/img/typemaster-landing-screenshot@300w.jpg 1x, 
-									assets/img/typemaster-landing-screenshot@600w.jpg 2x" 
-							src="assets/img/typemaster-landing-screenshot@300w.jpg" 
-							alt="webpage screenshot"
-							loading="lazy">
+						<picture>
+							<source
+								srcset="
+									assets/img/typemaster-landing-screenshot@300w.webp 1x,
+									assets/img/typemaster-landing-screenshot@600w.webp 2x
+								"
+								type="image/webp"
+							/>
+							<img
+								srcset="
+									assets/img/typemaster-landing-screenshot@300w.jpg 1x,
+									assets/img/typemaster-landing-screenshot@600w.jpg 2x
+								"
+								src="assets/img/typemaster-landing-screenshot@300w.jpg"
+								alt="webpage screenshot"
+								loading="lazy"
+							/>
 						</picture>
 						<a
 							class="project-card__github-btn"
@@ -501,17 +538,23 @@
 						<h3 class="font-p font-p--big">Name: Suite landing page</h3>
 					</div>
 					<div class="project-card__image-wrapper">
-						<picture>          
-							<source 
-							srcset="assets/img/suit-landing-screenshot@300w.webp 1x, 
-									assets/img/suit-landing-screenshot@600w.webp 2x" 
-							type="image/webp"> 
-							<img 
-							srcset="assets/img/suit-landing-screenshot@300w.jpg 1x, 
-									assets/img/suit-landing-screenshot@600w.jpg 2x" 
-							src="assets/img/suit-landing-screenshot@300w.jpg" 
-							alt="webpage screenshot"
-							loading="lazy">
+						<picture>
+							<source
+								srcset="
+									assets/img/suit-landing-screenshot@300w.webp 1x,
+									assets/img/suit-landing-screenshot@600w.webp 2x
+								"
+								type="image/webp"
+							/>
+							<img
+								srcset="
+									assets/img/suit-landing-screenshot@300w.jpg 1x,
+									assets/img/suit-landing-screenshot@600w.jpg 2x
+								"
+								src="assets/img/suit-landing-screenshot@300w.jpg"
+								alt="webpage screenshot"
+								loading="lazy"
+							/>
 						</picture>
 						<a
 							class="project-card__github-btn"
@@ -595,7 +638,13 @@
 			<h2 class="section-title font-h2 font-h2--big">
 				<span class="guides"></span>Contact me
 			</h2>
-			<form name="contact" method="POST" data-netlify="true" action="" class="contact__wrapper row wrap">
+			<form
+				name="contact"
+				method="POST"
+				data-netlify="true"
+				action=""
+				class="contact__wrapper row wrap"
+			>
 				<div class="contact__wrapper__inner row wrap">
 					<div class="contact-box styled-box">
 						<label class="styled-box__title font-p font-p--big" for="name"
@@ -608,7 +657,7 @@
 							type="text"
 							placeholder="your name here"
 							required
-						>
+						/>
 					</div>
 					<div class="contact-box styled-box">
 						<label class="styled-box__title font-p font-p--big" for="email"
@@ -622,7 +671,7 @@
 							placeholder="youremail@example.com"
 							pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
 							required
-						>
+						/>
 					</div>
 				</div>
 				<div class="contact-box styled-box">
@@ -643,11 +692,11 @@
 						<span class="button__text">Send</span>
 					</button>
 				</div>
-			  </form>
+			</form>
 		</section>
 		<footer class="section footer row wrap">
 			<div class="footer__logo row column">
-				<img class="logo" src="assets/base/mylogo.svg" alt="logo" >
+				<img class="logo" src="assets/base/mylogo.svg" alt="logo" />
 				<p class="font-h2 font-h2--small">Marcos_Valenzuela</p>
 			</div>
 
@@ -717,5 +766,6 @@
 				>People illustrations by Storyset</a
 			>
 		</footer>
+		<script src="assets/js/script.js"></script>
 	</body>
 </html>
