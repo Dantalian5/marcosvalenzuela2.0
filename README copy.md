@@ -66,7 +66,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -127,32 +126,6 @@ The main task is to create a counter that, with the help of two buttons, allows 
 
 <!-- USAGE EXAMPLES -->
 
-## Usage
-
-Main features:
-
-- Decrement or increment the counter (using the +/- buttons, respectively).
-- Decrement or increment the timer (using an input that allows the user to directly enter the number).
-- Configure the number an infinite pomodoro timer with cicle counter.
-- To configure the break time between work sessions.
-- To display usage data, including the amount of work time, the number of cycles, and the amount of break time.
-
-Extra features:
-
-- Choose from different color themes.
-- Select from various skins.
-- Access 'help' and tooltips to facilitate the use of the app.
-
-Functionalities of webpage:
-
-- The selected theme in previous sections will be retained across sections (cookies).
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-
 ## Roadmap
 
 - [x] Design the Counter
@@ -163,24 +136,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Improve design & themes
 - [ ] Project functionalities for use on an work-scheduled system .
 
-See the [open issues](https://github.com/Dantalian5/js-simple-counter/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+See the [open issues](https://github.com/Dantalian5/marcosvalenzuela2.0/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -211,24 +167,22 @@ Made and designed with love by [me](https://marcosvalenzuela.netlify.app).
 ## Acknowledgments
 
 - [start2impact University](https://www.start2impact.it)
-- [iconify](https://icon-sets.iconify.design)
-- [Pictogrammers](https://github.com/Templarian/MaterialDesign)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Dantalian5/js-simple-counter.svg?style=for-the-badge
-[contributors-url]: https://github.com/Dantalian5/js-simple-counter/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Dantalian5/js-simple-counter.svg?style=for-the-badge
-[forks-url]: https://github.com/Dantalian5/js-simple-counter/network/members
-[stars-shield]: https://img.shields.io/github/stars/Dantalian5/js-simple-counter.svg?style=for-the-badge
-[stars-url]: https://github.com/Dantalian5/js-simple-counter/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Dantalian5/js-simple-counter.svg?style=for-the-badge
-[issues-url]: https://github.com/Dantalian5/js-simple-counter/issues
-[license-shield]: https://img.shields.io/github/license/Dantalian5/js-simple-counter.svg?style=for-the-badge
-[license-url]: https://github.com/Dantalian5/js-simple-counter/blob/master/LICENSE.md
+[contributors-shield]: https://img.shields.io/github/contributors/Dantalian5/marcosvalenzuela2.0.svg?style=for-the-badge
+[contributors-url]: https://github.com/Dantalian5/marcosvalenzuela2.0/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Dantalian5/marcosvalenzuela2.0.svg?style=for-the-badge
+[forks-url]: https://github.com/Dantalian5/marcosvalenzuela2.0/network/members
+[stars-shield]: https://img.shields.io/github/stars/Dantalian5/marcosvalenzuela2.0.svg?style=for-the-badge
+[stars-url]: https://github.com/Dantalian5/marcosvalenzuela2.0/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Dantalian5/marcosvalenzuela2.0.svg?style=for-the-badge
+[issues-url]: https://github.com/Dantalian5/marcosvalenzuela2.0/issues
+[license-shield]: https://img.shields.io/github/license/Dantalian5/marcosvalenzuela2.0.svg?style=for-the-badge
+[license-url]: https://github.com/Dantalian5/marcosvalenzuela2.0/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/marcos-valenzuela-coding
 [product-screenshot]: ./screenshot.jpg
