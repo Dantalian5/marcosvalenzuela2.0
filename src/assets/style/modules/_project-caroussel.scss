@@ -1,0 +1,121 @@
+@use "../base/colors" as *;
+@use "../base/fonts" as *;
+.project-carousel {
+	display: block;
+	height: 32rem;
+	position: relative;
+	width: 100%;
+	margin-inline: auto;
+	&__item {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: 0.2s;
+		z-index: 0;
+	}
+}
+.project-card {
+	padding-block: 0rem 1rem;
+	padding-inline: 1rem;
+	flex-shrink: 0;
+	width: 18.75rem;
+	height: 31.25rem;
+	height: auto;
+	scroll-snap-align: center;
+	background-color: $c-dark-blue;
+	&__image-wrapper {
+		position: relative;
+		width: 100%;
+		height: 13.75rem;
+		overflow: hidden;
+		border-radius: 0.5rem;
+		border: 1px solid $c-green-cyan;
+	}
+	&__image {
+		width: 100%;
+	}
+	&__github-btn {
+		position: absolute;
+		bottom: 0.5rem;
+		left: 0.5rem;
+		width: 4rem;
+		height: 4rem;
+		padding: 1rem;
+		border-radius: 50%;
+		border: 4px solid $c-green-cyan;
+		background: $c-n-white;
+		box-shadow: 4px 2px 6px 0px rgba(0, 0, 0, 0.5);
+		font-size: 1.5rem;
+		color: $c-dark-blue;
+	}
+	&__info {
+		& > * {
+			margin-top: 1.5rem;
+		}
+	}
+	&__btn-live-site {
+		display: block;
+		width: fit-content;
+		position: relative;
+		padding-right: 0.5rem;
+	}
+	&__live-icon {
+		position: absolute;
+		top: 50%;
+		right: 0rem;
+		transform: translate(100%, -50%);
+	}
+}
+.styled-box-1 {
+	border: 4px solid $c-green-cyan;
+	border-radius: 0.5rem;
+	padding-top: 0;
+	&__title {
+		display: block;
+		position: relative;
+		width: fit-content;
+		max-width: 100%;
+		transform: translate(0, -0.8em);
+		padding-inline: 0.5rem;
+		background: $c-dark-blue;
+		&--centered {
+			margin-inline: auto;
+			width: 100%;
+			& > * {
+				text-align: center;
+			}
+		}
+	}
+}
+
+.projects__nav {
+	position: relative;
+	width: fit-content;
+	margin-inline: auto;
+	margin-top: 1rem;
+	gap: 0.5rem;
+	&__btn {
+		position: absolute;
+		top: 50%;
+		font-family: $f_family-firacode;
+		color: $c-ghost-white;
+		font-size: 1.5rem;
+	}
+	&--prev {
+		left: -1rem;
+		transform: translate(-100%, -50%);
+	}
+	&--next {
+		right: -1rem;
+		transform: translate(100%, -50%);
+	}
+	&__item {
+		display: block;
+		width: 0.75rem;
+		height: 0.75rem;
+		border-radius: 50%;
+		background: $c-ghost-white;
+		border: 2px solid $c-green-cyan;
+	}
+}
