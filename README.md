@@ -61,7 +61,7 @@
 
 <div align="center" >
     <img src="./screenshot-desktop.jpg" alt="Logo" width="auto" height="500">
-    <img src="./screenshot-mobile.jpg" alt="Logo" width="autoi" height="500">
+    <img src="./screenshot-mobile.jpg" alt="Logo" width="auto" height="500">
 </div>
 
 This is my personal portfolio, where you can find my current situation, knowledge, progress, skills, and abilities, as well as a showcase of my best works, and, above all, a way to contact me.

@@ -27,7 +27,11 @@ buttonReadMore.addEventListener("click", (event) => {
 });
 
 const carousel = document.querySelector(".project-carousel");
-const carouselItems = document.querySelectorAll(".project-carousel__item");
+const searchInput = document.querySelector(".search-box__input");
+const carouselTagedItems = document.querySelectorAll(".project-carousel__item");
+let carouselItems = document.querySelectorAll(
+	".project-carousel__item:not(.inactive)"
+);
 const prevButton = document.querySelector(
 	".projects__nav--btn.projects__nav--prev"
 );
@@ -39,19 +43,22 @@ const nextButton = document.querySelector(
 let indexFocused = 0;
 
 function loadCarousel(step) {
-	let Nfocused = Math.floor(
-		carousel.offsetWidth / (carouselItems[0].offsetWidth + 10)
-	);
-	let oldIndexFocused = indexFocused;
-	indexFocused = Math.min(
-		indexFocused + step >= 0 &&
-			indexFocused + Nfocused - 1 + step < carouselItems.length
-			? indexFocused + step
-			: indexFocused,
-		carouselItems.length - Nfocused
-	);
-	setFocused(step, Nfocused, oldIndexFocused);
-	setLaterals(Nfocused);
+	if (carouselItems.length > 0) {
+		let Nfocused = Math.min(
+			Math.floor(carousel.offsetWidth / (carouselItems[0].offsetWidth + 10)),
+			carouselItems.length
+		);
+		let oldIndexFocused = indexFocused;
+		indexFocused = Math.min(
+			indexFocused + step >= 0 &&
+				indexFocused + Nfocused - 1 + step < carouselItems.length
+				? indexFocused + step
+				: indexFocused,
+			carouselItems.length - Nfocused
+		);
+		setFocused(step, Nfocused, oldIndexFocused);
+		setLaterals(Nfocused);
+	}
 }
 function setFocused(step, Nfocused, oldIndexFocused) {
 	let stepToLeft;
@@ -79,7 +86,7 @@ function setFocused(step, Nfocused, oldIndexFocused) {
 	if (step < 0) {
 		carouselItems[indexFocused].style.transform = `translate(-50%, -50%)`;
 		carouselItems[indexFocused].style.left = stepToLeft;
-	} else {
+	} else if (step > 0) {
 		carouselItems[
 			indexFocused + Nfocused - 1
 		].style.transform = `translate(-50%, -50%)`;
@@ -191,5 +198,57 @@ carousel.addEventListener("wheel", function (event) {
 	} else if (deltaWheelX < -radio && !isWheeled) {
 		loadCarousel(-1);
 		isWheeled = true;
+	}
+});
+
+const tagsText = [
+	...Array.from(document.querySelectorAll(".js-card-tags")).map((element) =>
+		element.innerText.toLowerCase()
+	),
+	...Array.from(document.querySelectorAll(".js-card-names")).map((element) =>
+		element.innerText.toLowerCase()
+	),
+];
+const tagsList = Array.from(
+	new Set(tagsText.map((text) => text.split(/[\s,]+/)).flat())
+);
+
+const palabrasUnicas = searchInput.addEventListener("input", (event) => {
+	const tags = searchInput.value.toLowerCase();
+	const tagsArray = tags.trim().split(/[\s,]+/);
+	let isAtag = tagsArray.every((tag) => tagsList.includes(tag));
+	if (isAtag) {
+		carouselTagedItems.forEach((item) => {
+			const itemTags = (
+				item.querySelector(".js-card-tags").innerText +
+				" " +
+				item.querySelector(".js-card-names").innerText
+			).toLowerCase();
+			const itemTagsArray = itemTags.split(/[\s,]+/);
+
+			const containsAllTags = tagsArray.every((tag) =>
+				itemTagsArray.includes(tag)
+			);
+
+			if (containsAllTags || tags == "") {
+				item.classList.remove("inactive");
+			} else {
+				item.classList.add("inactive");
+			}
+		});
+
+		carouselItems = document.querySelectorAll(
+			".project-carousel__item:not(.inactive)"
+		);
+		loadCarousel(0);
+	} else if (tags == "") {
+		carouselTagedItems.forEach((item) => {
+			item.classList.remove("inactive");
+		});
+
+		carouselItems = document.querySelectorAll(
+			".project-carousel__item:not(.inactive)"
+		);
+		loadCarousel(0);
 	}
 });

@@ -266,9 +266,7 @@
 		padding: 0.25rem 1rem;
 		word-wrap: break-word;
 		word-break: break-all;
-		&:focus {
-			color: $c-dark-blue;
-		}
+		color: $c-dark-blue;
 		&:required:focus:invalid {
 			border-color: red;
 		}
