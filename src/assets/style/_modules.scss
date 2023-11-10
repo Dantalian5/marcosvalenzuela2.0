@@ -55,7 +55,7 @@
 	align-items: stretch;
 	justify-content: space-between;
 	background: $c-dark-blue;
-	padding-block: 2rem;
+	padding-block: 1rem;
 	padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
 	&__logo {
 		&__arrow {
@@ -363,6 +363,9 @@
 	.font-h1 {
 		font-size: 3rem;
 	}
+	.top-navbar {
+		padding-block: 1.5rem;
+	}
 }
 @media (min-width: 62.5rem) {
 	.font-h1 {
@@ -372,6 +375,9 @@
 		&--big {
 			font-size: 1.125rem;
 		}
+	}
+	.top-navbar {
+		padding-block: 2rem;
 	}
 	.hamburger {
 		display: none;

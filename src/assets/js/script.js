@@ -29,10 +29,10 @@ buttonReadMore.addEventListener("click", (event) => {
 const carousel = document.querySelector(".project-carousel");
 const carouselItems = document.querySelectorAll(".project-carousel__item");
 const prevButton = document.querySelector(
-	".projects__nav__btn.projects__nav--prev"
+	".projects__nav--btn.projects__nav--prev"
 );
 const nextButton = document.querySelector(
-	".projects__nav__btn.projects__nav--next"
+	".projects__nav--btn.projects__nav--next"
 );
 //const indexFocused = Array.from(carouselItems).indexOf(focusedItem);
 //let indexFocused = Math.ceil(carouselItems.length / 2) - 1;
@@ -43,12 +43,13 @@ function loadCarousel(step) {
 		carousel.offsetWidth / (carouselItems[0].offsetWidth + 10)
 	);
 	let oldIndexFocused = indexFocused;
-	indexFocused =
+	indexFocused = Math.min(
 		indexFocused + step >= 0 &&
-		indexFocused + Nfocused - 1 + step < carouselItems.length
+			indexFocused + Nfocused - 1 + step < carouselItems.length
 			? indexFocused + step
-			: indexFocused;
-
+			: indexFocused,
+		carouselItems.length - Nfocused
+	);
 	setFocused(step, Nfocused, oldIndexFocused);
 	setLaterals(Nfocused);
 }

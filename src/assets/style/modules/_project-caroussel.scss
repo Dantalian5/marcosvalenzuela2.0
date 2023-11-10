@@ -1,5 +1,9 @@
 @use "../base/colors" as *;
 @use "../base/fonts" as *;
+.carousel-wrapper {
+	width: 100%;
+	position: relative;
+}
 .project-carousel {
 	display: block;
 	height: 32rem;
@@ -88,34 +92,72 @@
 		}
 	}
 }
-
 .projects__nav {
-	position: relative;
-	width: fit-content;
-	margin-inline: auto;
-	margin-top: 1rem;
-	gap: 0.5rem;
-	&__btn {
+	&--btn {
 		position: absolute;
 		top: 50%;
+		z-index: 5;
 		font-family: $f_family-firacode;
 		color: $c-ghost-white;
-		font-size: 1.5rem;
+		font-size: 2rem;
+
+		aspect-ratio: 1;
+		border-radius: 50%;
+		border: 2px solid $c-green-cyan;
+		padding: 10px;
+		box-shadow: 0px 0px 2px 2px #0000004d;
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: -1;
+			border-radius: 50%;
+			background: $c-dark-blue;
+			opacity: 0.9;
+		}
 	}
 	&--prev {
-		left: -1rem;
-		transform: translate(-100%, -50%);
+		left: 0;
+		transform: translate(0%, -50%);
 	}
 	&--next {
-		right: -1rem;
-		transform: translate(100%, -50%);
-	}
-	&__item {
-		display: block;
-		width: 0.75rem;
-		height: 0.75rem;
-		border-radius: 50%;
-		background: $c-ghost-white;
-		border: 2px solid $c-green-cyan;
+		left: 100%;
+		transform: translate(-100%, -50%);
 	}
 }
+
+// .projects__nav {
+// 	position: relative;
+// 	width: fit-content;
+// 	min-width: 2rem;
+// 	margin-inline: auto;
+// 	margin-top: 2rem;
+// 	gap: 0.5rem;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	&__btn {
+// 		position: absolute;
+// 		top: 50%;
+// 		font-family: $f_family-firacode;
+// 		color: $c-ghost-white;
+// 		font-size: 1.5rem;
+// 		font-size: 3rem;
+// 	}
+// 	&--prev {
+// 		left: -1rem;
+// 		transform: translate(-100%, -50%);
+// 	}
+// 	&--next {
+// 		right: -1rem;
+// 		transform: translate(100%, -50%);
+// 	}
+// 	&__item {
+// 		display: block;
+// 		width: 0.75rem;
+// 		height: 0.75rem;
+// 		border-radius: 50%;
+// 		background: $c-ghost-white;
+// 		border: 2px solid $c-green-cyan;
+// 	}
+// }

@@ -50,14 +50,10 @@
 		border-color: $c-green-cyan;
 	}
 }
+.projects__nav--btn:active {
+	scale: 0.9;
+}
 @media (hover: hover) {
-	.project-card {
-		//transition: transform 300ms;
-		&:hover {
-			//transform: scale(1.05);
-			//transition: transform 300ms;
-		}
-	}
 	.social-link:hover {
 		color: $c-green-cyan;
 		transform: scale(1.2);
