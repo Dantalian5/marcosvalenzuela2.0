@@ -4,7 +4,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
@@ -61,7 +61,7 @@
 
 <div align="center" >
     <img src="./screenshot-desktop.jpg" alt="Logo" width="auto" height="500">
-    <img src="./screenshot-mobile.jpg" alt="Logo" width="autoi" height="500">
+    <img src="./screenshot-mobile.jpg" alt="Logo" width="auto" height="500">
 </div>
 
 This is my personal portfolio, where you can find my current situation, knowledge, progress, skills, and abilities, as well as a showcase of my best works, and, above all, a way to contact me.
@@ -175,7 +175,7 @@ Made and designed with love by [me](https://marcosvalenzuela.netlify.app).
 [issues-shield]: https://img.shields.io/github/issues/Dantalian5/marcosvalenzuela2.0.svg?style=for-the-badge
 [issues-url]: https://github.com/Dantalian5/marcosvalenzuela2.0/issues
 [license-shield]: https://img.shields.io/github/license/Dantalian5/marcosvalenzuela2.0.svg?style=for-the-badge
-[license-url]: https://github.com/Dantalian5/marcosvalenzuela2.0/blob/master/LICENSE
+[license-url]: https://github.com/Dantalian5/marcosvalenzuela2.0/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/marcos-valenzuela-coding
 [desktop-screenshot]: ./screenshot-desktop.jpg

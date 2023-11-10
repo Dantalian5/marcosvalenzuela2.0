@@ -11,7 +11,7 @@ a:visited {
 body {
 	min-height: 100vh;
 	min-height: 100svh;
-	background: $c-dark-blue;
+	background: var(--c-dark-blue);
 }
 img,
 svg {

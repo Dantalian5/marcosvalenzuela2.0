@@ -1,0 +1,139 @@
+.carousel-wrapper {
+	width: 100%;
+	position: relative;
+}
+.search-box {
+	max-width: 25rem;
+	margin-inline: auto;
+	margin-bottom: 2rem;
+	&__input {
+		width: 100%;
+		padding: 0.8rem 1.2rem;
+		background: none;
+	}
+}
+.project-carousel {
+	display: block;
+	height: 32rem;
+	position: relative;
+	width: 100%;
+	margin-inline: auto;
+	&__item {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: 0.2s;
+		z-index: 0;
+		&.inactive {
+			display: none;
+		}
+	}
+}
+.project-card {
+	padding-block: 0rem 1rem;
+	padding-inline: 1rem;
+	flex-shrink: 0;
+	width: 18.75rem;
+	height: auto;
+	min-height: 30.625rem;
+	scroll-snap-align: center;
+	background-color: var(--c-dark-blue);
+	&__image-wrapper {
+		position: relative;
+		width: 100%;
+		height: 13.75rem;
+		overflow: hidden;
+		border-radius: 0.5rem;
+		border: 1px solid var(--c-green-cyan);
+	}
+	&__image {
+		width: 100%;
+	}
+	&__github-btn {
+		position: absolute;
+		bottom: 0.5rem;
+		left: 0.5rem;
+		width: 4rem;
+		height: 4rem;
+		padding: 1rem;
+		border-radius: 50%;
+		border: 4px solid var(--c-green-cyan);
+		background: var(--c-n-white);
+		box-shadow: 4px 2px 6px 0px rgba(0, 0, 0, 0.5);
+		font-size: 1.5rem;
+		color: var(--c-dark-blue);
+	}
+	&__info {
+		& > * {
+			margin-top: 1.5rem;
+		}
+	}
+	&__btn-live-site {
+		display: block;
+		width: fit-content;
+		position: relative;
+		padding-right: 0.5rem;
+	}
+	&__live-icon {
+		position: absolute;
+		top: 50%;
+		right: 0rem;
+		transform: translate(100%, -50%);
+	}
+}
+.styled-box-1 {
+	border: 4px solid var(--c-green-cyan);
+	border-radius: 0.5rem;
+	padding-top: 0;
+	&__title {
+		display: block;
+		position: relative;
+		width: fit-content;
+		max-width: 100%;
+		transform: translate(0, -0.8em);
+		padding-inline: 0.5rem;
+		background: var(--c-dark-blue);
+		&--centered {
+			margin-inline: auto;
+			width: 100%;
+			& > * {
+				text-align: center;
+			}
+		}
+	}
+}
+.projects__nav {
+	&--btn {
+		position: absolute;
+		top: 50%;
+		z-index: 5;
+		font-family: "Fira Code", monospace;
+		color: var(--c-ghost-white);
+		font-size: 2rem;
+
+		aspect-ratio: 1;
+		border-radius: 50%;
+		border: 2px solid var(--c-green-cyan);
+		padding: 10px;
+		box-shadow: 0px 0px 2px 2px #0000004d;
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: -1;
+			border-radius: 50%;
+			background: var(--c-dark-blue);
+			opacity: 0.9;
+		}
+	}
+	&--prev {
+		left: 0;
+		transform: translate(0%, -50%);
+	}
+	&--next {
+		left: 100%;
+		transform: translate(-100%, -50%);
+	}
+}

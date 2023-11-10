@@ -2,8 +2,15 @@
 ✔ fix "read more" button (use js) @done (08/11/2023, 13:24:25)
 ✔ Update personal picture @done (08/11/2023, 12:12:55)
 ✔ Update hero image @done (08/11/2023, 12:40:26)
-☐ Update the repos method (take images and data from sites, to imprube page loading);
-☐ update readme 
+✔ Update the repos method (take images and data from sites, to improve page loading); @done (10/11/2023, 22:39:10)
+✔ update readme @done (08/11/2023, 18:35:52)
 ☐ update scss
-    ☐ Update @use
- 
+  ☐ Minimize & optimice scss files, review code for better structure
+  ✔ Update @use @done (08/11/2023, 18:45:01)
+✔ Reapair form element & childrens @done (10/11/2023, 22:38:56)
+✔ Update and fix proyect carousel @done (10/11/2023, 22:38:57)
+  ✔ add card carousel using javascript @done (10/11/2023, 09:34:06)
+  ✔ add a good animation @done (10/11/2023, 09:34:10)
+  ✔ fix buttons and markers. @done (10/11/2023, 15:30:30)
+  ✔ add a "search by tag" @done (10/11/2023, 22:38:50)
+✔ Update screenshots on image-og @done (10/11/2023, 23:05:22)

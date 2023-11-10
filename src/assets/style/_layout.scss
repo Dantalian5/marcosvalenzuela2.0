@@ -25,7 +25,7 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 1;
+	z-index: 10;
 }
 .section {
 	padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
@@ -75,33 +75,20 @@
 }
 .footer {
 	gap: 2.5rem;
-	justify-content: center;
-	&__logo,
-	&__extra {
-		max-width: fit-content;
-	}
+	justify-content: space-evenly;
 	&__logo {
+		max-width: fit-content;
 		gap: 0.5rem;
 	}
 	&__icon-wrapper {
 		justify-content: center;
 		width: 100%;
-		margin-inline: auto;
 		gap: 2rem;
 	}
-}
-.section__projects {
-	position: relative;
-	margin-inline: auto;
-	width: fit-content;
-	max-width: 100%;
-	padding: 2rem;
-	align-items: stretch;
-	gap: 4rem;
-	align-self: stretch;
-	overflow-x: scroll;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
+	&__rights {
+		width: 100%;
+		text-align: center;
+	}
 }
 @media (min-width: 37.5rem) {
 	:root {
