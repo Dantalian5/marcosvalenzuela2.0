@@ -1,5 +1,3 @@
-@use "../base/colors" as *;
-@use "../base/fonts" as *;
 .carousel-wrapper {
 	width: 100%;
 	position: relative;
@@ -41,14 +39,14 @@
 	height: auto;
 	min-height: 30.625rem;
 	scroll-snap-align: center;
-	background-color: $c-dark-blue;
+	background-color: var(--c-dark-blue);
 	&__image-wrapper {
 		position: relative;
 		width: 100%;
 		height: 13.75rem;
 		overflow: hidden;
 		border-radius: 0.5rem;
-		border: 1px solid $c-green-cyan;
+		border: 1px solid var(--c-green-cyan);
 	}
 	&__image {
 		width: 100%;
@@ -61,11 +59,11 @@
 		height: 4rem;
 		padding: 1rem;
 		border-radius: 50%;
-		border: 4px solid $c-green-cyan;
-		background: $c-n-white;
+		border: 4px solid var(--c-green-cyan);
+		background: var(--c-n-white);
 		box-shadow: 4px 2px 6px 0px rgba(0, 0, 0, 0.5);
 		font-size: 1.5rem;
-		color: $c-dark-blue;
+		color: var(--c-dark-blue);
 	}
 	&__info {
 		& > * {
@@ -86,7 +84,7 @@
 	}
 }
 .styled-box-1 {
-	border: 4px solid $c-green-cyan;
+	border: 4px solid var(--c-green-cyan);
 	border-radius: 0.5rem;
 	padding-top: 0;
 	&__title {
@@ -96,7 +94,7 @@
 		max-width: 100%;
 		transform: translate(0, -0.8em);
 		padding-inline: 0.5rem;
-		background: $c-dark-blue;
+		background: var(--c-dark-blue);
 		&--centered {
 			margin-inline: auto;
 			width: 100%;
@@ -111,13 +109,13 @@
 		position: absolute;
 		top: 50%;
 		z-index: 5;
-		font-family: $f_family-firacode;
-		color: $c-ghost-white;
+		font-family: "Fira Code", monospace;
+		color: var(--c-ghost-white);
 		font-size: 2rem;
 
 		aspect-ratio: 1;
 		border-radius: 50%;
-		border: 2px solid $c-green-cyan;
+		border: 2px solid var(--c-green-cyan);
 		padding: 10px;
 		box-shadow: 0px 0px 2px 2px #0000004d;
 		&::before {
@@ -126,7 +124,7 @@
 			inset: 0;
 			z-index: -1;
 			border-radius: 50%;
-			background: $c-dark-blue;
+			background: var(--c-dark-blue);
 			opacity: 0.9;
 		}
 	}

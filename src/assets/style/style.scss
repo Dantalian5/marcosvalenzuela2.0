@@ -1,7 +1,7 @@
-@use "rsc/normalize";
+// @use "rsc/normalize";
 @use "rsc/reset";
-@use "base/fonts";
-@use "base/colors";
+@use "variables";
+@use "fonts";
 @use "base";
 @use "layout";
 @use "modules";

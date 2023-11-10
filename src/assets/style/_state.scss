@@ -1,4 +1,3 @@
-@use "base/colors" as *;
 .sotolined {
 	position: relative;
 	&::before {
@@ -6,7 +5,7 @@
 		visibility: hidden;
 		width: 0%;
 		height: 0;
-		border: 1px solid $c-green-cyan;
+		border: 1px solid var(--c-green-cyan);
 		position: absolute;
 		bottom: 0;
 		left: 50%;
@@ -32,7 +31,7 @@
 			visibility: hidden;
 			width: 0%;
 			height: 0;
-			border: 1px solid $c-green-cyan;
+			border: 1px solid var(--c-green-cyan);
 			position: absolute;
 			bottom: 0;
 			left: 50%;
@@ -47,7 +46,7 @@
 				width: 100%;
 			}
 		}
-		border-color: $c-green-cyan;
+		border-color: var(--c-green-cyan);
 	}
 }
 .projects__nav--btn:active {
@@ -55,12 +54,12 @@
 }
 @media (hover: hover) {
 	.social-link:hover {
-		color: $c-green-cyan;
+		color: var(--c-green-cyan);
 		transform: scale(1.2);
 	}
 	.footer__extra {
 		&:hover {
-			color: $c-green-cyan;
+			color: var(--c-green-cyan);
 		}
 	}
 	.blinked {

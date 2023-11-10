@@ -5,7 +5,8 @@
 ✔ Update the repos method (take images and data from sites, to improve page loading); @done (10/11/2023, 22:39:10)
 ✔ update readme @done (08/11/2023, 18:35:52)
 ☐ update scss
-    ✔ Update @use @done (08/11/2023, 18:45:01)
+  ☐ Minimize & optimice scss files, review code for better structure
+  ✔ Update @use @done (08/11/2023, 18:45:01)
 ✔ Reapair form element & childrens @done (10/11/2023, 22:38:56)
 ✔ Update and fix proyect carousel @done (10/11/2023, 22:38:57)
   ✔ add card carousel using javascript @done (10/11/2023, 09:34:06)
