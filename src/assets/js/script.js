@@ -35,51 +35,77 @@ const nextButton = document.querySelector(
 	".projects__nav__btn.projects__nav--next"
 );
 //const indexFocused = Array.from(carouselItems).indexOf(focusedItem);
-let indexFocused = Math.ceil(carouselItems.length / 2) - 1;
+//let indexFocused = Math.ceil(carouselItems.length / 2) - 1;
+let indexFocused = 0;
 
 function loadCarousel(step) {
+	let Nfocused = Math.floor(
+		carousel.offsetWidth / (carouselItems[0].offsetWidth + 10)
+	);
 	let oldIndexFocused = indexFocused;
 	indexFocused =
-		indexFocused + step >= 0 && indexFocused + step < carouselItems.length
+		indexFocused + step >= 0 &&
+		indexFocused + Nfocused - 1 + step < carouselItems.length
 			? indexFocused + step
 			: indexFocused;
-	let index = 0;
-	carouselItems[indexFocused].style.transform = `translate(-50%, -50%)`;
-	console.log(`50% - ${carouselItems[indexFocused].offsetWidth * 2}px`);
-	if (step < 0 && oldIndexFocused != indexFocused) {
-		carouselItems[indexFocused].style.left = `calc(50% - ${
-			carouselItems[indexFocused].offsetWidth / 2
-		}px)`;
-		setTimeout(function () {
-			carouselItems[indexFocused].style.left = `50%`;
-		}, 250);
-	} else if (step > 0 && oldIndexFocused != indexFocused) {
-		carouselItems[indexFocused].style.left = `calc(50% + ${
-			carouselItems[indexFocused].offsetWidth / 2
-		}px)`;
-		setTimeout(function () {
-			carouselItems[indexFocused].style.left = `50%`;
-		}, 250);
-	} else if (step < 0 && oldIndexFocused == indexFocused) {
-		carouselItems[indexFocused].style.left = `60%`;
-		setTimeout(function () {
-			carouselItems[indexFocused].style.left = `50%`;
-		}, 100);
-	} else if (step > 0 && oldIndexFocused == indexFocused) {
-		carouselItems[indexFocused].style.left = `40%`;
-		setTimeout(function () {
-			carouselItems[indexFocused].style.left = `50%`;
-		}, 100);
-	}
-	carouselItems[indexFocused].style.zIndex = 1;
-	carouselItems[indexFocused].style.opacity = 1;
 
-	for (let i = indexFocused + 1; i < carouselItems.length; i++) {
+	setFocused(step, Nfocused, oldIndexFocused);
+	setLaterals(Nfocused);
+}
+function setFocused(step, Nfocused, oldIndexFocused) {
+	let stepToLeft;
+	let showStep = carousel.offsetWidth / (Nfocused * 2);
+	let cont = 1;
+	if (indexFocused != oldIndexFocused) {
+		const offset = carouselItems[indexFocused].offsetWidth;
+		stepToLeft =
+			step < 0
+				? `calc( ${Math.floor(
+						carousel.offsetWidth / (Nfocused * 2)
+				  )}px - ${offset}px)`
+				: `calc( ${
+						Math.floor(carousel.offsetWidth / (Nfocused * 2)) *
+						(Nfocused * 2 - 1)
+				  }px + ${offset}px)`;
+	} else {
+		stepToLeft =
+			step < 0
+				? `calc( ${carousel.offsetWidth / (Nfocused * 2)}px + 100px)`
+				: `calc( ${
+						(carousel.offsetWidth / (Nfocused * 2)) * (Nfocused * 2 - 1)
+				  }px - 100px)`;
+	}
+	if (step < 0) {
+		carouselItems[indexFocused].style.transform = `translate(-50%, -50%)`;
+		carouselItems[indexFocused].style.left = stepToLeft;
+	} else {
+		carouselItems[
+			indexFocused + Nfocused - 1
+		].style.transform = `translate(-50%, -50%)`;
+		carouselItems[indexFocused + Nfocused - 1].style.left = stepToLeft;
+	}
+	setTimeout(function () {
+		for (let i = indexFocused; i < indexFocused + Nfocused; i++) {
+			carouselItems[i].style.transform = `translate(-50%, -50%)`;
+			carouselItems[i].style.left = `${showStep * cont}px`;
+			carouselItems[i].style.zIndex = 1;
+			carouselItems[i].style.opacity = 1;
+
+			cont += 2;
+		}
+	}, 100);
+}
+function setLaterals(Nfocused) {
+	let radio = 100;
+	let index = 0;
+	for (let i = indexFocused + Nfocused; i < carouselItems.length; i++) {
 		index++;
 		carouselItems[i].style.transform = `translate(-50%, -50%) scale(${
 			1 - 0.1 * index
 		}) perspective(100px) rotateY(-1deg)`;
-		carouselItems[i].style.left = `calc( 50% + ${100 * index}px)`;
+		carouselItems[i].style.left = `calc( ${
+			(carousel.offsetWidth / (Nfocused * 2)) * (Nfocused * 2 - 1)
+		}px + ${radio * index}px)`;
 		carouselItems[i].style.zIndex = -index;
 		carouselItems[i].style.opacity = index < 3 ? 0.3 - index / 10 : 0.05;
 	}
@@ -89,12 +115,18 @@ function loadCarousel(step) {
 		carouselItems[i].style.transform = `translate(-50%, -50%) scale(${
 			1 - 0.1 * index
 		}) perspective(100px) rotateY(1deg)`;
-		carouselItems[i].style.left = `calc( 50% - ${100 * index}px)`;
+		carouselItems[i].style.left = `calc( ${
+			carousel.offsetWidth / (Nfocused * 2)
+		}px - ${radio * index}px)`;
 		carouselItems[i].style.zIndex = -index;
 		carouselItems[i].style.opacity = index < 3 ? 0.3 - index / 10 : 0.05;
 	}
 }
+
 loadCarousel(0);
+window.addEventListener("resize", function () {
+	loadCarousel(0);
+});
 
 nextButton.onclick = function () {
 	loadCarousel(+1);

@@ -20,8 +20,8 @@
 	padding-inline: 1rem;
 	flex-shrink: 0;
 	width: 18.75rem;
-	height: 31.25rem;
 	height: auto;
+	min-height: 30.625rem;
 	scroll-snap-align: center;
 	background-color: $c-dark-blue;
 	&__image-wrapper {
