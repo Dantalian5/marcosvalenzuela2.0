@@ -3,20 +3,17 @@ const hamburgerMenu = document.getElementById("js-hamburgerMenu");
 const buttonReadMore = document.getElementById("js-buttonReadMore");
 
 //-Hamburger Menu EventListeners-
-hamburgerMenu.addEventListener("click", (event) => {
+hamburgerMenu.addEventListener("click", () => {
 	//open and close the menu
 	hamburgerMenu.classList.toggle("active");
 });
 document.addEventListener("click", (event) => {
 	// if clicked outside the menu, close the menu
-	if (
-		event.target.closest("#js-hamburgerMenu") === null &&
-		event.target.closest("#js-menuItems") === null
-	) {
+	if (!event.target.closest("#js-hamburgerMenu, #js-menuItems")) {
 		hamburgerMenu.classList.remove("active");
 	}
 });
-buttonReadMore.addEventListener("click", (event) => {
+buttonReadMore.addEventListener("click", () => {
 	//open and close the menu
 	buttonReadMore.classList.toggle("active");
 	if (buttonReadMore.classList.contains("active")) {
@@ -213,11 +210,16 @@ const tagsList = Array.from(
 	new Set(tagsText.map((text) => text.split(/[\s,]+/)).flat())
 );
 
-const palabrasUnicas = searchInput.addEventListener("input", (event) => {
-	const tags = searchInput.value.toLowerCase();
-	const tagsArray = tags.trim().split(/[\s,]+/);
+searchInput.addEventListener("input", ({target}) => {
+	const tagsArray = target.value
+		.toLowerCase()
+		.trim()
+		.split(/[\s,]+/);
+	console.log(tagsArray);
 	let isAtag = tagsArray.every((tag) => tagsList.includes(tag));
+	console.log(isAtag);
 	if (isAtag) {
+		document.querySelector(".search-box__error").style.display = "none";
 		carouselTagedItems.forEach((item) => {
 			const itemTags = (
 				item.querySelector(".js-card-tags").innerText +
@@ -230,7 +232,7 @@ const palabrasUnicas = searchInput.addEventListener("input", (event) => {
 				itemTagsArray.includes(tag)
 			);
 
-			if (containsAllTags || tags == "") {
+			if (containsAllTags) {
 				item.classList.remove("inactive");
 			} else {
 				item.classList.add("inactive");
@@ -241,11 +243,18 @@ const palabrasUnicas = searchInput.addEventListener("input", (event) => {
 			".project-carousel__item:not(.inactive)"
 		);
 		loadCarousel(0);
-	} else if (tags == "") {
-		carouselTagedItems.forEach((item) => {
-			item.classList.remove("inactive");
-		});
-
+	} else {
+		if (target.value != "") {
+			carouselTagedItems.forEach((item) => {
+				item.classList.add("inactive");
+			});
+			document.querySelector(".search-box__error").style.display = "block";
+		} else {
+			carouselTagedItems.forEach((item) => {
+				item.classList.remove("inactive");
+			});
+			document.querySelector(".search-box__error").style.display = "none";
+		}
 		carouselItems = document.querySelectorAll(
 			".project-carousel__item:not(.inactive)"
 		);

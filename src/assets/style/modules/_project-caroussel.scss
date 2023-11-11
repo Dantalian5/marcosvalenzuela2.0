@@ -5,11 +5,17 @@
 .search-box {
 	max-width: 25rem;
 	margin-inline: auto;
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 	&__input {
 		width: 100%;
 		padding: 0.8rem 1.2rem;
 		background: none;
+		margin-bottom: 0.5rem;
+	}
+	&__error {
+		color: red;
+		text-align: center;
+		display: none;
 	}
 }
 .project-carousel {
