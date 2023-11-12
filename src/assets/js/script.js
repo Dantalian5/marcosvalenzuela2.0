@@ -3,24 +3,19 @@ const hamburgerMenu = document.getElementById("js-hamburgerMenu");
 const buttonReadMore = document.getElementById("js-buttonReadMore");
 
 //-Hamburger Menu EventListeners-
-hamburgerMenu.addEventListener("click", () => {
-	//open and close the menu
-	hamburgerMenu.classList.toggle("active");
-});
 document.addEventListener("click", (event) => {
-	// if clicked outside the menu, close the menu
+	// if clicked outside the menu, close the menu, if clicked in the menu, togle
 	if (!event.target.closest("#js-hamburgerMenu, #js-menuItems")) {
 		hamburgerMenu.classList.remove("active");
+	} else if (event.target.closest("#js-hamburgerMenu")) {
+		hamburgerMenu.classList.toggle("active");
 	}
 });
 buttonReadMore.addEventListener("click", () => {
-	//open and close the menu
 	buttonReadMore.classList.toggle("active");
-	if (buttonReadMore.classList.contains("active")) {
-		buttonReadMore.innerText = "Read Less";
-	} else {
-		buttonReadMore.innerText = "Read More";
-	}
+	buttonReadMore.innerText = buttonReadMore.classList.contains("active")
+		? "Read Less"
+		: "Read More";
 });
 
 const carousel = document.querySelector(".project-carousel");
