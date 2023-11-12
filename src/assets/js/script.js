@@ -1,40 +1,25 @@
 "use strict";
+//-------------------------------------------------------
+// Variables:
 const hamburgerMenu = document.getElementById("js-hamburgerMenu");
-const buttonReadMore = document.getElementById("js-buttonReadMore");
-
-//-Hamburger Menu EventListeners-
-document.addEventListener("click", (event) => {
-	// if clicked outside the menu, close the menu, if clicked in the menu, togle
-	if (!event.target.closest("#js-hamburgerMenu, #js-menuItems")) {
-		hamburgerMenu.classList.remove("active");
-	} else if (event.target.closest("#js-hamburgerMenu")) {
-		hamburgerMenu.classList.toggle("active");
-	}
-});
-buttonReadMore.addEventListener("click", () => {
-	buttonReadMore.classList.toggle("active");
-	buttonReadMore.innerText = buttonReadMore.classList.contains("active")
-		? "Read Less"
-		: "Read More";
-});
-
 const carousel = document.querySelector(".project-carousel");
 const searchInput = document.querySelector(".search-box__input");
 const carouselTagedItems = document.querySelectorAll(".project-carousel__item");
-let carouselItems = document.querySelectorAll(
-	".project-carousel__item:not(.inactive)"
-);
-const prevButton = document.querySelector(
-	".projects__nav--btn.projects__nav--prev"
-);
-const nextButton = document.querySelector(
-	".projects__nav--btn.projects__nav--next"
-);
-//const indexFocused = Array.from(carouselItems).indexOf(focusedItem);
-//let indexFocused = Math.ceil(carouselItems.length / 2) - 1;
 let indexFocused = 0;
-
+let startPositionX;
+let startPositionY;
+let deltaX;
+let deltaY;
+let isDragging;
+let isWheeled;
+//-------------------------------------------------------
+// Functions :
 function loadCarousel(step) {
+	const carouselItems = document.querySelectorAll(
+		".project-carousel__item:not(.inactive)"
+	);
+	document.querySelector(".search-box__error").style.display =
+		carouselItems.length == 0 ? "block" : "none";
 	if (carouselItems.length > 0) {
 		let Nfocused = Math.min(
 			Math.floor(carousel.offsetWidth / (carouselItems[0].offsetWidth + 10)),
@@ -48,11 +33,11 @@ function loadCarousel(step) {
 				: indexFocused,
 			carouselItems.length - Nfocused
 		);
-		setFocused(step, Nfocused, oldIndexFocused);
-		setLaterals(Nfocused);
+		setFocused(carouselItems, step, Nfocused, oldIndexFocused);
+		setLaterals(carouselItems, Nfocused);
 	}
 }
-function setFocused(step, Nfocused, oldIndexFocused) {
+function setFocused(carouselItems, step, Nfocused, oldIndexFocused) {
 	let stepToLeft;
 	let showStep = carousel.offsetWidth / (Nfocused * 2);
 	let cont = 1;
@@ -95,7 +80,7 @@ function setFocused(step, Nfocused, oldIndexFocused) {
 		}
 	}, 100);
 }
-function setLaterals(Nfocused) {
+function setLaterals(carouselItems, Nfocused) {
 	let radio = 100;
 	let index = 0;
 	for (let i = indexFocused + Nfocused; i < carouselItems.length; i++) {
@@ -122,24 +107,38 @@ function setLaterals(Nfocused) {
 		carouselItems[i].style.opacity = index < 3 ? 0.3 - index / 10 : 0.05;
 	}
 }
-
+//-------------------------------------------------------
+// Event Starters :
 loadCarousel(0);
+//-------------------------------------------------------
+// Event Handlers :
+//-Hamburger Menu EventListeners-
+document.addEventListener("click", (event) => {
+	// if clicked outside the menu, close the menu, if clicked in the menu, togle
+	if (!event.target.closest("#js-hamburgerMenu, #js-menuItems")) {
+		hamburgerMenu.classList.remove("active");
+	} else if (event.target.closest("#js-hamburgerMenu")) {
+		hamburgerMenu.classList.toggle("active");
+	}
+});
+document.getElementById("js-buttonReadMore").onclick = function () {
+	this.classList.toggle("active");
+	this.innerText = this.classList.contains("active")
+		? "Read Less"
+		: "Read More";
+};
 window.addEventListener("resize", function () {
 	loadCarousel(0);
 });
+document.querySelector(".projects__nav--btn.projects__nav--prev").onclick =
+	function () {
+		loadCarousel(-1);
+	};
+document.querySelector(".projects__nav--btn.projects__nav--next").onclick =
+	function () {
+		loadCarousel(+1);
+	};
 
-nextButton.onclick = function () {
-	loadCarousel(+1);
-};
-prevButton.onclick = function () {
-	loadCarousel(-1);
-};
-
-let isDragging;
-let startPositionX;
-let startPositionY;
-let deltaX;
-let deltaY;
 carousel.addEventListener("touchstart", function (event) {
 	isDragging = true;
 	startPositionX = event.touches[0].clientX;
@@ -169,7 +168,6 @@ carousel.addEventListener("touchend", function () {
 carousel.addEventListener("selectstart", function (event) {
 	event.preventDefault();
 });
-let isWheeled;
 carousel.addEventListener("wheel", function (event) {
 	// Detectar el desplazamiento horizontal de la rueda del ratón
 	let deltaWheelX = event.deltaX;
@@ -189,66 +187,36 @@ carousel.addEventListener("wheel", function (event) {
 		isWheeled = true;
 	}
 });
-const tagsText = [
-	...Array.from(document.querySelectorAll(".js-card-tags")).map((element) =>
-		element.innerText.toLowerCase()
-	),
-	...Array.from(document.querySelectorAll(".js-card-names")).map((element) =>
-		element.innerText.toLowerCase()
-	),
-];
-const tagsList = Array.from(
-	new Set(tagsText.map((text) => text.split(/[\s,]+/)).flat())
-);
-
 searchInput.addEventListener("input", ({target}) => {
 	const tagsArray = target.value
 		.toLowerCase()
 		.trim()
 		.split(/[\s,]+/);
-	console.log(tagsArray);
-	let isAtag = tagsArray.every((tag) => tagsList.includes(tag));
-	console.log(isAtag);
-	if (isAtag) {
+	if (target.value != "") {
 		document.querySelector(".search-box__error").style.display = "none";
 		carouselTagedItems.forEach((item) => {
-			const itemTags = (
+			const itemTagsArray = (
 				item.querySelector(".js-card-tags").innerText +
 				" " +
 				item.querySelector(".js-card-names").innerText
-			).toLowerCase();
-			const itemTagsArray = itemTags.split(/[\s,]+/);
+			)
+				.toLowerCase()
+				.split(/[\s,]+/);
 
 			const containsAllTags = tagsArray.every((tag) =>
-				itemTagsArray.includes(tag)
+				itemTagsArray.some((item) => item.includes(tag))
 			);
-
 			if (containsAllTags) {
 				item.classList.remove("inactive");
 			} else {
 				item.classList.add("inactive");
 			}
 		});
-
-		carouselItems = document.querySelectorAll(
-			".project-carousel__item:not(.inactive)"
-		);
-		loadCarousel(0);
 	} else {
-		if (target.value != "") {
-			carouselTagedItems.forEach((item) => {
-				item.classList.add("inactive");
-			});
-			document.querySelector(".search-box__error").style.display = "block";
-		} else {
-			carouselTagedItems.forEach((item) => {
-				item.classList.remove("inactive");
-			});
-			document.querySelector(".search-box__error").style.display = "none";
-		}
-		carouselItems = document.querySelectorAll(
-			".project-carousel__item:not(.inactive)"
-		);
-		loadCarousel(0);
+		carouselTagedItems.forEach((item) => {
+			item.classList.remove("inactive");
+		});
 	}
+	loadCarousel(0);
 });
+//-------------------------------------------------------
