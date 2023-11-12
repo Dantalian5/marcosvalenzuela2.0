@@ -165,18 +165,15 @@ carousel.addEventListener("touchend", function () {
 		loadCarousel(-1);
 	}
 });
-
 // Evitar que se seleccione texto al arrastrar
 carousel.addEventListener("selectstart", function (event) {
 	event.preventDefault();
 });
-
 let isWheeled;
-let deltaWheelX;
-
 carousel.addEventListener("wheel", function (event) {
 	// Detectar el desplazamiento horizontal de la rueda del ratón
-	deltaWheelX = event.deltaX;
+	let deltaWheelX = event.deltaX;
+
 	if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
 		event.preventDefault();
 	}
@@ -192,7 +189,6 @@ carousel.addEventListener("wheel", function (event) {
 		isWheeled = true;
 	}
 });
-
 const tagsText = [
 	...Array.from(document.querySelectorAll(".js-card-tags")).map((element) =>
 		element.innerText.toLowerCase()
