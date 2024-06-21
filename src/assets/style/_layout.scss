@@ -38,13 +38,15 @@
 	padding-block: 2rem;
 	min-height: 100vh;
 	min-height: 100svh;
+	margin-bottom: 2rem;
 }
 .about,
 .skills,
 .projects,
 .contact,
 .footer {
-	padding-block: 4rem 8rem;
+	padding-block: 4rem;
+	margin-bottom: 4rem;
 }
 .about {
 	&__wrapper {

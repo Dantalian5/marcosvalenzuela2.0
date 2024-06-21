@@ -145,9 +145,6 @@
 	& ~ .info-block__text > .info-block__alt {
 		display: inline;
 	}
-	& ~ .read-more__label::after {
-		content: "Read less";
-	}
 }
 
 .img-block {
