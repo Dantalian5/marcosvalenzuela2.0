@@ -1,869 +1,1128 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-		<meta
-			name="description"
-			content="Empower your digital projects with a skilled web developer. Expertly coded websites for all. Let's create exceptional online experiences together!"
-		/>
-		<!-- Title of the page -->
-		<title>Marcos Valenzuela | Portfolio</title>
-		<meta name="author" content="Marcos Valenzuela" />
-		<meta property="og:title" content="Marcos Valenzuela | Portfolio" />
-		<meta property="og:type" content="website" />
-		<meta
-			property="og:description"
-			content="Empower your digital projects with a skilled web developer. Expertly coded websites for all. Let's create exceptional online experiences together!"
-		/>
-		<meta property="og:url" content="https://marcosvalenzuela.netlify.app" />
-		<meta
-			property="og:image"
-			content="https://marcosvalenzuela.netlify.app/assets/images/screenshot-og.jpg"
-		/>
-		<meta
-			property="og:image:alt"
-			content="a small screenshot of a web portfolio"
-		/>
-		<!-- Favicons setup -->
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="assets/favicon/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="assets/favicon/favicon-16x16.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="assets/favicon/apple-touch-icon.png"
-		/>
-		<link rel="manifest" href="assets/favicon/site.webmanifest" />
-		<link
-			rel="mask-icon"
-			href="assets/favicon/safari-pinned-tab.svg"
-			color="#5bbad5"
-		/>
-		<meta name="msapplication-TileColor" content="#da532c" />
-		<!-- Stylesheet setup -->
-		<link rel="stylesheet" href="assets/style/style.scss" />
-	</head>
-	<body>
-		<div class="navbar">
-			<nav class="top-navbar row">
-				<a class="top-navbar__logo row font-h2" href="#header">
-					<svg
-						class="top-navbar__logo__arrow font-h2--big"
-						xmlns="http://www.w3.org/2000/svg"
-						width="1em"
-						height="1em"
-						viewBox="0 0 1024 1024"
-					>
-						<path
-							fill="currentColor"
-							d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0z"
-						/>
-					</svg>
-					<p class="font-h2--big top-navbar__logo__text">
-						M_<span class="blink">V</span>
-					</p>
-				</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta
+      name="description"
+      content="Empower your digital projects with a skilled web developer. Expertly coded websites for all. Let's create exceptional online experiences together!"
+    />
+    <!-- Title of the page -->
+    <title>Marcos Valenzuela | Portfolio</title>
+    <meta name="author" content="Marcos Valenzuela" />
+    <meta property="og:title" content="Marcos Valenzuela | Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Empower your digital projects with a skilled web developer. Expertly coded websites for all. Let's create exceptional online experiences together!"
+    />
+    <meta property="og:url" content="https://marcosvalenzuela.netlify.app" />
+    <meta
+      property="og:image"
+      content="https://marcosvalenzuela.netlify.app/assets/images/screenshot-og.jpg"
+    />
+    <meta
+      property="og:image:alt"
+      content="a small screenshot of a web portfolio"
+    />
+    <!-- Favicons setup -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <!-- Stylesheet setup -->
+    <link rel="stylesheet" href="assets/style/style.scss" />
+  </head>
+  <body>
+    <div class="navbar">
+      <nav class="top-navbar row">
+        <a class="top-navbar__logo row font-h2" href="#header">
+          <svg
+            class="top-navbar__logo__arrow font-h2--big"
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 1024 1024"
+          >
+            <path
+              fill="currentColor"
+              d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0z"
+            />
+          </svg>
+          <p class="font-h2--big top-navbar__logo__text">
+            M_<span class="blink">V</span>
+          </p>
+        </a>
 
-				<div class="menubar">
-					<button id="js-hamburgerMenu" class="hamburger">
-						<svg
-							class="hamburger__box font-h2 font-h2--big"
-							xmlns="http://www.w3.org/2000/svg"
-							width="1.5em"
-							height="1.5em"
-							viewBox="0 0 24 24"
-							fill="currentColor"
-						>
-							<rect
-								class="hamburger__line hamburger__top"
-								width="20"
-								height="2.5"
-								x="2"
-								y="4.75"
-								rx="2"
-							></rect>
-							<rect
-								class="hamburger__line hamburger__middle"
-								width="20"
-								height="2.5"
-								x="2"
-								y="10.75"
-								rx="2"
-							></rect>
-							<rect
-								class="hamburger__line hamburger__bottom"
-								width="20"
-								height="2.5"
-								x="2"
-								y="16.75"
-								rx="2"
-							></rect>
-						</svg>
-					</button>
-					<ul id="js-menuItems" class="menubar__wrapper row">
-						<li class="menubar__link font-h2 font-h2--big">
-							<a class="sotolined blinked" href="#about">About</a>
-						</li>
-						<li class="menubar__link font-h2 font-h2--big">
-							<a class="sotolined blinked" href="#skills">Skills</a>
-						</li>
-						<li class="menubar__link font-h2 font-h2--big">
-							<a class="sotolined blinked" href="#projects">Projects</a>
-						</li>
-						<li class="menubar__link font-h2 font-h2--big">
-							<a class="sotolined blinked" href="#contact">Contact</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-		<header id="header" class="section header row wrap">
-			<div class="hero__info">
-				<div class="hero__info__text">
-					<p class="font-p font-p--big">
-						<span class="guides"></span>Hi, I&#x2019;m
-					</p>
-					<p class="font-h2 font-h2--big">
-						<span class="guides"></span>Marcos Valenzuela
-					</p>
-					<h1 class="font-h1">
-						<span class="guides"></span>Front-End Developer
-					</h1>
-				</div>
-				<div class="hero__info__cta row wrap">
-					<a class="button font-h2 font-h2--small" href="#contact"
-						><p class="button__text">Contact Me</p></a
-					>
-					<a
-						class="button font-h2 font-h2--small"
-						href="assets/docs/CVal.pdf"
-						download="Curriculum Vitae Marcos Valenzuela"
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="1em"
-							height="1em"
-							viewBox="0 0 16 16"
-						>
-							<path
-								fill="currentColor"
-								d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"
-							/>
-							<path
-								fill="currentColor"
-								d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"
-							/>
-						</svg>
-						<p class="button__text">CV</p>
-					</a>
-				</div>
-			</div>
-			<div class="hero__img">
-				<picture>
-					<source
-						srcset="
-							assets/img/Dan/Dan_coding@600.webp  1x,
-							assets/img/Dan/Dan_coding@1024.webp 2x
-						"
-						type="image/webp"
-					/>
-					<img
-						srcset="
-							assets/img/Dan/Dan_coding@600.jpg  1x,
-							assets/img/Dan/Dan_coding@1024.jpg 2x
-						"
-						src="assets/img/Dan/Dan_coding@600.jpg"
-						alt="illustration of a person showing a program"
-					/>
-				</picture>
-				<div class="hero__img__bg"></div>
-			</div>
-		</header>
-		<section id="about" class="section about row wrap">
-			<h2 class="section-title font-h2 font-h2--big">
-				<span class="guides"></span>About Me
-			</h2>
-			<div class="about__wrapper row wrap">
-				<div class="info-block">
-					<button
-						id="js-buttonReadMore"
-						class="read-more__btn font-p font-p--big"
-					>
-						Read More
-					</button>
-					<p class="info-block__text font-p font-p--big">
-						<span class="guides"></span>Hi there! I'm Marcos Valenzuela, a web
-						developer based in Italy. My passion for design and programming has
-						led me to dive into the exciting world of web development.
-						<br /><span class="info-block__alt"
-							>With experience in HTML and CSS, I enjoy creating visually
-							appealing and functional web designs. Although my journey is still
-							relatively short, I am eager to continue learning and improving my
-							skills in the field of web development. My goal is to create
-							intuitive and visually engaging websites that provide a great user
-							experience. I love taking on new challenges and finding creative
-							solutions to overcome them. If you're looking for an enthusiastic
-							web developer ready to grow alongside your project, feel free to
-							contact me! I'm excited to be part of new projects and contribute
-							my HTML and CSS skills. I look forward to the opportunity to work
-							with you and bring your digital vision to life!</span
-						>
-					</p>
-				</div>
-				<div class="img-block">
-					<div class="img-block__container">
-						<picture>
-							<source
-								srcset="
-									assets/img/Dan/Dan_stand@600.webp  1x,
-									assets/img/Dan/Dan_stand@1024.webp 2x
-								"
-								type="image/webp"
-							/>
-							<img
-								srcset="
-									assets/img/Dan/Dan_stand@600.jpg  1x,
-									assets/img/Dan/Dan_stand@1024.jpg 2x
-								"
-								src="assets/img/Dan/Dan_stand@600.jpg"
-								alt="webpage screenshot"
-								loading="lazy"
-							/>
-						</picture>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="skills" class="section skills">
-			<h2 class="section-title font-h2 font-h2--big">
-				<span class="guides"></span>Skills
-			</h2>
-			<div class="skills__info row wrap">
-				<div class="styled-box skill-wrapper">
-					<div class="styled-box__title">
-						<h3 class="font-p font-p--big">Code:</h3>
-					</div>
-					<div class="skill-wrapper__items row wrap">
-						<p class="skill-box row font-p font-p--big">
-							<span class="skill-box__icon">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 16 16"
-								>
-									<path
-										fill="currentColor"
-										d="M3 1.5a.25.25 0 0 0-.25.25v9.55c0 .09.048.172.125.217l4.859 2.802a.25.25 0 0 0 .245.003l5.141-2.817a.25.25 0 0 0 .13-.22V1.75A.25.25 0 0 0 13 1.5H3Zm-1.75.25C1.25.784 2.034 0 3 0h10c.966 0 1.75.784 1.75 1.75v9.536a1.75 1.75 0 0 1-.909 1.534L8.7 15.637a1.75 1.75 0 0 1-1.716-.018l-4.858-2.803A1.75 1.75 0 0 1 1.25 11.3V1.75ZM5 4.25a.75.75 0 0 1 .75-.75h4.615a.75.75 0 0 1 0 1.5H6.5v1.712h3.865a.75.75 0 0 1 .75.75v2.884a.75.75 0 0 1-.414.671l-2.308 1.154a.75.75 0 0 1-.67 0l-2.308-1.154a.75.75 0 0 1-.415-.67v-.578a.75.75 0 0 1 1.5 0v.114l1.558.779l1.557-.78v-1.67H5.75a.75.75 0 0 1-.75-.75V4.25Z"
-									/>
-								</svg> </span
-							>Html
-						</p>
-						<p class="skill-box row font-p font-p--big">
-							<span class="skill-box__icon">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 16 16"
-								>
-									<path
-										fill="currentColor"
-										d="M3 1.6a.25.25 0 0 0-.25.25v9.55c0 .09.048.172.125.217l4.859 2.802a.25.25 0 0 0 .245.003l5.141-2.817a.25.25 0 0 0 .13-.22V1.85A.25.25 0 0 0 13 1.6H3Zm-1.75.25C1.25.884 2.034.1 3 .1h10c.966 0 1.75.784 1.75 1.75v9.536a1.75 1.75 0 0 1-.909 1.534L8.7 15.738a1.75 1.75 0 0 1-1.716-.02l-4.858-2.802A1.75 1.75 0 0 1 1.25 11.4V1.85ZM5 4.35a.75.75 0 0 1 .75-.75h4.615a.75.75 0 0 1 .75.75v6.096a.75.75 0 0 1-.414.671l-2.308 1.154a.75.75 0 0 1-.67 0l-2.308-1.154a.75.75 0 0 1-.415-.67v-.578a.75.75 0 1 1 1.5 0v.114l1.558.778l1.557-.778V8.312H7a.75.75 0 1 1 0-1.5h2.615V5.1H5.75A.75.75 0 0 1 5 4.35Z"
-									/>
-								</svg> </span
-							>Css
-						</p>
-						<p class="skill-box row font-p font-p--big">
-							<span class="skill-box__icon">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 24 24"
-								>
-									<g
-										fill="none"
-										stroke="currentColor"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-									>
-										<path
-											d="M2 12a2 2 0 0 0 2-2V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2M2 12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4a2 2 0 0 1 2-2"
-										/>
-										<path d="M9 16V8h3.5a2 2 0 1 1 0 4H9h4a2 2 0 1 1 0 4H9z" />
-									</g>
-								</svg> </span
-							>Bootstrap
-						</p>
-						<p class="skill-box row font-p font-p--big">
-							<span class="skill-box__icon">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 16 16"
-								>
-									<path
-										fill="currentColor"
-										d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v2a.75.75 0 0 1-1.5 0v-2a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h13.5a.75.75 0 0 1 0 1.5H1.75A1.75 1.75 0 0 1 0 14.25V1.75Zm8.25 4A.75.75 0 0 1 9 6.5v4c0 1.005-.276 1.758-.845 2.232c-.543.453-1.201.518-1.655.518a.75.75 0 0 1 0-1.5c.346 0 .563-.06.695-.17c.106-.088.305-.335.305-1.08v-4a.75.75 0 0 1 .75-.75Zm3.026.83c.418-.498 1.075-.83 1.974-.83c.835 0 1.465.286 1.89.735a.75.75 0 0 1-1.09 1.03c-.11-.116-.33-.265-.8-.265c-.5 0-.72.168-.826.295A.767.767 0 0 0 12.25 8c0 .104.043.3.174.455c.107.127.325.295.826.295c.076 0 .149.011.218.032c.663.094 1.164.39 1.506.798c.394.47.526 1.024.526 1.42c0 .396-.132.95-.526 1.42c-.418.498-1.075.83-1.974.83c-.835 0-1.465-.286-1.89-.735a.75.75 0 0 1 1.09-1.03c.11.116.33.265.8.265c.5 0 .72-.168.826-.295A.767.767 0 0 0 14 11c0-.104-.043-.3-.174-.455c-.107-.127-.325-.295-.826-.295a.748.748 0 0 1-.218-.032c-.663-.095-1.164-.39-1.506-.798A2.263 2.263 0 0 1 10.75 8c0-.396.132-.95.526-1.42Z"
-									/>
-								</svg> </span
-							>JavaScript
-						</p>
-					</div>
-				</div>
-				<div class="styled-box skill-wrapper">
-					<div class="styled-box__title">
-						<h3 class="font-p font-p--big">Tools:</h3>
-					</div>
-					<div class="skill-wrapper__items row wrap">
-						<p class="skill-box row font-p font-p--big">
-							<span class="skill-box__icon">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 15 15"
-								>
-									<path
-										fill="currentColor"
-										d="m6.793 1.207l.353.354l-.353-.354ZM1.207 6.793l-.353-.354l.353.354Zm0 1.414l.354-.353l-.354.353Zm5.586 5.586l-.354.353l.354-.353Zm1.414 0l-.353-.354l.353.354Zm5.586-5.586l.353.354l-.353-.354Zm0-1.414l-.354.353l.354-.353ZM8.207 1.207l.354-.353l-.354.353ZM6.44.854L.854 6.439l.707.707l5.585-5.585L6.44.854ZM.854 8.56l5.585 5.585l.707-.707l-5.585-5.585l-.707.707Zm7.707 5.585l5.585-5.585l-.707-.707l-5.585 5.585l.707.707Zm5.585-7.707L8.561.854l-.707.707l5.585 5.585l.707-.707Zm0 2.122a1.5 1.5 0 0 0 0-2.122l-.707.707a.5.5 0 0 1 0 .708l.707.707ZM6.44 14.146a1.5 1.5 0 0 0 2.122 0l-.707-.707a.5.5 0 0 1-.708 0l-.707.707ZM.854 6.44a1.5 1.5 0 0 0 0 2.122l.707-.707a.5.5 0 0 1 0-.708L.854 6.44Zm6.292-4.878a.5.5 0 0 1 .708 0L8.56.854a1.5 1.5 0 0 0-2.122 0l.707.707Zm-2 1.293l1 1l.708-.708l-1-1l-.708.708ZM7.5 5a.5.5 0 0 1-.5-.5H6A1.5 1.5 0 0 0 7.5 6V5Zm.5-.5a.5.5 0 0 1-.5.5v1A1.5 1.5 0 0 0 9 4.5H8ZM7.5 4a.5.5 0 0 1 .5.5h1A1.5 1.5 0 0 0 7.5 3v1Zm0-1A1.5 1.5 0 0 0 6 4.5h1a.5.5 0 0 1 .5-.5V3Zm.646 2.854l1.5 1.5l.707-.708l-1.5-1.5l-.707.708ZM10.5 8a.5.5 0 0 1-.5-.5H9A1.5 1.5 0 0 0 10.5 9V8Zm.5-.5a.5.5 0 0 1-.5.5v1A1.5 1.5 0 0 0 12 7.5h-1Zm-.5-.5a.5.5 0 0 1 .5.5h1A1.5 1.5 0 0 0 10.5 6v1Zm0-1A1.5 1.5 0 0 0 9 7.5h1a.5.5 0 0 1 .5-.5V6ZM7 5.5v4h1v-4H7Zm.5 5.5a.5.5 0 0 1-.5-.5H6A1.5 1.5 0 0 0 7.5 12v-1Zm.5-.5a.5.5 0 0 1-.5.5v1A1.5 1.5 0 0 0 9 10.5H8Zm-.5-.5a.5.5 0 0 1 .5.5h1A1.5 1.5 0 0 0 7.5 9v1Zm0-1A1.5 1.5 0 0 0 6 10.5h1a.5.5 0 0 1 .5-.5V9Z"
-									/>
-								</svg> </span
-							>Git
-						</p>
-						<p class="skill-box row font-p font-p--big">
-							<span class="skill-box__icon">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 15 15"
-								>
-									<path
-										fill="currentColor"
-										d="M5.65 12.477a.5.5 0 1 0-.3-.954l.3.954Zm-3.648-2.96l-.484-.128l-.254.968l.484.127l.254-.968ZM9 14.5v.5h1v-.5H9Zm.063-4.813l-.054-.497a.5.5 0 0 0-.299.852l.352-.354ZM12.5 5.913h.5V5.91l-.5.002Zm-.833-2.007l-.466-.18a.5.5 0 0 0 .112.533l.354-.353Zm-.05-2.017l.456-.204a.5.5 0 0 0-.319-.276l-.137.48Zm-2.173.792l-.126.484a.5.5 0 0 0 .398-.064l-.272-.42Zm-3.888 0l-.272.42a.5.5 0 0 0 .398.064l-.126-.484ZM3.383 1.89l-.137-.48a.5.5 0 0 0-.32.276l.457.204Zm-.05 2.017l.354.353a.5.5 0 0 0 .112-.534l-.466.181ZM2.5 5.93H3v-.002l-.5.002Zm3.438 3.758l.352.355a.5.5 0 0 0-.293-.851l-.06.496ZM5.5 11H6l-.001-.037L5.5 11ZM5 14.5v.5h1v-.5H5Zm.35-2.977c-.603.19-.986.169-1.24.085c-.251-.083-.444-.25-.629-.49a4.8 4.8 0 0 1-.27-.402c-.085-.139-.182-.302-.28-.447c-.191-.281-.473-.633-.929-.753l-.254.968c.08.02.184.095.355.346c.082.122.16.252.258.412c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.51.168 1.116.15 1.852-.081l-.3-.954Zm4.65-.585c0-.318-.014-.608-.104-.878c-.096-.288-.262-.51-.481-.727l-.705.71c.155.153.208.245.237.333c.035.105.053.254.053.562h1Zm-.884-.753c.903-.097 1.888-.325 2.647-.982c.78-.675 1.237-1.729 1.237-3.29h-1c0 1.359-.39 2.1-.892 2.534c-.524.454-1.258.653-2.099.743l.107.995ZM13 5.91a3.354 3.354 0 0 0-.98-2.358l-.707.706c.438.44.685 1.034.687 1.655l1-.003Zm-.867-1.824c.15-.384.22-.794.21-1.207l-1 .025a2.12 2.12 0 0 1-.142.82l.932.362Zm.21-1.207a3.119 3.119 0 0 0-.27-1.195l-.913.408c.115.256.177.532.184.812l1-.025Zm-.726-.99c.137-.481.137-.482.136-.482h-.003l-.004-.002a.462.462 0 0 0-.03-.007a1.261 1.261 0 0 0-.212-.024a2.172 2.172 0 0 0-.51.054c-.425.091-1.024.317-1.82.832l.542.84c.719-.464 1.206-.634 1.488-.694a1.2 1.2 0 0 1 .306-.03l-.008-.001a.278.278 0 0 1-.01-.002l-.006-.002h-.003l-.002-.001c-.001 0-.002 0 .136-.482Zm-2.047.307a8.209 8.209 0 0 0-4.14 0l.252.968a7.209 7.209 0 0 1 3.636 0l.252-.968Zm-3.743.064c-.797-.514-1.397-.74-1.822-.83a2.17 2.17 0 0 0-.51-.053a1.259 1.259 0 0 0-.241.03l-.004.002h-.003l.136.481l.137.481h-.001l-.002.001l-.003.001a.327.327 0 0 1-.016.004l-.008.001h.008a1.19 1.19 0 0 1 .298.03c.282.06.769.23 1.488.694l.543-.84Zm-2.9-.576a3.12 3.12 0 0 0-.27 1.195l1 .025a2.09 2.09 0 0 1 .183-.812l-.913-.408Zm-.27 1.195c-.01.413.06.823.21 1.207l.932-.362a2.12 2.12 0 0 1-.143-.82l-1-.025Zm.322.673a3.354 3.354 0 0 0-.726 1.091l.924.38c.118-.285.292-.545.51-.765l-.708-.706Zm-.726 1.091A3.354 3.354 0 0 0 2 5.93l1-.003c0-.31.06-.616.177-.902l-.924-.38ZM2 5.93c0 1.553.458 2.597 1.239 3.268c.757.65 1.74.88 2.64.987l.118-.993C5.15 9.09 4.416 8.89 3.89 8.438C3.388 8.007 3 7.276 3 5.928H2Zm3.585 3.404c-.5.498-.629 1.09-.584 1.704L6 10.963c-.03-.408.052-.683.291-.921l-.705-.709ZM5 11v3.5h1V11H5Zm5 3.5V13H9v1.5h1Zm0-1.5v-2.063H9V13h1Z"
-									/>
-								</svg> </span
-							>Github
-						</p>
-						<p class="skill-box row font-p font-p--big">
-							<span class="skill-box__icon">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 15 15"
-								>
-									<path
-										fill="currentColor"
-										fill-rule="evenodd"
-										d="M7 2.05H5.525a1.475 1.475 0 0 0 0 2.95H7V2.05Zm0-1h2.475a2.475 2.475 0 0 1 1.492 4.45A2.475 2.475 0 0 1 8 9.463v1.962A2.475 2.475 0 1 1 4.033 9.45a2.471 2.471 0 0 1-.983-1.975c0-.807.386-1.523.983-1.975a2.475 2.475 0 0 1 1.492-4.45H7Zm1 1V5h1.475a1.475 1.475 0 1 0 0-2.95H8Zm-2.475 6.9H7V6H5.525a1.475 1.475 0 0 0-.006 2.95h.006ZM4.05 11.425c0-.813.657-1.472 1.47-1.475H7v1.475a1.475 1.475 0 0 1-2.95 0ZM8 7.472a1.475 1.475 0 1 1 0 .006v-.006Z"
-										clip-rule="evenodd"
-									/>
-								</svg> </span
-							>Figma
-						</p>
-						<p class="skill-box row font-p font-p--big">
-							<span class="skill-box__icon">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 24 24"
-								>
-									<path
-										fill="currentColor"
-										d="M7.666 14.871c.237.147 3.818.875 4.693 1.02c.303.064.088.376-.33.587c-.943.251-5.517-1.607-4.363-1.607zm5.647-13.264l3.505 3.56c.333.34.328.998.142 1.187l-1.74-1.392l-.342 2.061l-1.455-.767l-2.328 1.47l-.771-3.1L9.073 6.79H7.16c-.78 0-.871-.99-.163-1.698c1.237-1.335 2.657-2.696 3.429-3.485c.776-.793 2.127-.77 2.887 0zM9.786.97l-8.86 9.066c-2.993 3.707 2.038 3.276 4.194 4.343c.774.791-2.965 1.375-2.191 2.166c.773.791 4.678 1.524 5.453 2.314c.773.791-1.584 1.63-.81 2.42c.773.792 2.563.042 2.898 1.868c.238 1.304 3.224.56 4.684-.508c.774-.791-1.48-.717-.706-1.508c1.923-1.967 3.715-.714 4.373-2.686c.325-.974-2.832-1.501-2.057-2.292c2.226-1.3 9.919-2.146 6.268-5.796L13.85.97c-1.123-1.078-2.998-1.09-4.063 0zm10.177 17.475c0 .45 3.314.745 3.314-.106c-.472-1.366-2.922-1.274-3.314.106zm-14.928 2.39c.784.679 1.997-.169 2.36-1.116c-.76-1.01-3.607.037-2.36 1.116zm14.512-1.466c-1.011.908.114 1.828 1.111 1.242c.222-.225-.006-1.016-1.11-1.242Z"
-									/>
-								</svg> </span
-							>Inkscape
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="projects" class="section projects">
-			<h2 class="section-title font-h2 font-h2--big">
-				<span class="guides"></span>Projects
-			</h2>
-			<div class="carousel-wrapper">
-				<div class="search-box">
-					<input
-						id="input-box"
-						class="search-box__input styled-box font-p font-p--small"
-						type="text"
-						placeholder="Search by tag or name"
-					/>
-					<p class="search-box__error font-p font-p--small">
-						Ups...no project with this atributes
-					</p>
-				</div>
-				<ul class="section__projects row project-carousel">
-					<li class="project-card styled-box-1 project-carousel__item">
-						<div class="styled-box__title styled-box__title--centered">
-							<h3 class="font-p font-p--big">
-								Name: <span class="js-card-names">Art Gallery Website</span>
-							</h3>
-						</div>
-						<div class="project-card__image-wrapper">
-							<picture>
-								<source
-									srcset="
-										assets/img/art-gallery-screenshot@300w.webp 1x,
-										assets/img/art-gallery-screenshot@600w.webp 2x
-									"
-									type="image/webp"
-								/>
-								<img
-									srcset="
-										assets/img/art-gallery-screenshot@300w.jpg 1x,
-										assets/img/art-gallery-screenshot@600w.jpg 2x
-									"
-									src="assets/img/art-gallery-screenshot@300w.jpg"
-									alt="webpage screenshot"
-									loading="lazy"
-								/>
-							</picture>
-							<a
-								class="project-card__github-btn"
-								title="Github Repository"
-								href="https://github.com/Dantalian5/Art-gallery-website"
-								target="_blank"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 15 15"
-								>
-									<path
-										fill="currentColor"
-										d="M5.65 12.477a.5.5 0 1 0-.3-.954l.3.954Zm-3.648-2.96l-.484-.128l-.254.968l.484.127l.254-.968ZM9 14.5v.5h1v-.5H9Zm.063-4.813l-.054-.497a.5.5 0 0 0-.299.852l.352-.354ZM12.5 5.913h.5V5.91l-.5.002Zm-.833-2.007l-.466-.18a.5.5 0 0 0 .112.533l.354-.353Zm-.05-2.017l.456-.204a.5.5 0 0 0-.319-.276l-.137.48Zm-2.173.792l-.126.484a.5.5 0 0 0 .398-.064l-.272-.42Zm-3.888 0l-.272.42a.5.5 0 0 0 .398.064l-.126-.484ZM3.383 1.89l-.137-.48a.5.5 0 0 0-.32.276l.457.204Zm-.05 2.017l.354.353a.5.5 0 0 0 .112-.534l-.466.181ZM2.5 5.93H3v-.002l-.5.002Zm3.438 3.758l.352.355a.5.5 0 0 0-.293-.851l-.06.496ZM5.5 11H6l-.001-.037L5.5 11ZM5 14.5v.5h1v-.5H5Zm.35-2.977c-.603.19-.986.169-1.24.085c-.251-.083-.444-.25-.629-.49a4.8 4.8 0 0 1-.27-.402c-.085-.139-.182-.302-.28-.447c-.191-.281-.473-.633-.929-.753l-.254.968c.08.02.184.095.355.346c.082.122.16.252.258.412c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.51.168 1.116.15 1.852-.081l-.3-.954Zm4.65-.585c0-.318-.014-.608-.104-.878c-.096-.288-.262-.51-.481-.727l-.705.71c.155.153.208.245.237.333c.035.105.053.254.053.562h1Zm-.884-.753c.903-.097 1.888-.325 2.647-.982c.78-.675 1.237-1.729 1.237-3.29h-1c0 1.359-.39 2.1-.892 2.534c-.524.454-1.258.653-2.099.743l.107.995ZM13 5.91a3.354 3.354 0 0 0-.98-2.358l-.707.706c.438.44.685 1.034.687 1.655l1-.003Zm-.867-1.824c.15-.384.22-.794.21-1.207l-1 .025a2.12 2.12 0 0 1-.142.82l.932.362Zm.21-1.207a3.119 3.119 0 0 0-.27-1.195l-.913.408c.115.256.177.532.184.812l1-.025Zm-.726-.99c.137-.481.137-.482.136-.482h-.003l-.004-.002a.462.462 0 0 0-.03-.007a1.261 1.261 0 0 0-.212-.024a2.172 2.172 0 0 0-.51.054c-.425.091-1.024.317-1.82.832l.542.84c.719-.464 1.206-.634 1.488-.694a1.2 1.2 0 0 1 .306-.03l-.008-.001a.278.278 0 0 1-.01-.002l-.006-.002h-.003l-.002-.001c-.001 0-.002 0 .136-.482Zm-2.047.307a8.209 8.209 0 0 0-4.14 0l.252.968a7.209 7.209 0 0 1 3.636 0l.252-.968Zm-3.743.064c-.797-.514-1.397-.74-1.822-.83a2.17 2.17 0 0 0-.51-.053a1.259 1.259 0 0 0-.241.03l-.004.002h-.003l.136.481l.137.481h-.001l-.002.001l-.003.001a.327.327 0 0 1-.016.004l-.008.001h.008a1.19 1.19 0 0 1 .298.03c.282.06.769.23 1.488.694l.543-.84Zm-2.9-.576a3.12 3.12 0 0 0-.27 1.195l1 .025a2.09 2.09 0 0 1 .183-.812l-.913-.408Zm-.27 1.195c-.01.413.06.823.21 1.207l.932-.362a2.12 2.12 0 0 1-.143-.82l-1-.025Zm.322.673a3.354 3.354 0 0 0-.726 1.091l.924.38c.118-.285.292-.545.51-.765l-.708-.706Zm-.726 1.091A3.354 3.354 0 0 0 2 5.93l1-.003c0-.31.06-.616.177-.902l-.924-.38ZM2 5.93c0 1.553.458 2.597 1.239 3.268c.757.65 1.74.88 2.64.987l.118-.993C5.15 9.09 4.416 8.89 3.89 8.438C3.388 8.007 3 7.276 3 5.928H2Zm3.585 3.404c-.5.498-.629 1.09-.584 1.704L6 10.963c-.03-.408.052-.683.291-.921l-.705-.709ZM5 11v3.5h1V11H5Zm5 3.5V13H9v1.5h1Zm0-1.5v-2.063H9V13h1Z"
-									/>
-								</svg>
-							</a>
-						</div>
-						<div class="project-card__info">
-							<a
-								class="project-card__btn-live-site font-p font-p--small sotolined"
-								href="https://dantalian5.github.io/Art-gallery-website/index.html"
-								target="_blank"
-							>
-								Live Site
-								<svg
-									class="project-card__live-icon"
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 24 24"
-								>
-									<path
-										fill="none"
-										stroke="currentColor"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M13.5 10.5L21 3m-5 0h5v5m0 6v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
-									/>
-								</svg>
-							</a>
-							<p class="font-p font-p--small">
-								Description: This is a solution to the "Art gallery website"
-								challenge on Frontend Mentor.
-							</p>
-							<p class="font-p font-p--small">
-								Tags: <span class="js-card-tags">html, css</span>
-							</p>
-						</div>
-					</li>
-					<li class="project-card styled-box-1 project-carousel__item">
-						<div class="styled-box__title styled-box__title--centered">
-							<h3 class="font-p font-p--big">
-								Name: <span class="js-card-names">Typemaster landing page</span>
-							</h3>
-						</div>
-						<div class="project-card__image-wrapper">
-							<picture>
-								<source
-									srcset="
-										assets/img/typemaster-landing-screenshot@300w.webp 1x,
-										assets/img/typemaster-landing-screenshot@600w.webp 2x
-									"
-									type="image/webp"
-								/>
-								<img
-									srcset="
-										assets/img/typemaster-landing-screenshot@300w.jpg 1x,
-										assets/img/typemaster-landing-screenshot@600w.jpg 2x
-									"
-									src="assets/img/typemaster-landing-screenshot@300w.jpg"
-									alt="webpage screenshot"
-									loading="lazy"
-								/>
-							</picture>
-							<a
-								class="project-card__github-btn"
-								title="Github Repository"
-								href="https://github.com/Dantalian5/typemaster-pre-launch-landing-page"
-								target="_blank"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 15 15"
-								>
-									<path
-										fill="currentColor"
-										d="M5.65 12.477a.5.5 0 1 0-.3-.954l.3.954Zm-3.648-2.96l-.484-.128l-.254.968l.484.127l.254-.968ZM9 14.5v.5h1v-.5H9Zm.063-4.813l-.054-.497a.5.5 0 0 0-.299.852l.352-.354ZM12.5 5.913h.5V5.91l-.5.002Zm-.833-2.007l-.466-.18a.5.5 0 0 0 .112.533l.354-.353Zm-.05-2.017l.456-.204a.5.5 0 0 0-.319-.276l-.137.48Zm-2.173.792l-.126.484a.5.5 0 0 0 .398-.064l-.272-.42Zm-3.888 0l-.272.42a.5.5 0 0 0 .398.064l-.126-.484ZM3.383 1.89l-.137-.48a.5.5 0 0 0-.32.276l.457.204Zm-.05 2.017l.354.353a.5.5 0 0 0 .112-.534l-.466.181ZM2.5 5.93H3v-.002l-.5.002Zm3.438 3.758l.352.355a.5.5 0 0 0-.293-.851l-.06.496ZM5.5 11H6l-.001-.037L5.5 11ZM5 14.5v.5h1v-.5H5Zm.35-2.977c-.603.19-.986.169-1.24.085c-.251-.083-.444-.25-.629-.49a4.8 4.8 0 0 1-.27-.402c-.085-.139-.182-.302-.28-.447c-.191-.281-.473-.633-.929-.753l-.254.968c.08.02.184.095.355.346c.082.122.16.252.258.412c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.51.168 1.116.15 1.852-.081l-.3-.954Zm4.65-.585c0-.318-.014-.608-.104-.878c-.096-.288-.262-.51-.481-.727l-.705.71c.155.153.208.245.237.333c.035.105.053.254.053.562h1Zm-.884-.753c.903-.097 1.888-.325 2.647-.982c.78-.675 1.237-1.729 1.237-3.29h-1c0 1.359-.39 2.1-.892 2.534c-.524.454-1.258.653-2.099.743l.107.995ZM13 5.91a3.354 3.354 0 0 0-.98-2.358l-.707.706c.438.44.685 1.034.687 1.655l1-.003Zm-.867-1.824c.15-.384.22-.794.21-1.207l-1 .025a2.12 2.12 0 0 1-.142.82l.932.362Zm.21-1.207a3.119 3.119 0 0 0-.27-1.195l-.913.408c.115.256.177.532.184.812l1-.025Zm-.726-.99c.137-.481.137-.482.136-.482h-.003l-.004-.002a.462.462 0 0 0-.03-.007a1.261 1.261 0 0 0-.212-.024a2.172 2.172 0 0 0-.51.054c-.425.091-1.024.317-1.82.832l.542.84c.719-.464 1.206-.634 1.488-.694a1.2 1.2 0 0 1 .306-.03l-.008-.001a.278.278 0 0 1-.01-.002l-.006-.002h-.003l-.002-.001c-.001 0-.002 0 .136-.482Zm-2.047.307a8.209 8.209 0 0 0-4.14 0l.252.968a7.209 7.209 0 0 1 3.636 0l.252-.968Zm-3.743.064c-.797-.514-1.397-.74-1.822-.83a2.17 2.17 0 0 0-.51-.053a1.259 1.259 0 0 0-.241.03l-.004.002h-.003l.136.481l.137.481h-.001l-.002.001l-.003.001a.327.327 0 0 1-.016.004l-.008.001h.008a1.19 1.19 0 0 1 .298.03c.282.06.769.23 1.488.694l.543-.84Zm-2.9-.576a3.12 3.12 0 0 0-.27 1.195l1 .025a2.09 2.09 0 0 1 .183-.812l-.913-.408Zm-.27 1.195c-.01.413.06.823.21 1.207l.932-.362a2.12 2.12 0 0 1-.143-.82l-1-.025Zm.322.673a3.354 3.354 0 0 0-.726 1.091l.924.38c.118-.285.292-.545.51-.765l-.708-.706Zm-.726 1.091A3.354 3.354 0 0 0 2 5.93l1-.003c0-.31.06-.616.177-.902l-.924-.38ZM2 5.93c0 1.553.458 2.597 1.239 3.268c.757.65 1.74.88 2.64.987l.118-.993C5.15 9.09 4.416 8.89 3.89 8.438C3.388 8.007 3 7.276 3 5.928H2Zm3.585 3.404c-.5.498-.629 1.09-.584 1.704L6 10.963c-.03-.408.052-.683.291-.921l-.705-.709ZM5 11v3.5h1V11H5Zm5 3.5V13H9v1.5h1Zm0-1.5v-2.063H9V13h1Z"
-									/>
-								</svg>
-							</a>
-						</div>
-						<div class="project-card__info">
-							<a
-								class="project-card__btn-live-site font-p font-p--small sotolined"
-								href="https://dantalian5.github.io/typemaster-pre-launch-landing-page/"
-								target="_blank"
-							>
-								Live Site
-								<svg
-									class="project-card__live-icon"
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 24 24"
-								>
-									<path
-										fill="none"
-										stroke="currentColor"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M13.5 10.5L21 3m-5 0h5v5m0 6v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
-									/>
-								</svg>
-							</a>
-							<p class="font-p font-p--small">
-								Description: This is a solution to the "Typemaster pre-launch
-								landing page" challenge on Frontend Mentor.
-							</p>
-							<p class="font-p font-p--small">
-								Tags: <span class="js-card-tags">html, css</span>
-							</p>
-						</div>
-					</li>
-					<li class="project-card styled-box-1 project-carousel__item">
-						<div class="styled-box__title styled-box__title--centered">
-							<h3 class="font-p font-p--big">
-								Name: <span class="js-card-names">Suite landing page</span>
-							</h3>
-						</div>
-						<div class="project-card__image-wrapper">
-							<picture>
-								<source
-									srcset="
-										assets/img/suit-landing-screenshot@300w.webp 1x,
-										assets/img/suit-landing-screenshot@600w.webp 2x
-									"
-									type="image/webp"
-								/>
-								<img
-									srcset="
-										assets/img/suit-landing-screenshot@300w.jpg 1x,
-										assets/img/suit-landing-screenshot@600w.jpg 2x
-									"
-									src="assets/img/suit-landing-screenshot@300w.jpg"
-									alt="webpage screenshot"
-									loading="lazy"
-								/>
-							</picture>
-							<a
-								class="project-card__github-btn"
-								title="Github Repository"
-								href="https://github.com/Dantalian5/suite-landing-page"
-								target="_blank"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 15 15"
-								>
-									<path
-										fill="currentColor"
-										d="M5.65 12.477a.5.5 0 1 0-.3-.954l.3.954Zm-3.648-2.96l-.484-.128l-.254.968l.484.127l.254-.968ZM9 14.5v.5h1v-.5H9Zm.063-4.813l-.054-.497a.5.5 0 0 0-.299.852l.352-.354ZM12.5 5.913h.5V5.91l-.5.002Zm-.833-2.007l-.466-.18a.5.5 0 0 0 .112.533l.354-.353Zm-.05-2.017l.456-.204a.5.5 0 0 0-.319-.276l-.137.48Zm-2.173.792l-.126.484a.5.5 0 0 0 .398-.064l-.272-.42Zm-3.888 0l-.272.42a.5.5 0 0 0 .398.064l-.126-.484ZM3.383 1.89l-.137-.48a.5.5 0 0 0-.32.276l.457.204Zm-.05 2.017l.354.353a.5.5 0 0 0 .112-.534l-.466.181ZM2.5 5.93H3v-.002l-.5.002Zm3.438 3.758l.352.355a.5.5 0 0 0-.293-.851l-.06.496ZM5.5 11H6l-.001-.037L5.5 11ZM5 14.5v.5h1v-.5H5Zm.35-2.977c-.603.19-.986.169-1.24.085c-.251-.083-.444-.25-.629-.49a4.8 4.8 0 0 1-.27-.402c-.085-.139-.182-.302-.28-.447c-.191-.281-.473-.633-.929-.753l-.254.968c.08.02.184.095.355.346c.082.122.16.252.258.412c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.51.168 1.116.15 1.852-.081l-.3-.954Zm4.65-.585c0-.318-.014-.608-.104-.878c-.096-.288-.262-.51-.481-.727l-.705.71c.155.153.208.245.237.333c.035.105.053.254.053.562h1Zm-.884-.753c.903-.097 1.888-.325 2.647-.982c.78-.675 1.237-1.729 1.237-3.29h-1c0 1.359-.39 2.1-.892 2.534c-.524.454-1.258.653-2.099.743l.107.995ZM13 5.91a3.354 3.354 0 0 0-.98-2.358l-.707.706c.438.44.685 1.034.687 1.655l1-.003Zm-.867-1.824c.15-.384.22-.794.21-1.207l-1 .025a2.12 2.12 0 0 1-.142.82l.932.362Zm.21-1.207a3.119 3.119 0 0 0-.27-1.195l-.913.408c.115.256.177.532.184.812l1-.025Zm-.726-.99c.137-.481.137-.482.136-.482h-.003l-.004-.002a.462.462 0 0 0-.03-.007a1.261 1.261 0 0 0-.212-.024a2.172 2.172 0 0 0-.51.054c-.425.091-1.024.317-1.82.832l.542.84c.719-.464 1.206-.634 1.488-.694a1.2 1.2 0 0 1 .306-.03l-.008-.001a.278.278 0 0 1-.01-.002l-.006-.002h-.003l-.002-.001c-.001 0-.002 0 .136-.482Zm-2.047.307a8.209 8.209 0 0 0-4.14 0l.252.968a7.209 7.209 0 0 1 3.636 0l.252-.968Zm-3.743.064c-.797-.514-1.397-.74-1.822-.83a2.17 2.17 0 0 0-.51-.053a1.259 1.259 0 0 0-.241.03l-.004.002h-.003l.136.481l.137.481h-.001l-.002.001l-.003.001a.327.327 0 0 1-.016.004l-.008.001h.008a1.19 1.19 0 0 1 .298.03c.282.06.769.23 1.488.694l.543-.84Zm-2.9-.576a3.12 3.12 0 0 0-.27 1.195l1 .025a2.09 2.09 0 0 1 .183-.812l-.913-.408Zm-.27 1.195c-.01.413.06.823.21 1.207l.932-.362a2.12 2.12 0 0 1-.143-.82l-1-.025Zm.322.673a3.354 3.354 0 0 0-.726 1.091l.924.38c.118-.285.292-.545.51-.765l-.708-.706Zm-.726 1.091A3.354 3.354 0 0 0 2 5.93l1-.003c0-.31.06-.616.177-.902l-.924-.38ZM2 5.93c0 1.553.458 2.597 1.239 3.268c.757.65 1.74.88 2.64.987l.118-.993C5.15 9.09 4.416 8.89 3.89 8.438C3.388 8.007 3 7.276 3 5.928H2Zm3.585 3.404c-.5.498-.629 1.09-.584 1.704L6 10.963c-.03-.408.052-.683.291-.921l-.705-.709ZM5 11v3.5h1V11H5Zm5 3.5V13H9v1.5h1Zm0-1.5v-2.063H9V13h1Z"
-									/>
-								</svg>
-							</a>
-						</div>
-						<div class="project-card__info">
-							<a
-								class="project-card__btn-live-site font-p font-p--small sotolined"
-								href="https://dantalian5.github.io/suite-landing-page/"
-								target="_blank"
-							>
-								Live Site
-								<svg
-									class="project-card__live-icon"
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 24 24"
-								>
-									<path
-										fill="none"
-										stroke="currentColor"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M13.5 10.5L21 3m-5 0h5v5m0 6v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
-									/>
-								</svg>
-							</a>
-							<p class="font-p font-p--small">
-								Description: This is a solution to the "Suite landing page"
-								challenge on Frontend Mentor.
-							</p>
-							<p class="font-p font-p--small">
-								Tags: <span class="js-card-tags">html, css</span>
-							</p>
-						</div>
-					</li>
-					<li class="project-card styled-box-1 project-carousel__item">
-						<div class="styled-box__title styled-box__title--centered">
-							<h3 class="font-p font-p--big">
-								Name: <span class="js-card-names">JS simple counter</span>
-							</h3>
-						</div>
-						<div class="project-card__image-wrapper">
-							<picture>
-								<source
-									srcset="
-										https://raw.githubusercontent.com/Dantalian5/js-simple-counter/main/screenshots/webp/screenshot%40300.webp 1x,
-										https://raw.githubusercontent.com/Dantalian5/js-simple-counter/main/screenshots/webp/screenshot%40600.webp 2x
-									"
-									type="image/webp"
-								/>
-								<img
-									src="assets/img/js-simple-counter@300.jpg"
-									srcset="
-										https://raw.githubusercontent.com/Dantalian5/js-simple-counter/main/screenshots/jpg/screenshot%40600.jpg 2x
-									"
-									alt="webpage screenshot"
-									onerror="this.onerror = null;this.parentNode.children[0].srcset = this.src;"
-									loading="lazy"
-								/>
-							</picture>
-							<a
-								class="project-card__github-btn"
-								title="Github Repository"
-								href="https://github.com/Dantalian5/js-simple-counter"
-								target="_blank"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 15 15"
-								>
-									<path
-										fill="currentColor"
-										d="M5.65 12.477a.5.5 0 1 0-.3-.954l.3.954Zm-3.648-2.96l-.484-.128l-.254.968l.484.127l.254-.968ZM9 14.5v.5h1v-.5H9Zm.063-4.813l-.054-.497a.5.5 0 0 0-.299.852l.352-.354ZM12.5 5.913h.5V5.91l-.5.002Zm-.833-2.007l-.466-.18a.5.5 0 0 0 .112.533l.354-.353Zm-.05-2.017l.456-.204a.5.5 0 0 0-.319-.276l-.137.48Zm-2.173.792l-.126.484a.5.5 0 0 0 .398-.064l-.272-.42Zm-3.888 0l-.272.42a.5.5 0 0 0 .398.064l-.126-.484ZM3.383 1.89l-.137-.48a.5.5 0 0 0-.32.276l.457.204Zm-.05 2.017l.354.353a.5.5 0 0 0 .112-.534l-.466.181ZM2.5 5.93H3v-.002l-.5.002Zm3.438 3.758l.352.355a.5.5 0 0 0-.293-.851l-.06.496ZM5.5 11H6l-.001-.037L5.5 11ZM5 14.5v.5h1v-.5H5Zm.35-2.977c-.603.19-.986.169-1.24.085c-.251-.083-.444-.25-.629-.49a4.8 4.8 0 0 1-.27-.402c-.085-.139-.182-.302-.28-.447c-.191-.281-.473-.633-.929-.753l-.254.968c.08.02.184.095.355.346c.082.122.16.252.258.412c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.51.168 1.116.15 1.852-.081l-.3-.954Zm4.65-.585c0-.318-.014-.608-.104-.878c-.096-.288-.262-.51-.481-.727l-.705.71c.155.153.208.245.237.333c.035.105.053.254.053.562h1Zm-.884-.753c.903-.097 1.888-.325 2.647-.982c.78-.675 1.237-1.729 1.237-3.29h-1c0 1.359-.39 2.1-.892 2.534c-.524.454-1.258.653-2.099.743l.107.995ZM13 5.91a3.354 3.354 0 0 0-.98-2.358l-.707.706c.438.44.685 1.034.687 1.655l1-.003Zm-.867-1.824c.15-.384.22-.794.21-1.207l-1 .025a2.12 2.12 0 0 1-.142.82l.932.362Zm.21-1.207a3.119 3.119 0 0 0-.27-1.195l-.913.408c.115.256.177.532.184.812l1-.025Zm-.726-.99c.137-.481.137-.482.136-.482h-.003l-.004-.002a.462.462 0 0 0-.03-.007a1.261 1.261 0 0 0-.212-.024a2.172 2.172 0 0 0-.51.054c-.425.091-1.024.317-1.82.832l.542.84c.719-.464 1.206-.634 1.488-.694a1.2 1.2 0 0 1 .306-.03l-.008-.001a.278.278 0 0 1-.01-.002l-.006-.002h-.003l-.002-.001c-.001 0-.002 0 .136-.482Zm-2.047.307a8.209 8.209 0 0 0-4.14 0l.252.968a7.209 7.209 0 0 1 3.636 0l.252-.968Zm-3.743.064c-.797-.514-1.397-.74-1.822-.83a2.17 2.17 0 0 0-.51-.053a1.259 1.259 0 0 0-.241.03l-.004.002h-.003l.136.481l.137.481h-.001l-.002.001l-.003.001a.327.327 0 0 1-.016.004l-.008.001h.008a1.19 1.19 0 0 1 .298.03c.282.06.769.23 1.488.694l.543-.84Zm-2.9-.576a3.12 3.12 0 0 0-.27 1.195l1 .025a2.09 2.09 0 0 1 .183-.812l-.913-.408Zm-.27 1.195c-.01.413.06.823.21 1.207l.932-.362a2.12 2.12 0 0 1-.143-.82l-1-.025Zm.322.673a3.354 3.354 0 0 0-.726 1.091l.924.38c.118-.285.292-.545.51-.765l-.708-.706Zm-.726 1.091A3.354 3.354 0 0 0 2 5.93l1-.003c0-.31.06-.616.177-.902l-.924-.38ZM2 5.93c0 1.553.458 2.597 1.239 3.268c.757.65 1.74.88 2.64.987l.118-.993C5.15 9.09 4.416 8.89 3.89 8.438C3.388 8.007 3 7.276 3 5.928H2Zm3.585 3.404c-.5.498-.629 1.09-.584 1.704L6 10.963c-.03-.408.052-.683.291-.921l-.705-.709ZM5 11v3.5h1V11H5Zm5 3.5V13H9v1.5h1Zm0-1.5v-2.063H9V13h1Z"
-									/>
-								</svg>
-							</a>
-						</div>
-						<div class="project-card__info">
-							<a
-								class="project-card__btn-live-site font-p font-p--small sotolined"
-								href="https://js-simple-counter-s2i.vercel.app/"
-								target="_blank"
-							>
-								Live Site
-								<svg
-									class="project-card__live-icon"
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									viewBox="0 0 24 24"
-								>
-									<path
-										fill="none"
-										stroke="currentColor"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M13.5 10.5L21 3m-5 0h5v5m0 6v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
-									/>
-								</svg>
-							</a>
-							<p class="font-p font-p--small">
-								Description: A simple application that functions as a counter
-								and a timer (pomodoro timer).
-							</p>
-							<p class="font-p font-p--small">
-								Tags: <span class="js-card-tags">html, css, js</span>
-							</p>
-						</div>
-					</li>
-				</ul>
+        <div class="menubar">
+          <button id="js-hamburgerMenu" class="hamburger">
+            <svg
+              class="hamburger__box font-h2 font-h2--big"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.5em"
+              height="1.5em"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <rect
+                class="hamburger__line hamburger__top"
+                width="20"
+                height="2.5"
+                x="2"
+                y="4.75"
+                rx="2"
+              ></rect>
+              <rect
+                class="hamburger__line hamburger__middle"
+                width="20"
+                height="2.5"
+                x="2"
+                y="10.75"
+                rx="2"
+              ></rect>
+              <rect
+                class="hamburger__line hamburger__bottom"
+                width="20"
+                height="2.5"
+                x="2"
+                y="16.75"
+                rx="2"
+              ></rect>
+            </svg>
+          </button>
+          <ul id="js-menuItems" class="menubar__wrapper row">
+            <li class="menubar__link font-h2 font-h2--big">
+              <a class="sotolined blinked" href="#about">About</a>
+            </li>
+            <li class="menubar__link font-h2 font-h2--big">
+              <a class="sotolined blinked" href="#skills">Skills</a>
+            </li>
+            <li class="menubar__link font-h2 font-h2--big">
+              <a class="sotolined blinked" href="#projects">Projects</a>
+            </li>
+            <li class="menubar__link font-h2 font-h2--big">
+              <a class="sotolined blinked" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <header id="header" class="section header row wrap">
+      <div class="hero__info">
+        <div class="hero__info__text">
+          <p class="font-p font-p--big">
+            <span class="guides"></span>Hi, I&#x2019;m
+          </p>
+          <p class="font-h2 font-h2--big">
+            <span class="guides"></span>Marcos Valenzuela
+          </p>
+          <h1 class="font-h1">
+            <span class="guides"></span>Full-Stack Developer
+          </h1>
+        </div>
+        <div class="hero__info__cta row wrap">
+          <a class="button font-h2 font-h2--small" href="#contact"
+            ><p class="button__text">Contact Me</p></a
+          >
+          <a
+            class="button font-h2 font-h2--small"
+            href="assets/docs/CVal.pdf"
+            download="Curriculum Vitae Marcos Valenzuela"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill="currentColor"
+                d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"
+              />
+              <path
+                fill="currentColor"
+                d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"
+              />
+            </svg>
+            <p class="button__text">CV</p>
+          </a>
+        </div>
+      </div>
+      <div class="hero__img">
+        <picture>
+          <source
+            srcset="
+              assets/img/Dan/Dan_coding@600.webp  1x,
+              assets/img/Dan/Dan_coding@1024.webp 2x
+            "
+            type="image/webp"
+          />
+          <img
+            srcset="
+              assets/img/Dan/Dan_coding@600.jpg  1x,
+              assets/img/Dan/Dan_coding@1024.jpg 2x
+            "
+            src="assets/img/Dan/Dan_coding@600.jpg"
+            alt="illustration of a person showing a program"
+          />
+        </picture>
+        <div class="hero__img__bg"></div>
+      </div>
+    </header>
+    <section id="about" class="section about row wrap">
+      <h2 class="section-title font-h2 font-h2--big">
+        <span class="guides"></span>About Me
+      </h2>
+      <div class="about__wrapper row wrap">
+        <div class="info-block">
+          <button
+            id="js-buttonReadMore"
+            class="read-more__btn font-p font-p--big"
+          >
+            Read More
+          </button>
+          <p class="info-block__text font-p font-p--big">
+            <span class="guides"></span>Hi there! I'm Marcos Valenzuela, a web
+            developer based in Italy. My passion for design and programming has
+            led me to dive into the exciting world of web development.
+            <br /><span class="info-block__alt"
+              >I enjoy creating visually appealing and functional web designs.
+              Although my journey is still relatively short, I am eager to
+              continue learning and improving my skills in the field. My goal is
+              to create intuitive and visually engaging websites that provide a
+              great user experience. I love taking on new challenges and finding
+              creative solutions to overcome them. If you're looking for an
+              enthusiastic web developer ready to grow alongside your project,
+              feel free to contact me! I'm excited to be part of new projects
+              and contribute my skills. I look forward to the opportunity to
+              work with you and bring your digital vision to life!</span
+            >
+          </p>
+        </div>
+        <div class="img-block">
+          <div class="img-block__container">
+            <picture>
+              <source
+                srcset="
+                  assets/img/Dan/Dan_stand@600.webp  1x,
+                  assets/img/Dan/Dan_stand@1024.webp 2x
+                "
+                type="image/webp"
+              />
+              <img
+                srcset="
+                  assets/img/Dan/Dan_stand@600.jpg  1x,
+                  assets/img/Dan/Dan_stand@1024.jpg 2x
+                "
+                src="assets/img/Dan/Dan_stand@600.jpg"
+                alt="webpage screenshot"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="section skills">
+      <h2 class="section-title font-h2 font-h2--big">
+        <span class="guides"></span>Skills
+      </h2>
+      <div class="skills__info row wrap">
+        <div class="styled-box skill-wrapper">
+          <div class="styled-box__title">
+            <h3 class="font-p font-p--big">Code:</h3>
+          </div>
+          <div class="skill-wrapper__items row wrap">
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M3 1.5a.25.25 0 0 0-.25.25v9.55c0 .09.048.172.125.217l4.859 2.802a.25.25 0 0 0 .245.003l5.141-2.817a.25.25 0 0 0 .13-.22V1.75A.25.25 0 0 0 13 1.5H3Zm-1.75.25C1.25.784 2.034 0 3 0h10c.966 0 1.75.784 1.75 1.75v9.536a1.75 1.75 0 0 1-.909 1.534L8.7 15.637a1.75 1.75 0 0 1-1.716-.018l-4.858-2.803A1.75 1.75 0 0 1 1.25 11.3V1.75ZM5 4.25a.75.75 0 0 1 .75-.75h4.615a.75.75 0 0 1 0 1.5H6.5v1.712h3.865a.75.75 0 0 1 .75.75v2.884a.75.75 0 0 1-.414.671l-2.308 1.154a.75.75 0 0 1-.67 0l-2.308-1.154a.75.75 0 0 1-.415-.67v-.578a.75.75 0 0 1 1.5 0v.114l1.558.779l1.557-.78v-1.67H5.75a.75.75 0 0 1-.75-.75V4.25Z"
+                  />
+                </svg> </span
+              >Html
+            </p>
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M3 1.6a.25.25 0 0 0-.25.25v9.55c0 .09.048.172.125.217l4.859 2.802a.25.25 0 0 0 .245.003l5.141-2.817a.25.25 0 0 0 .13-.22V1.85A.25.25 0 0 0 13 1.6H3Zm-1.75.25C1.25.884 2.034.1 3 .1h10c.966 0 1.75.784 1.75 1.75v9.536a1.75 1.75 0 0 1-.909 1.534L8.7 15.738a1.75 1.75 0 0 1-1.716-.02l-4.858-2.802A1.75 1.75 0 0 1 1.25 11.4V1.85ZM5 4.35a.75.75 0 0 1 .75-.75h4.615a.75.75 0 0 1 .75.75v6.096a.75.75 0 0 1-.414.671l-2.308 1.154a.75.75 0 0 1-.67 0l-2.308-1.154a.75.75 0 0 1-.415-.67v-.578a.75.75 0 1 1 1.5 0v.114l1.558.778l1.557-.778V8.312H7a.75.75 0 1 1 0-1.5h2.615V5.1H5.75A.75.75 0 0 1 5 4.35Z"
+                  />
+                </svg> </span
+              >Css
+            </p>
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v2a.75.75 0 0 1-1.5 0v-2a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h13.5a.75.75 0 0 1 0 1.5H1.75A1.75 1.75 0 0 1 0 14.25V1.75Zm8.25 4A.75.75 0 0 1 9 6.5v4c0 1.005-.276 1.758-.845 2.232c-.543.453-1.201.518-1.655.518a.75.75 0 0 1 0-1.5c.346 0 .563-.06.695-.17c.106-.088.305-.335.305-1.08v-4a.75.75 0 0 1 .75-.75Zm3.026.83c.418-.498 1.075-.83 1.974-.83c.835 0 1.465.286 1.89.735a.75.75 0 0 1-1.09 1.03c-.11-.116-.33-.265-.8-.265c-.5 0-.72.168-.826.295A.767.767 0 0 0 12.25 8c0 .104.043.3.174.455c.107.127.325.295.826.295c.076 0 .149.011.218.032c.663.094 1.164.39 1.506.798c.394.47.526 1.024.526 1.42c0 .396-.132.95-.526 1.42c-.418.498-1.075.83-1.974.83c-.835 0-1.465-.286-1.89-.735a.75.75 0 0 1 1.09-1.03c.11.116.33.265.8.265c.5 0 .72-.168.826-.295A.767.767 0 0 0 14 11c0-.104-.043-.3-.174-.455c-.107-.127-.325-.295-.826-.295a.748.748 0 0 1-.218-.032c-.663-.095-1.164-.39-1.506-.798A2.263 2.263 0 0 1 10.75 8c0-.396.132-.95.526-1.42Z"
+                  />
+                </svg> </span
+              >JavaScript
+            </p>
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M4.85 2.372c-.251.145-.515.544-.546 1.416a.75.75 0 0 1-1.499-.053c.038-1.068.376-2.131 1.295-2.662c.922-.532 2.015-.29 2.961.214a.75.75 0 0 1-.706 1.324c-.773-.413-1.253-.384-1.505-.24m4.021 1.3a.75.75 0 0 1 1.056.1a16.46 16.46 0 0 1 1.57 2.268c1.04 1.802 1.681 3.648 1.854 5.196c.086.773.06 1.509-.12 2.14c-.183.635-.537 1.21-1.131 1.553c-.719.415-1.55.357-2.309.08c-.762-.278-1.547-.803-2.295-1.486a.75.75 0 0 1 1.011-1.108c.66.602 1.279.996 1.797 1.184c.522.19.85.145 1.046.031c.164-.095.33-.288.438-.667c.11-.384.145-.91.072-1.56c-.145-1.299-.7-2.947-1.663-4.613A14.994 14.994 0 0 0 8.772 4.73a.75.75 0 0 1 .1-1.056"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M14.5 8.206c0-.29-.214-.719-.953-1.18a.75.75 0 0 1 .795-1.273C15.248 6.32 16 7.144 16 8.206c0 1.064-.756 1.89-1.666 2.457a.75.75 0 0 1-.793-1.273c.744-.464.959-.894.959-1.184m-3.137 2.832a.75.75 0 0 1-.614.865A16.56 16.56 0 0 1 8 12.127c-2.08 0-4-.367-5.427-.992c-.713-.311-1.336-.702-1.792-1.174C.32 9.487 0 8.891 0 8.206c0-.83.466-1.52 1.085-2.04c.622-.521 1.47-.938 2.435-1.244a.75.75 0 0 1 .454 1.43c-.85.27-1.502.609-1.924.964c-.426.356-.55.663-.55.89c0 .19.085.43.359.713c.278.287.716.58 1.315.842c1.197.524 2.902.866 4.826.866c.885 0 1.727-.072 2.498-.203a.75.75 0 0 1 .865.614"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M4.872 13.63c.25.145.729.174 1.499-.235a.75.75 0 1 1 .704 1.325c-.944.501-2.034.74-2.953.21c-.922-.533-1.26-1.6-1.295-2.672a.75.75 0 0 1 1.499-.05c.03.875.294 1.277.546 1.422m-.884-4.133a.75.75 0 0 1-.442-.964c.302-.815.697-1.657 1.18-2.493c1.04-1.802 2.318-3.28 3.572-4.204c.626-.461 1.276-.806 1.913-.965c.641-.16 1.317-.141 1.91.202c.72.415 1.084 1.163 1.224 1.96c.141.799.078 1.741-.14 2.73a.75.75 0 1 1-1.464-.321c.191-.872.223-1.606.127-2.15c-.096-.546-.3-.807-.496-.92c-.164-.095-.415-.142-.797-.046c-.388.097-.86.33-1.387.718c-1.052.774-2.202 2.08-3.163 3.746a14.925 14.925 0 0 0-1.073 2.265a.75.75 0 0 1-.964.442"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M9.46 8.066a1.36 1.36 0 1 1-2.72 0a1.36 1.36 0 0 1 2.72 0"
+                  /></svg></span
+              >React.js
+            </p>
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 15V9l7.745 10.65A9 9 0 1 1 19 17.657M15 12V9"
+                  /></svg></span
+              >Next.js
+            </p>
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M12 23.956c-.342 0-.66-.089-.957-.243l-3.029-1.738c-.455-.242-.227-.33-.09-.374c.614-.198.728-.242 1.366-.595c.068-.044.16-.022.228.022l2.323 1.343c.09.044.205.044.273 0l9.087-5.084c.09-.044.136-.132.136-.242V6.899c0-.11-.045-.198-.136-.242l-9.087-5.061c-.091-.044-.205-.044-.273 0L2.754 6.657c-.091.044-.137.154-.137.242v10.146c0 .088.046.198.137.242l2.482 1.387c1.344.66 2.186-.11 2.186-.88V7.78c0-.132.114-.264.274-.264h1.161c.137 0 .273.11.273.264v10.013c0 1.739-.979 2.751-2.687 2.751c-.524 0-.934 0-2.095-.55l-2.391-1.32A1.847 1.847 0 0 1 1 17.067V6.921c0-.66.364-1.276.957-1.606L11.044.23a2.095 2.095 0 0 1 1.912 0l9.088 5.084c.592.33.956.946.956 1.606v10.146c0 .66-.364 1.276-.956 1.607l-9.087 5.083a2.4 2.4 0 0 1-.957.198m2.801-6.977c-3.985 0-4.805-1.76-4.805-3.257c0-.132.114-.264.273-.264h1.184c.137 0 .25.088.25.22c.183 1.166.707 1.738 3.121 1.738c1.913 0 2.733-.418 2.733-1.408c0-.572-.228-.99-3.211-1.276c-2.483-.243-4.031-.77-4.031-2.685c0-1.783 1.548-2.84 4.145-2.84c2.915 0 4.35.969 4.532 3.082a.347.347 0 0 1-.069.198c-.045.044-.113.088-.182.088h-1.184a.265.265 0 0 1-.25-.198c-.274-1.21-.98-1.607-2.847-1.607c-2.096 0-2.346.704-2.346 1.233c0 .638.296.836 3.12 1.188c2.801.352 4.122.858 4.122 2.75c-.023 1.938-1.662 3.038-4.555 3.038"
+                  /></svg></span
+              >Node.js
+            </p>
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M24 18.588a1.53 1.53 0 0 1-1.895-.72l-3.45-4.771l-.5-.667l-4.003 5.444a1.466 1.466 0 0 1-1.802.708l5.158-6.92l-4.798-6.251a1.595 1.595 0 0 1 1.9.666l3.576 4.83l3.596-4.81a1.435 1.435 0 0 1 1.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 0 0 0 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27c1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.08 4.08 0 0 0 2.582-2.876c.207-.666.548-.78 1.174-.588a5.42 5.42 0 0 1-2.589 3.957a6.27 6.27 0 0 1-7.306-.933a6.58 6.58 0 0 1-1.64-3.858c0-.235-.08-.455-.134-.666A88 88 0 0 1 0 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278c-2.882-.04-4.944 2.094-5.071 5.264z"
+                  /></svg></span
+              >Express.js
+            </p>
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M2 12a2 2 0 0 0 2-2V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2M2 12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4a2 2 0 0 1 2-2"
+                    />
+                    <path d="M9 16V8h3.5a2 2 0 1 1 0 4H9h4a2 2 0 1 1 0 4H9z" />
+                  </g>
+                </svg> </span
+              >Bootstrap
+            </p>
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11.667 6Q7.933 6 7 9.667q1.4-1.834 3.267-1.375c.71.174 1.217.68 1.778 1.24c.916.912 2 1.968 4.288 1.968q3.734 0 4.667-3.667q-1.4 1.834-3.267 1.375c-.71-.174-1.217-.68-1.778-1.24C15.039 7.056 13.98 6 11.667 6m-4 6.5Q3.933 12.5 3 16.167q1.4-1.834 3.267-1.375c.71.174 1.217.68 1.778 1.24c.916.912 1.975 1.968 4.288 1.968q3.734 0 4.667-3.667q-1.4 1.834-3.267 1.375c-.71-.174-1.217-.68-1.778-1.24c-.916-.912-1.975-1.968-4.288-1.968"
+                  />
+                </svg> </span
+              >Tailwind
+            </p>
+          </div>
+        </div>
+        <div class="styled-box skill-wrapper">
+          <div class="styled-box__title">
+            <h3 class="font-p font-p--big">Tools:</h3>
+          </div>
+          <div class="skill-wrapper__items row wrap">
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 15 15"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m6.793 1.207l.353.354l-.353-.354ZM1.207 6.793l-.353-.354l.353.354Zm0 1.414l.354-.353l-.354.353Zm5.586 5.586l-.354.353l.354-.353Zm1.414 0l-.353-.354l.353.354Zm5.586-5.586l.353.354l-.353-.354Zm0-1.414l-.354.353l.354-.353ZM8.207 1.207l.354-.353l-.354.353ZM6.44.854L.854 6.439l.707.707l5.585-5.585L6.44.854ZM.854 8.56l5.585 5.585l.707-.707l-5.585-5.585l-.707.707Zm7.707 5.585l5.585-5.585l-.707-.707l-5.585 5.585l.707.707Zm5.585-7.707L8.561.854l-.707.707l5.585 5.585l.707-.707Zm0 2.122a1.5 1.5 0 0 0 0-2.122l-.707.707a.5.5 0 0 1 0 .708l.707.707ZM6.44 14.146a1.5 1.5 0 0 0 2.122 0l-.707-.707a.5.5 0 0 1-.708 0l-.707.707ZM.854 6.44a1.5 1.5 0 0 0 0 2.122l.707-.707a.5.5 0 0 1 0-.708L.854 6.44Zm6.292-4.878a.5.5 0 0 1 .708 0L8.56.854a1.5 1.5 0 0 0-2.122 0l.707.707Zm-2 1.293l1 1l.708-.708l-1-1l-.708.708ZM7.5 5a.5.5 0 0 1-.5-.5H6A1.5 1.5 0 0 0 7.5 6V5Zm.5-.5a.5.5 0 0 1-.5.5v1A1.5 1.5 0 0 0 9 4.5H8ZM7.5 4a.5.5 0 0 1 .5.5h1A1.5 1.5 0 0 0 7.5 3v1Zm0-1A1.5 1.5 0 0 0 6 4.5h1a.5.5 0 0 1 .5-.5V3Zm.646 2.854l1.5 1.5l.707-.708l-1.5-1.5l-.707.708ZM10.5 8a.5.5 0 0 1-.5-.5H9A1.5 1.5 0 0 0 10.5 9V8Zm.5-.5a.5.5 0 0 1-.5.5v1A1.5 1.5 0 0 0 12 7.5h-1Zm-.5-.5a.5.5 0 0 1 .5.5h1A1.5 1.5 0 0 0 10.5 6v1Zm0-1A1.5 1.5 0 0 0 9 7.5h1a.5.5 0 0 1 .5-.5V6ZM7 5.5v4h1v-4H7Zm.5 5.5a.5.5 0 0 1-.5-.5H6A1.5 1.5 0 0 0 7.5 12v-1Zm.5-.5a.5.5 0 0 1-.5.5v1A1.5 1.5 0 0 0 9 10.5H8Zm-.5-.5a.5.5 0 0 1 .5.5h1A1.5 1.5 0 0 0 7.5 9v1Zm0-1A1.5 1.5 0 0 0 6 10.5h1a.5.5 0 0 1 .5-.5V9Z"
+                  />
+                </svg> </span
+              >Git
+            </p>
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 15 15"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M5.65 12.477a.5.5 0 1 0-.3-.954l.3.954Zm-3.648-2.96l-.484-.128l-.254.968l.484.127l.254-.968ZM9 14.5v.5h1v-.5H9Zm.063-4.813l-.054-.497a.5.5 0 0 0-.299.852l.352-.354ZM12.5 5.913h.5V5.91l-.5.002Zm-.833-2.007l-.466-.18a.5.5 0 0 0 .112.533l.354-.353Zm-.05-2.017l.456-.204a.5.5 0 0 0-.319-.276l-.137.48Zm-2.173.792l-.126.484a.5.5 0 0 0 .398-.064l-.272-.42Zm-3.888 0l-.272.42a.5.5 0 0 0 .398.064l-.126-.484ZM3.383 1.89l-.137-.48a.5.5 0 0 0-.32.276l.457.204Zm-.05 2.017l.354.353a.5.5 0 0 0 .112-.534l-.466.181ZM2.5 5.93H3v-.002l-.5.002Zm3.438 3.758l.352.355a.5.5 0 0 0-.293-.851l-.06.496ZM5.5 11H6l-.001-.037L5.5 11ZM5 14.5v.5h1v-.5H5Zm.35-2.977c-.603.19-.986.169-1.24.085c-.251-.083-.444-.25-.629-.49a4.8 4.8 0 0 1-.27-.402c-.085-.139-.182-.302-.28-.447c-.191-.281-.473-.633-.929-.753l-.254.968c.08.02.184.095.355.346c.082.122.16.252.258.412c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.51.168 1.116.15 1.852-.081l-.3-.954Zm4.65-.585c0-.318-.014-.608-.104-.878c-.096-.288-.262-.51-.481-.727l-.705.71c.155.153.208.245.237.333c.035.105.053.254.053.562h1Zm-.884-.753c.903-.097 1.888-.325 2.647-.982c.78-.675 1.237-1.729 1.237-3.29h-1c0 1.359-.39 2.1-.892 2.534c-.524.454-1.258.653-2.099.743l.107.995ZM13 5.91a3.354 3.354 0 0 0-.98-2.358l-.707.706c.438.44.685 1.034.687 1.655l1-.003Zm-.867-1.824c.15-.384.22-.794.21-1.207l-1 .025a2.12 2.12 0 0 1-.142.82l.932.362Zm.21-1.207a3.119 3.119 0 0 0-.27-1.195l-.913.408c.115.256.177.532.184.812l1-.025Zm-.726-.99c.137-.481.137-.482.136-.482h-.003l-.004-.002a.462.462 0 0 0-.03-.007a1.261 1.261 0 0 0-.212-.024a2.172 2.172 0 0 0-.51.054c-.425.091-1.024.317-1.82.832l.542.84c.719-.464 1.206-.634 1.488-.694a1.2 1.2 0 0 1 .306-.03l-.008-.001a.278.278 0 0 1-.01-.002l-.006-.002h-.003l-.002-.001c-.001 0-.002 0 .136-.482Zm-2.047.307a8.209 8.209 0 0 0-4.14 0l.252.968a7.209 7.209 0 0 1 3.636 0l.252-.968Zm-3.743.064c-.797-.514-1.397-.74-1.822-.83a2.17 2.17 0 0 0-.51-.053a1.259 1.259 0 0 0-.241.03l-.004.002h-.003l.136.481l.137.481h-.001l-.002.001l-.003.001a.327.327 0 0 1-.016.004l-.008.001h.008a1.19 1.19 0 0 1 .298.03c.282.06.769.23 1.488.694l.543-.84Zm-2.9-.576a3.12 3.12 0 0 0-.27 1.195l1 .025a2.09 2.09 0 0 1 .183-.812l-.913-.408Zm-.27 1.195c-.01.413.06.823.21 1.207l.932-.362a2.12 2.12 0 0 1-.143-.82l-1-.025Zm.322.673a3.354 3.354 0 0 0-.726 1.091l.924.38c.118-.285.292-.545.51-.765l-.708-.706Zm-.726 1.091A3.354 3.354 0 0 0 2 5.93l1-.003c0-.31.06-.616.177-.902l-.924-.38ZM2 5.93c0 1.553.458 2.597 1.239 3.268c.757.65 1.74.88 2.64.987l.118-.993C5.15 9.09 4.416 8.89 3.89 8.438C3.388 8.007 3 7.276 3 5.928H2Zm3.585 3.404c-.5.498-.629 1.09-.584 1.704L6 10.963c-.03-.408.052-.683.291-.921l-.705-.709ZM5 11v3.5h1V11H5Zm5 3.5V13H9v1.5h1Zm0-1.5v-2.063H9V13h1Z"
+                  />
+                </svg> </span
+              >Github
+            </p>
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 15 15"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M7 2.05H5.525a1.475 1.475 0 0 0 0 2.95H7V2.05Zm0-1h2.475a2.475 2.475 0 0 1 1.492 4.45A2.475 2.475 0 0 1 8 9.463v1.962A2.475 2.475 0 1 1 4.033 9.45a2.471 2.471 0 0 1-.983-1.975c0-.807.386-1.523.983-1.975a2.475 2.475 0 0 1 1.492-4.45H7Zm1 1V5h1.475a1.475 1.475 0 1 0 0-2.95H8Zm-2.475 6.9H7V6H5.525a1.475 1.475 0 0 0-.006 2.95h.006ZM4.05 11.425c0-.813.657-1.472 1.47-1.475H7v1.475a1.475 1.475 0 0 1-2.95 0ZM8 7.472a1.475 1.475 0 1 1 0 .006v-.006Z"
+                    clip-rule="evenodd"
+                  />
+                </svg> </span
+              >Figma
+            </p>
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M7.666 14.871c.237.147 3.818.875 4.693 1.02c.303.064.088.376-.33.587c-.943.251-5.517-1.607-4.363-1.607zm5.647-13.264l3.505 3.56c.333.34.328.998.142 1.187l-1.74-1.392l-.342 2.061l-1.455-.767l-2.328 1.47l-.771-3.1L9.073 6.79H7.16c-.78 0-.871-.99-.163-1.698c1.237-1.335 2.657-2.696 3.429-3.485c.776-.793 2.127-.77 2.887 0zM9.786.97l-8.86 9.066c-2.993 3.707 2.038 3.276 4.194 4.343c.774.791-2.965 1.375-2.191 2.166c.773.791 4.678 1.524 5.453 2.314c.773.791-1.584 1.63-.81 2.42c.773.792 2.563.042 2.898 1.868c.238 1.304 3.224.56 4.684-.508c.774-.791-1.48-.717-.706-1.508c1.923-1.967 3.715-.714 4.373-2.686c.325-.974-2.832-1.501-2.057-2.292c2.226-1.3 9.919-2.146 6.268-5.796L13.85.97c-1.123-1.078-2.998-1.09-4.063 0zm10.177 17.475c0 .45 3.314.745 3.314-.106c-.472-1.366-2.922-1.274-3.314.106zm-14.928 2.39c.784.679 1.997-.169 2.36-1.116c-.76-1.01-3.607.037-2.36 1.116zm14.512-1.466c-1.011.908.114 1.828 1.111 1.242c.222-.225-.006-1.016-1.11-1.242Z"
+                  />
+                </svg> </span
+              >Inkscape
+            </p>
+            <p class="skill-box row font-p font-p--big">
+              <span class="skill-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 128 128"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M123.965 91.902c-7.246-18.297-13.262-37.058-20.184-55.476c-3.054-7.84-6.047-15.746-10.215-23.082c-1.656-2.633-3.238-5.528-5.953-7.215a4 4 0 0 0-2.222-.606c-1.27.028-2.536.594-3.504 1.415c-3.645 2.886-5.805 7.082-8.227 10.949c-4.277 7.172-8.789 14.687-15.941 19.347c-3.36 2.371-7.762 2.63-11 5.172c-4.43 3.34-7.442 8.078-11.074 12.184c-.829.988-2.11 1.383-3.227 1.918C21.578 60.93 10.738 65.336 0 69.98c9.09 7.032 18.777 13.29 28.05 20.079c2.544-.504 5.098-1.547 7.72-1.082c4.16 1.3 6.597 5.285 8.503 8.93c3.875 7.94 6.676 16.323 9.813 24.57c5.246-.375 9.969-3.079 14.027-6.258c7.809-6.324 13.758-14.5 20.305-22.047c3.14-3.3 6.34-7.23 11.05-8.149c4.762-1.152 9.864.555 13.395 3.836c4.957 4.43 9.344 9.551 15.137 12.942c-.777-3.836-2.645-7.278-4.035-10.899M42.96 79.012c-4.57 2.703-9.426 4.93-14.176 7.289c-7.457-4.996-14.723-10.29-22.05-15.465c9.878-4.328 19.91-8.348 29.917-12.387c4.746 3.703 9.637 7.223 14.383 10.926c-2.23 3.563-4.914 6.871-8.074 9.637m10.168-12.414C48.414 63.058 43.64 59.609 39 55.977c2.977-4.055 6.238-7.977 10.14-11.172c2.587-1.657 5.743-2.117 8.426-3.61c6.368-3.18 10.711-9.011 14.86-14.582c-5.317 13.805-10.992 27.664-19.297 39.985zm0 0"
+                  />
+                </svg> </span
+              >Matlab
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="section projects">
+      <h2 class="section-title font-h2 font-h2--big">
+        <span class="guides"></span>Projects
+      </h2>
+      <div class="carousel-wrapper">
+        <div class="search-box">
+          <input
+            id="input-box"
+            class="search-box__input styled-box font-p font-p--small"
+            type="text"
+            placeholder="Search by tag or name"
+          />
+          <p class="search-box__error font-p font-p--small">
+            Ups...no project with this atributes
+          </p>
+        </div>
+        <ul class="section__projects row project-carousel">
+          <li class="project-card styled-box-1 project-carousel__item">
+            <div class="styled-box__title styled-box__title--centered">
+              <h3 class="font-p font-p--big">
+                Name: <span class="js-card-names">DevJobs web app</span>
+              </h3>
+            </div>
+            <div class="project-card__image-wrapper">
+              <picture>
+                <source
+                  srcset="
+                    assets/img/DevJobs@300w.webp 1x,
+                    assets/img/DevJobs@600w.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    assets/img/DevJobs@300w.jpg 1x,
+                    assets/img/DevJobs@600w.jpg 2x
+                  "
+                  src="assets/img/DevJobs@300w.jpg"
+                  alt="webpage screenshot"
+                  loading="lazy"
+                />
+              </picture>
+              <a
+                class="project-card__github-btn"
+                title="Github Repository"
+                href="https://github.com/Dantalian5/devjobs-web-app"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 15 15"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M5.65 12.477a.5.5 0 1 0-.3-.954l.3.954Zm-3.648-2.96l-.484-.128l-.254.968l.484.127l.254-.968ZM9 14.5v.5h1v-.5H9Zm.063-4.813l-.054-.497a.5.5 0 0 0-.299.852l.352-.354ZM12.5 5.913h.5V5.91l-.5.002Zm-.833-2.007l-.466-.18a.5.5 0 0 0 .112.533l.354-.353Zm-.05-2.017l.456-.204a.5.5 0 0 0-.319-.276l-.137.48Zm-2.173.792l-.126.484a.5.5 0 0 0 .398-.064l-.272-.42Zm-3.888 0l-.272.42a.5.5 0 0 0 .398.064l-.126-.484ZM3.383 1.89l-.137-.48a.5.5 0 0 0-.32.276l.457.204Zm-.05 2.017l.354.353a.5.5 0 0 0 .112-.534l-.466.181ZM2.5 5.93H3v-.002l-.5.002Zm3.438 3.758l.352.355a.5.5 0 0 0-.293-.851l-.06.496ZM5.5 11H6l-.001-.037L5.5 11ZM5 14.5v.5h1v-.5H5Zm.35-2.977c-.603.19-.986.169-1.24.085c-.251-.083-.444-.25-.629-.49a4.8 4.8 0 0 1-.27-.402c-.085-.139-.182-.302-.28-.447c-.191-.281-.473-.633-.929-.753l-.254.968c.08.02.184.095.355.346c.082.122.16.252.258.412c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.51.168 1.116.15 1.852-.081l-.3-.954Zm4.65-.585c0-.318-.014-.608-.104-.878c-.096-.288-.262-.51-.481-.727l-.705.71c.155.153.208.245.237.333c.035.105.053.254.053.562h1Zm-.884-.753c.903-.097 1.888-.325 2.647-.982c.78-.675 1.237-1.729 1.237-3.29h-1c0 1.359-.39 2.1-.892 2.534c-.524.454-1.258.653-2.099.743l.107.995ZM13 5.91a3.354 3.354 0 0 0-.98-2.358l-.707.706c.438.44.685 1.034.687 1.655l1-.003Zm-.867-1.824c.15-.384.22-.794.21-1.207l-1 .025a2.12 2.12 0 0 1-.142.82l.932.362Zm.21-1.207a3.119 3.119 0 0 0-.27-1.195l-.913.408c.115.256.177.532.184.812l1-.025Zm-.726-.99c.137-.481.137-.482.136-.482h-.003l-.004-.002a.462.462 0 0 0-.03-.007a1.261 1.261 0 0 0-.212-.024a2.172 2.172 0 0 0-.51.054c-.425.091-1.024.317-1.82.832l.542.84c.719-.464 1.206-.634 1.488-.694a1.2 1.2 0 0 1 .306-.03l-.008-.001a.278.278 0 0 1-.01-.002l-.006-.002h-.003l-.002-.001c-.001 0-.002 0 .136-.482Zm-2.047.307a8.209 8.209 0 0 0-4.14 0l.252.968a7.209 7.209 0 0 1 3.636 0l.252-.968Zm-3.743.064c-.797-.514-1.397-.74-1.822-.83a2.17 2.17 0 0 0-.51-.053a1.259 1.259 0 0 0-.241.03l-.004.002h-.003l.136.481l.137.481h-.001l-.002.001l-.003.001a.327.327 0 0 1-.016.004l-.008.001h.008a1.19 1.19 0 0 1 .298.03c.282.06.769.23 1.488.694l.543-.84Zm-2.9-.576a3.12 3.12 0 0 0-.27 1.195l1 .025a2.09 2.09 0 0 1 .183-.812l-.913-.408Zm-.27 1.195c-.01.413.06.823.21 1.207l.932-.362a2.12 2.12 0 0 1-.143-.82l-1-.025Zm.322.673a3.354 3.354 0 0 0-.726 1.091l.924.38c.118-.285.292-.545.51-.765l-.708-.706Zm-.726 1.091A3.354 3.354 0 0 0 2 5.93l1-.003c0-.31.06-.616.177-.902l-.924-.38ZM2 5.93c0 1.553.458 2.597 1.239 3.268c.757.65 1.74.88 2.64.987l.118-.993C5.15 9.09 4.416 8.89 3.89 8.438C3.388 8.007 3 7.276 3 5.928H2Zm3.585 3.404c-.5.498-.629 1.09-.584 1.704L6 10.963c-.03-.408.052-.683.291-.921l-.705-.709ZM5 11v3.5h1V11H5Zm5 3.5V13H9v1.5h1Zm0-1.5v-2.063H9V13h1Z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="project-card__info">
+              <a
+                class="project-card__btn-live-site font-p font-p--small sotolined"
+                href="https://devjobs-web-app-five.vercel.app/"
+                target="_blank"
+              >
+                Live Site
+                <svg
+                  class="project-card__live-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13.5 10.5L21 3m-5 0h5v5m0 6v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
+                  />
+                </svg>
+              </a>
+              <p class="font-p font-p--small">
+                Description: This is a solution to the "DevJobs web app"
+                challenge on Frontend Mentor.
+              </p>
+              <p class="font-p font-p--small">
+                Tags: <span class="js-card-tags">react, firestore, css</span>
+              </p>
+            </div>
+          </li>
+          <li class="project-card styled-box-1 project-carousel__item">
+            <div class="styled-box__title styled-box__title--centered">
+              <h3 class="font-p font-p--big">
+                Name: <span class="js-card-names">WorldCountries web app</span>
+              </h3>
+            </div>
+            <div class="project-card__image-wrapper">
+              <picture>
+                <source
+                  srcset="
+                    assets/img/WorldCountries@300w.webp 1x,
+                    assets/img/WorldCountries@600w.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    assets/img/WorldCountries@300w.jpg 1x,
+                    assets/img/WorldCountries@600w.jpg 2x
+                  "
+                  src="assets/img/WorldCountries@300w.jpg"
+                  alt="webpage screenshot"
+                  loading="lazy"
+                />
+              </picture>
+              <a
+                class="project-card__github-btn"
+                title="Github Repository"
+                href="https://github.com/Dantalian5/worldcountries-web-app"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 15 15"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M5.65 12.477a.5.5 0 1 0-.3-.954l.3.954Zm-3.648-2.96l-.484-.128l-.254.968l.484.127l.254-.968ZM9 14.5v.5h1v-.5H9Zm.063-4.813l-.054-.497a.5.5 0 0 0-.299.852l.352-.354ZM12.5 5.913h.5V5.91l-.5.002Zm-.833-2.007l-.466-.18a.5.5 0 0 0 .112.533l.354-.353Zm-.05-2.017l.456-.204a.5.5 0 0 0-.319-.276l-.137.48Zm-2.173.792l-.126.484a.5.5 0 0 0 .398-.064l-.272-.42Zm-3.888 0l-.272.42a.5.5 0 0 0 .398.064l-.126-.484ZM3.383 1.89l-.137-.48a.5.5 0 0 0-.32.276l.457.204Zm-.05 2.017l.354.353a.5.5 0 0 0 .112-.534l-.466.181ZM2.5 5.93H3v-.002l-.5.002Zm3.438 3.758l.352.355a.5.5 0 0 0-.293-.851l-.06.496ZM5.5 11H6l-.001-.037L5.5 11ZM5 14.5v.5h1v-.5H5Zm.35-2.977c-.603.19-.986.169-1.24.085c-.251-.083-.444-.25-.629-.49a4.8 4.8 0 0 1-.27-.402c-.085-.139-.182-.302-.28-.447c-.191-.281-.473-.633-.929-.753l-.254.968c.08.02.184.095.355.346c.082.122.16.252.258.412c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.51.168 1.116.15 1.852-.081l-.3-.954Zm4.65-.585c0-.318-.014-.608-.104-.878c-.096-.288-.262-.51-.481-.727l-.705.71c.155.153.208.245.237.333c.035.105.053.254.053.562h1Zm-.884-.753c.903-.097 1.888-.325 2.647-.982c.78-.675 1.237-1.729 1.237-3.29h-1c0 1.359-.39 2.1-.892 2.534c-.524.454-1.258.653-2.099.743l.107.995ZM13 5.91a3.354 3.354 0 0 0-.98-2.358l-.707.706c.438.44.685 1.034.687 1.655l1-.003Zm-.867-1.824c.15-.384.22-.794.21-1.207l-1 .025a2.12 2.12 0 0 1-.142.82l.932.362Zm.21-1.207a3.119 3.119 0 0 0-.27-1.195l-.913.408c.115.256.177.532.184.812l1-.025Zm-.726-.99c.137-.481.137-.482.136-.482h-.003l-.004-.002a.462.462 0 0 0-.03-.007a1.261 1.261 0 0 0-.212-.024a2.172 2.172 0 0 0-.51.054c-.425.091-1.024.317-1.82.832l.542.84c.719-.464 1.206-.634 1.488-.694a1.2 1.2 0 0 1 .306-.03l-.008-.001a.278.278 0 0 1-.01-.002l-.006-.002h-.003l-.002-.001c-.001 0-.002 0 .136-.482Zm-2.047.307a8.209 8.209 0 0 0-4.14 0l.252.968a7.209 7.209 0 0 1 3.636 0l.252-.968Zm-3.743.064c-.797-.514-1.397-.74-1.822-.83a2.17 2.17 0 0 0-.51-.053a1.259 1.259 0 0 0-.241.03l-.004.002h-.003l.136.481l.137.481h-.001l-.002.001l-.003.001a.327.327 0 0 1-.016.004l-.008.001h.008a1.19 1.19 0 0 1 .298.03c.282.06.769.23 1.488.694l.543-.84Zm-2.9-.576a3.12 3.12 0 0 0-.27 1.195l1 .025a2.09 2.09 0 0 1 .183-.812l-.913-.408Zm-.27 1.195c-.01.413.06.823.21 1.207l.932-.362a2.12 2.12 0 0 1-.143-.82l-1-.025Zm.322.673a3.354 3.354 0 0 0-.726 1.091l.924.38c.118-.285.292-.545.51-.765l-.708-.706Zm-.726 1.091A3.354 3.354 0 0 0 2 5.93l1-.003c0-.31.06-.616.177-.902l-.924-.38ZM2 5.93c0 1.553.458 2.597 1.239 3.268c.757.65 1.74.88 2.64.987l.118-.993C5.15 9.09 4.416 8.89 3.89 8.438C3.388 8.007 3 7.276 3 5.928H2Zm3.585 3.404c-.5.498-.629 1.09-.584 1.704L6 10.963c-.03-.408.052-.683.291-.921l-.705-.709ZM5 11v3.5h1V11H5Zm5 3.5V13H9v1.5h1Zm0-1.5v-2.063H9V13h1Z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="project-card__info">
+              <a
+                class="project-card__btn-live-site font-p font-p--small sotolined"
+                href="https://worldcountries-web-app.vercel.app/"
+                target="_blank"
+              >
+                Live Site
+                <svg
+                  class="project-card__live-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13.5 10.5L21 3m-5 0h5v5m0 6v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
+                  />
+                </svg>
+              </a>
+              <p class="font-p font-p--small">
+                Description: This is a solution to the "WorldCountries web app"
+                challenge on Frontend Mentor.
+              </p>
+              <p class="font-p font-p--small">
+                Tags: <span class="js-card-tags">react, tailwind, api</span>
+              </p>
+            </div>
+          </li>
+          <li class="project-card styled-box-1 project-carousel__item">
+            <div class="styled-box__title styled-box__title--centered">
+              <h3 class="font-p font-p--big">
+                Name: <span class="js-card-names">Art Gallery Website</span>
+              </h3>
+            </div>
+            <div class="project-card__image-wrapper">
+              <picture>
+                <source
+                  srcset="
+                    assets/img/art-gallery-screenshot@300w.webp 1x,
+                    assets/img/art-gallery-screenshot@600w.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    assets/img/art-gallery-screenshot@300w.jpg 1x,
+                    assets/img/art-gallery-screenshot@600w.jpg 2x
+                  "
+                  src="assets/img/art-gallery-screenshot@300w.jpg"
+                  alt="webpage screenshot"
+                  loading="lazy"
+                />
+              </picture>
+              <a
+                class="project-card__github-btn"
+                title="Github Repository"
+                href="https://github.com/Dantalian5/Art-gallery-website"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 15 15"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M5.65 12.477a.5.5 0 1 0-.3-.954l.3.954Zm-3.648-2.96l-.484-.128l-.254.968l.484.127l.254-.968ZM9 14.5v.5h1v-.5H9Zm.063-4.813l-.054-.497a.5.5 0 0 0-.299.852l.352-.354ZM12.5 5.913h.5V5.91l-.5.002Zm-.833-2.007l-.466-.18a.5.5 0 0 0 .112.533l.354-.353Zm-.05-2.017l.456-.204a.5.5 0 0 0-.319-.276l-.137.48Zm-2.173.792l-.126.484a.5.5 0 0 0 .398-.064l-.272-.42Zm-3.888 0l-.272.42a.5.5 0 0 0 .398.064l-.126-.484ZM3.383 1.89l-.137-.48a.5.5 0 0 0-.32.276l.457.204Zm-.05 2.017l.354.353a.5.5 0 0 0 .112-.534l-.466.181ZM2.5 5.93H3v-.002l-.5.002Zm3.438 3.758l.352.355a.5.5 0 0 0-.293-.851l-.06.496ZM5.5 11H6l-.001-.037L5.5 11ZM5 14.5v.5h1v-.5H5Zm.35-2.977c-.603.19-.986.169-1.24.085c-.251-.083-.444-.25-.629-.49a4.8 4.8 0 0 1-.27-.402c-.085-.139-.182-.302-.28-.447c-.191-.281-.473-.633-.929-.753l-.254.968c.08.02.184.095.355.346c.082.122.16.252.258.412c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.51.168 1.116.15 1.852-.081l-.3-.954Zm4.65-.585c0-.318-.014-.608-.104-.878c-.096-.288-.262-.51-.481-.727l-.705.71c.155.153.208.245.237.333c.035.105.053.254.053.562h1Zm-.884-.753c.903-.097 1.888-.325 2.647-.982c.78-.675 1.237-1.729 1.237-3.29h-1c0 1.359-.39 2.1-.892 2.534c-.524.454-1.258.653-2.099.743l.107.995ZM13 5.91a3.354 3.354 0 0 0-.98-2.358l-.707.706c.438.44.685 1.034.687 1.655l1-.003Zm-.867-1.824c.15-.384.22-.794.21-1.207l-1 .025a2.12 2.12 0 0 1-.142.82l.932.362Zm.21-1.207a3.119 3.119 0 0 0-.27-1.195l-.913.408c.115.256.177.532.184.812l1-.025Zm-.726-.99c.137-.481.137-.482.136-.482h-.003l-.004-.002a.462.462 0 0 0-.03-.007a1.261 1.261 0 0 0-.212-.024a2.172 2.172 0 0 0-.51.054c-.425.091-1.024.317-1.82.832l.542.84c.719-.464 1.206-.634 1.488-.694a1.2 1.2 0 0 1 .306-.03l-.008-.001a.278.278 0 0 1-.01-.002l-.006-.002h-.003l-.002-.001c-.001 0-.002 0 .136-.482Zm-2.047.307a8.209 8.209 0 0 0-4.14 0l.252.968a7.209 7.209 0 0 1 3.636 0l.252-.968Zm-3.743.064c-.797-.514-1.397-.74-1.822-.83a2.17 2.17 0 0 0-.51-.053a1.259 1.259 0 0 0-.241.03l-.004.002h-.003l.136.481l.137.481h-.001l-.002.001l-.003.001a.327.327 0 0 1-.016.004l-.008.001h.008a1.19 1.19 0 0 1 .298.03c.282.06.769.23 1.488.694l.543-.84Zm-2.9-.576a3.12 3.12 0 0 0-.27 1.195l1 .025a2.09 2.09 0 0 1 .183-.812l-.913-.408Zm-.27 1.195c-.01.413.06.823.21 1.207l.932-.362a2.12 2.12 0 0 1-.143-.82l-1-.025Zm.322.673a3.354 3.354 0 0 0-.726 1.091l.924.38c.118-.285.292-.545.51-.765l-.708-.706Zm-.726 1.091A3.354 3.354 0 0 0 2 5.93l1-.003c0-.31.06-.616.177-.902l-.924-.38ZM2 5.93c0 1.553.458 2.597 1.239 3.268c.757.65 1.74.88 2.64.987l.118-.993C5.15 9.09 4.416 8.89 3.89 8.438C3.388 8.007 3 7.276 3 5.928H2Zm3.585 3.404c-.5.498-.629 1.09-.584 1.704L6 10.963c-.03-.408.052-.683.291-.921l-.705-.709ZM5 11v3.5h1V11H5Zm5 3.5V13H9v1.5h1Zm0-1.5v-2.063H9V13h1Z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="project-card__info">
+              <a
+                class="project-card__btn-live-site font-p font-p--small sotolined"
+                href="https://dantalian5.github.io/Art-gallery-website/index.html"
+                target="_blank"
+              >
+                Live Site
+                <svg
+                  class="project-card__live-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13.5 10.5L21 3m-5 0h5v5m0 6v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
+                  />
+                </svg>
+              </a>
+              <p class="font-p font-p--small">
+                Description: This is a solution to the "Art gallery website"
+                challenge on Frontend Mentor.
+              </p>
+              <p class="font-p font-p--small">
+                Tags: <span class="js-card-tags">html, css</span>
+              </p>
+            </div>
+          </li>
+          <li class="project-card styled-box-1 project-carousel__item">
+            <div class="styled-box__title styled-box__title--centered">
+              <h3 class="font-p font-p--big">
+                Name: <span class="js-card-names">Typemaster landing page</span>
+              </h3>
+            </div>
+            <div class="project-card__image-wrapper">
+              <picture>
+                <source
+                  srcset="
+                    assets/img/typemaster-landing-screenshot@300w.webp 1x,
+                    assets/img/typemaster-landing-screenshot@600w.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    assets/img/typemaster-landing-screenshot@300w.jpg 1x,
+                    assets/img/typemaster-landing-screenshot@600w.jpg 2x
+                  "
+                  src="assets/img/typemaster-landing-screenshot@300w.jpg"
+                  alt="webpage screenshot"
+                  loading="lazy"
+                />
+              </picture>
+              <a
+                class="project-card__github-btn"
+                title="Github Repository"
+                href="https://github.com/Dantalian5/typemaster-pre-launch-landing-page"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 15 15"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M5.65 12.477a.5.5 0 1 0-.3-.954l.3.954Zm-3.648-2.96l-.484-.128l-.254.968l.484.127l.254-.968ZM9 14.5v.5h1v-.5H9Zm.063-4.813l-.054-.497a.5.5 0 0 0-.299.852l.352-.354ZM12.5 5.913h.5V5.91l-.5.002Zm-.833-2.007l-.466-.18a.5.5 0 0 0 .112.533l.354-.353Zm-.05-2.017l.456-.204a.5.5 0 0 0-.319-.276l-.137.48Zm-2.173.792l-.126.484a.5.5 0 0 0 .398-.064l-.272-.42Zm-3.888 0l-.272.42a.5.5 0 0 0 .398.064l-.126-.484ZM3.383 1.89l-.137-.48a.5.5 0 0 0-.32.276l.457.204Zm-.05 2.017l.354.353a.5.5 0 0 0 .112-.534l-.466.181ZM2.5 5.93H3v-.002l-.5.002Zm3.438 3.758l.352.355a.5.5 0 0 0-.293-.851l-.06.496ZM5.5 11H6l-.001-.037L5.5 11ZM5 14.5v.5h1v-.5H5Zm.35-2.977c-.603.19-.986.169-1.24.085c-.251-.083-.444-.25-.629-.49a4.8 4.8 0 0 1-.27-.402c-.085-.139-.182-.302-.28-.447c-.191-.281-.473-.633-.929-.753l-.254.968c.08.02.184.095.355.346c.082.122.16.252.258.412c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.51.168 1.116.15 1.852-.081l-.3-.954Zm4.65-.585c0-.318-.014-.608-.104-.878c-.096-.288-.262-.51-.481-.727l-.705.71c.155.153.208.245.237.333c.035.105.053.254.053.562h1Zm-.884-.753c.903-.097 1.888-.325 2.647-.982c.78-.675 1.237-1.729 1.237-3.29h-1c0 1.359-.39 2.1-.892 2.534c-.524.454-1.258.653-2.099.743l.107.995ZM13 5.91a3.354 3.354 0 0 0-.98-2.358l-.707.706c.438.44.685 1.034.687 1.655l1-.003Zm-.867-1.824c.15-.384.22-.794.21-1.207l-1 .025a2.12 2.12 0 0 1-.142.82l.932.362Zm.21-1.207a3.119 3.119 0 0 0-.27-1.195l-.913.408c.115.256.177.532.184.812l1-.025Zm-.726-.99c.137-.481.137-.482.136-.482h-.003l-.004-.002a.462.462 0 0 0-.03-.007a1.261 1.261 0 0 0-.212-.024a2.172 2.172 0 0 0-.51.054c-.425.091-1.024.317-1.82.832l.542.84c.719-.464 1.206-.634 1.488-.694a1.2 1.2 0 0 1 .306-.03l-.008-.001a.278.278 0 0 1-.01-.002l-.006-.002h-.003l-.002-.001c-.001 0-.002 0 .136-.482Zm-2.047.307a8.209 8.209 0 0 0-4.14 0l.252.968a7.209 7.209 0 0 1 3.636 0l.252-.968Zm-3.743.064c-.797-.514-1.397-.74-1.822-.83a2.17 2.17 0 0 0-.51-.053a1.259 1.259 0 0 0-.241.03l-.004.002h-.003l.136.481l.137.481h-.001l-.002.001l-.003.001a.327.327 0 0 1-.016.004l-.008.001h.008a1.19 1.19 0 0 1 .298.03c.282.06.769.23 1.488.694l.543-.84Zm-2.9-.576a3.12 3.12 0 0 0-.27 1.195l1 .025a2.09 2.09 0 0 1 .183-.812l-.913-.408Zm-.27 1.195c-.01.413.06.823.21 1.207l.932-.362a2.12 2.12 0 0 1-.143-.82l-1-.025Zm.322.673a3.354 3.354 0 0 0-.726 1.091l.924.38c.118-.285.292-.545.51-.765l-.708-.706Zm-.726 1.091A3.354 3.354 0 0 0 2 5.93l1-.003c0-.31.06-.616.177-.902l-.924-.38ZM2 5.93c0 1.553.458 2.597 1.239 3.268c.757.65 1.74.88 2.64.987l.118-.993C5.15 9.09 4.416 8.89 3.89 8.438C3.388 8.007 3 7.276 3 5.928H2Zm3.585 3.404c-.5.498-.629 1.09-.584 1.704L6 10.963c-.03-.408.052-.683.291-.921l-.705-.709ZM5 11v3.5h1V11H5Zm5 3.5V13H9v1.5h1Zm0-1.5v-2.063H9V13h1Z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="project-card__info">
+              <a
+                class="project-card__btn-live-site font-p font-p--small sotolined"
+                href="https://dantalian5.github.io/typemaster-pre-launch-landing-page/"
+                target="_blank"
+              >
+                Live Site
+                <svg
+                  class="project-card__live-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13.5 10.5L21 3m-5 0h5v5m0 6v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
+                  />
+                </svg>
+              </a>
+              <p class="font-p font-p--small">
+                Description: This is a solution to the "Typemaster pre-launch
+                landing page" challenge on Frontend Mentor.
+              </p>
+              <p class="font-p font-p--small">
+                Tags: <span class="js-card-tags">html, css</span>
+              </p>
+            </div>
+          </li>
+          <li class="project-card styled-box-1 project-carousel__item">
+            <div class="styled-box__title styled-box__title--centered">
+              <h3 class="font-p font-p--big">
+                Name: <span class="js-card-names">Suite landing page</span>
+              </h3>
+            </div>
+            <div class="project-card__image-wrapper">
+              <picture>
+                <source
+                  srcset="
+                    assets/img/suit-landing-screenshot@300w.webp 1x,
+                    assets/img/suit-landing-screenshot@600w.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    assets/img/suit-landing-screenshot@300w.jpg 1x,
+                    assets/img/suit-landing-screenshot@600w.jpg 2x
+                  "
+                  src="assets/img/suit-landing-screenshot@300w.jpg"
+                  alt="webpage screenshot"
+                  loading="lazy"
+                />
+              </picture>
+              <a
+                class="project-card__github-btn"
+                title="Github Repository"
+                href="https://github.com/Dantalian5/suite-landing-page"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 15 15"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M5.65 12.477a.5.5 0 1 0-.3-.954l.3.954Zm-3.648-2.96l-.484-.128l-.254.968l.484.127l.254-.968ZM9 14.5v.5h1v-.5H9Zm.063-4.813l-.054-.497a.5.5 0 0 0-.299.852l.352-.354ZM12.5 5.913h.5V5.91l-.5.002Zm-.833-2.007l-.466-.18a.5.5 0 0 0 .112.533l.354-.353Zm-.05-2.017l.456-.204a.5.5 0 0 0-.319-.276l-.137.48Zm-2.173.792l-.126.484a.5.5 0 0 0 .398-.064l-.272-.42Zm-3.888 0l-.272.42a.5.5 0 0 0 .398.064l-.126-.484ZM3.383 1.89l-.137-.48a.5.5 0 0 0-.32.276l.457.204Zm-.05 2.017l.354.353a.5.5 0 0 0 .112-.534l-.466.181ZM2.5 5.93H3v-.002l-.5.002Zm3.438 3.758l.352.355a.5.5 0 0 0-.293-.851l-.06.496ZM5.5 11H6l-.001-.037L5.5 11ZM5 14.5v.5h1v-.5H5Zm.35-2.977c-.603.19-.986.169-1.24.085c-.251-.083-.444-.25-.629-.49a4.8 4.8 0 0 1-.27-.402c-.085-.139-.182-.302-.28-.447c-.191-.281-.473-.633-.929-.753l-.254.968c.08.02.184.095.355.346c.082.122.16.252.258.412c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.51.168 1.116.15 1.852-.081l-.3-.954Zm4.65-.585c0-.318-.014-.608-.104-.878c-.096-.288-.262-.51-.481-.727l-.705.71c.155.153.208.245.237.333c.035.105.053.254.053.562h1Zm-.884-.753c.903-.097 1.888-.325 2.647-.982c.78-.675 1.237-1.729 1.237-3.29h-1c0 1.359-.39 2.1-.892 2.534c-.524.454-1.258.653-2.099.743l.107.995ZM13 5.91a3.354 3.354 0 0 0-.98-2.358l-.707.706c.438.44.685 1.034.687 1.655l1-.003Zm-.867-1.824c.15-.384.22-.794.21-1.207l-1 .025a2.12 2.12 0 0 1-.142.82l.932.362Zm.21-1.207a3.119 3.119 0 0 0-.27-1.195l-.913.408c.115.256.177.532.184.812l1-.025Zm-.726-.99c.137-.481.137-.482.136-.482h-.003l-.004-.002a.462.462 0 0 0-.03-.007a1.261 1.261 0 0 0-.212-.024a2.172 2.172 0 0 0-.51.054c-.425.091-1.024.317-1.82.832l.542.84c.719-.464 1.206-.634 1.488-.694a1.2 1.2 0 0 1 .306-.03l-.008-.001a.278.278 0 0 1-.01-.002l-.006-.002h-.003l-.002-.001c-.001 0-.002 0 .136-.482Zm-2.047.307a8.209 8.209 0 0 0-4.14 0l.252.968a7.209 7.209 0 0 1 3.636 0l.252-.968Zm-3.743.064c-.797-.514-1.397-.74-1.822-.83a2.17 2.17 0 0 0-.51-.053a1.259 1.259 0 0 0-.241.03l-.004.002h-.003l.136.481l.137.481h-.001l-.002.001l-.003.001a.327.327 0 0 1-.016.004l-.008.001h.008a1.19 1.19 0 0 1 .298.03c.282.06.769.23 1.488.694l.543-.84Zm-2.9-.576a3.12 3.12 0 0 0-.27 1.195l1 .025a2.09 2.09 0 0 1 .183-.812l-.913-.408Zm-.27 1.195c-.01.413.06.823.21 1.207l.932-.362a2.12 2.12 0 0 1-.143-.82l-1-.025Zm.322.673a3.354 3.354 0 0 0-.726 1.091l.924.38c.118-.285.292-.545.51-.765l-.708-.706Zm-.726 1.091A3.354 3.354 0 0 0 2 5.93l1-.003c0-.31.06-.616.177-.902l-.924-.38ZM2 5.93c0 1.553.458 2.597 1.239 3.268c.757.65 1.74.88 2.64.987l.118-.993C5.15 9.09 4.416 8.89 3.89 8.438C3.388 8.007 3 7.276 3 5.928H2Zm3.585 3.404c-.5.498-.629 1.09-.584 1.704L6 10.963c-.03-.408.052-.683.291-.921l-.705-.709ZM5 11v3.5h1V11H5Zm5 3.5V13H9v1.5h1Zm0-1.5v-2.063H9V13h1Z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="project-card__info">
+              <a
+                class="project-card__btn-live-site font-p font-p--small sotolined"
+                href="https://dantalian5.github.io/suite-landing-page/"
+                target="_blank"
+              >
+                Live Site
+                <svg
+                  class="project-card__live-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13.5 10.5L21 3m-5 0h5v5m0 6v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
+                  />
+                </svg>
+              </a>
+              <p class="font-p font-p--small">
+                Description: This is a solution to the "Suite landing page"
+                challenge on Frontend Mentor.
+              </p>
+              <p class="font-p font-p--small">
+                Tags: <span class="js-card-tags">html, css</span>
+              </p>
+            </div>
+          </li>
+          <li class="project-card styled-box-1 project-carousel__item">
+            <div class="styled-box__title styled-box__title--centered">
+              <h3 class="font-p font-p--big">
+                Name: <span class="js-card-names">JS simple counter</span>
+              </h3>
+            </div>
+            <div class="project-card__image-wrapper">
+              <picture>
+                <source
+                  srcset="
+                    https://raw.githubusercontent.com/Dantalian5/js-simple-counter/main/screenshots/webp/screenshot%40300.webp 1x,
+                    https://raw.githubusercontent.com/Dantalian5/js-simple-counter/main/screenshots/webp/screenshot%40600.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="assets/img/js-simple-counter@300.jpg"
+                  srcset="
+                    https://raw.githubusercontent.com/Dantalian5/js-simple-counter/main/screenshots/jpg/screenshot%40600.jpg 2x
+                  "
+                  alt="webpage screenshot"
+                  onerror="this.onerror = null;this.parentNode.children[0].srcset = this.src;"
+                  loading="lazy"
+                />
+              </picture>
+              <a
+                class="project-card__github-btn"
+                title="Github Repository"
+                href="https://github.com/Dantalian5/js-simple-counter"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 15 15"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M5.65 12.477a.5.5 0 1 0-.3-.954l.3.954Zm-3.648-2.96l-.484-.128l-.254.968l.484.127l.254-.968ZM9 14.5v.5h1v-.5H9Zm.063-4.813l-.054-.497a.5.5 0 0 0-.299.852l.352-.354ZM12.5 5.913h.5V5.91l-.5.002Zm-.833-2.007l-.466-.18a.5.5 0 0 0 .112.533l.354-.353Zm-.05-2.017l.456-.204a.5.5 0 0 0-.319-.276l-.137.48Zm-2.173.792l-.126.484a.5.5 0 0 0 .398-.064l-.272-.42Zm-3.888 0l-.272.42a.5.5 0 0 0 .398.064l-.126-.484ZM3.383 1.89l-.137-.48a.5.5 0 0 0-.32.276l.457.204Zm-.05 2.017l.354.353a.5.5 0 0 0 .112-.534l-.466.181ZM2.5 5.93H3v-.002l-.5.002Zm3.438 3.758l.352.355a.5.5 0 0 0-.293-.851l-.06.496ZM5.5 11H6l-.001-.037L5.5 11ZM5 14.5v.5h1v-.5H5Zm.35-2.977c-.603.19-.986.169-1.24.085c-.251-.083-.444-.25-.629-.49a4.8 4.8 0 0 1-.27-.402c-.085-.139-.182-.302-.28-.447c-.191-.281-.473-.633-.929-.753l-.254.968c.08.02.184.095.355.346c.082.122.16.252.258.412c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.51.168 1.116.15 1.852-.081l-.3-.954Zm4.65-.585c0-.318-.014-.608-.104-.878c-.096-.288-.262-.51-.481-.727l-.705.71c.155.153.208.245.237.333c.035.105.053.254.053.562h1Zm-.884-.753c.903-.097 1.888-.325 2.647-.982c.78-.675 1.237-1.729 1.237-3.29h-1c0 1.359-.39 2.1-.892 2.534c-.524.454-1.258.653-2.099.743l.107.995ZM13 5.91a3.354 3.354 0 0 0-.98-2.358l-.707.706c.438.44.685 1.034.687 1.655l1-.003Zm-.867-1.824c.15-.384.22-.794.21-1.207l-1 .025a2.12 2.12 0 0 1-.142.82l.932.362Zm.21-1.207a3.119 3.119 0 0 0-.27-1.195l-.913.408c.115.256.177.532.184.812l1-.025Zm-.726-.99c.137-.481.137-.482.136-.482h-.003l-.004-.002a.462.462 0 0 0-.03-.007a1.261 1.261 0 0 0-.212-.024a2.172 2.172 0 0 0-.51.054c-.425.091-1.024.317-1.82.832l.542.84c.719-.464 1.206-.634 1.488-.694a1.2 1.2 0 0 1 .306-.03l-.008-.001a.278.278 0 0 1-.01-.002l-.006-.002h-.003l-.002-.001c-.001 0-.002 0 .136-.482Zm-2.047.307a8.209 8.209 0 0 0-4.14 0l.252.968a7.209 7.209 0 0 1 3.636 0l.252-.968Zm-3.743.064c-.797-.514-1.397-.74-1.822-.83a2.17 2.17 0 0 0-.51-.053a1.259 1.259 0 0 0-.241.03l-.004.002h-.003l.136.481l.137.481h-.001l-.002.001l-.003.001a.327.327 0 0 1-.016.004l-.008.001h.008a1.19 1.19 0 0 1 .298.03c.282.06.769.23 1.488.694l.543-.84Zm-2.9-.576a3.12 3.12 0 0 0-.27 1.195l1 .025a2.09 2.09 0 0 1 .183-.812l-.913-.408Zm-.27 1.195c-.01.413.06.823.21 1.207l.932-.362a2.12 2.12 0 0 1-.143-.82l-1-.025Zm.322.673a3.354 3.354 0 0 0-.726 1.091l.924.38c.118-.285.292-.545.51-.765l-.708-.706Zm-.726 1.091A3.354 3.354 0 0 0 2 5.93l1-.003c0-.31.06-.616.177-.902l-.924-.38ZM2 5.93c0 1.553.458 2.597 1.239 3.268c.757.65 1.74.88 2.64.987l.118-.993C5.15 9.09 4.416 8.89 3.89 8.438C3.388 8.007 3 7.276 3 5.928H2Zm3.585 3.404c-.5.498-.629 1.09-.584 1.704L6 10.963c-.03-.408.052-.683.291-.921l-.705-.709ZM5 11v3.5h1V11H5Zm5 3.5V13H9v1.5h1Zm0-1.5v-2.063H9V13h1Z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="project-card__info">
+              <a
+                class="project-card__btn-live-site font-p font-p--small sotolined"
+                href="https://js-simple-counter-s2i.vercel.app/"
+                target="_blank"
+              >
+                Live Site
+                <svg
+                  class="project-card__live-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13.5 10.5L21 3m-5 0h5v5m0 6v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
+                  />
+                </svg>
+              </a>
+              <p class="font-p font-p--small">
+                Description: A simple application that functions as a counter
+                and a timer (pomodoro timer).
+              </p>
+              <p class="font-p font-p--small">
+                Tags: <span class="js-card-tags">html, css, js</span>
+              </p>
+            </div>
+          </li>
+        </ul>
 
-				<button class="projects__nav--btn projects__nav--prev">&xlarr;</button>
-				<button class="projects__nav--btn projects__nav--next">&xrarr;</button>
-			</div>
-		</section>
-		<section id="contact" class="section contact">
-			<h2 class="section-title font-h2 font-h2--big">
-				<span class="guides"></span>Contact me
-			</h2>
-			<form
-				name="contact"
-				method="POST"
-				data-netlify="true"
-				action=""
-				class="contact__wrapper row wrap"
-				autocomplete="on"
-			>
-				<div class="contact__wrapper__inner row wrap">
-					<div class="contact-box styled-box">
-						<label class="styled-box__title font-p font-p--big" for="name"
-							>Name:</label
-						>
-						<input
-							class="contact-box__input font-p font-p--big"
-							name="name"
-							id="name"
-							type="text"
-							placeholder="your name here"
-							autocomplete="name"
-							required
-						/>
-					</div>
-					<div class="contact-box styled-box">
-						<label class="styled-box__title font-p font-p--big" for="email"
-							>Email:</label
-						>
-						<input
-							class="contact-box__input font-p font-p--big"
-							name="email"
-							id="email"
-							type="email"
-							placeholder="youremail@example.com"
-							pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-							title="example@email.com"
-							autocomplete="email"
-							required
-						/>
-					</div>
-				</div>
-				<div class="contact-box styled-box">
-					<label class="styled-box__title font-p font-p--big" for="message"
-						>Message:</label
-					>
-					<textarea
-						class="contact-box__input contact-box__input--large font-p font-p--big"
-						name="message"
-						id="message"
-						rows="5"
-						placeholder="your message here :&rpar;"
-						required
-					></textarea>
-				</div>
-				<div class="contact__btn-wrapper row">
-					<button type="submit" class="button font-h2 font-h2--small">
-						<span class="button__text">Send</span>
-					</button>
-				</div>
-			</form>
-		</section>
-		<footer class="section footer row wrap">
-			<div class="footer__logo row column">
-				<img class="logo" src="assets/base/mylogo.svg" alt="logo" />
-				<p class="font-h2 font-h2--small">Marcos_Valenzuela</p>
-			</div>
-			<div class="footer__icon-wrapper row">
-				<a
-					class="social-link font-h2 font-h2--big"
-					title="frontendmentor.io"
-					href="https://www.frontendmentor.io/profile/Dantalian5"
-					target="_blank"
-					><svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="1em"
-						height="1em"
-						viewBox="0 0 24 24"
-					>
-						<path
-							fill="currentColor"
-							d="M12.17 1.272a.732.732 0 0 0-.718.732v13.914a.732.732 0 0 0 .732.732a.732.732 0 0 0 .732-.732V2.004a.732.732 0 0 0-.745-.732zM23.246 5.44a.734.734 0 0 0-.277.063l-6.282 2.804a.733.733 0 0 0 0 1.336l6.282 2.813a.738.738 0 0 0 .3.065a.732.732 0 0 0 .297-1.4L18.78 8.976l4.786-2.137a.734.734 0 0 0 .37-.966a.734.734 0 0 0-.69-.433zm-22.5 5.032a.732.732 0 0 0-.722.915c1.736 6.677 7.775 11.341 14.683 11.341a.732.732 0 0 0 0-1.464A13.706 13.706 0 0 1 1.44 11.02a.732.732 0 0 0-.694-.547z"
-						/></svg
-				></a>
-				<a
-					class="social-link font-h2 font-h2--big"
-					title="linkedin.com"
-					href="https://www.linkedin.com/in/marcos-valenzuela-coding"
-					target="_blank"
-					><svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="1em"
-						height="1em"
-						viewBox="0 0 24 24"
-					>
-						<g
-							fill="none"
-							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="1.5"
-						>
-							<path
-								d="M21 8v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5ZM7 17v-7"
-							/>
-							<path
-								d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011"
-							/>
-						</g></svg
-				></a>
-				<a
-					class="social-link font-h2 font-h2--big"
-					title="github.com"
-					href="https://github.com/Dantalian5"
-					target="_blank"
-					><svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="1em"
-						height="1em"
-						viewBox="0 0 16 16"
-					>
-						<path
-							fill="currentColor"
-							d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59c.4.07.55-.17.55-.38c0-.19-.01-.82-.01-1.49c-2.01.37-2.53-.49-2.69-.94c-.09-.23-.48-.94-.82-1.13c-.28-.15-.68-.52-.01-.53c.63-.01 1.08.58 1.23.82c.72 1.21 1.87.87 2.33.66c.07-.52.28-.87.51-1.07c-1.78-.2-3.64-.89-3.64-3.95c0-.87.31-1.59.82-2.15c-.08-.2-.36-1.02.08-2.12c0 0 .67-.21 2.2.82c.64-.18 1.32-.27 2-.27c.68 0 1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82c.44 1.1.16 1.92.08 2.12c.51.56.82 1.27.82 2.15c0 3.07-1.87 3.75-3.65 3.95c.29.25.54.73.54 1.48c0 1.07-.01 1.93-.01 2.2c0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-						/></svg
-				></a>
-			</div>
-			<div class="footer__rights">
-				<p class="font-p font-p--small">
-					<span>&copy;</span>2023 Marcos Valenzuela. <br />
-					All rights reserved.
-				</p>
-			</div>
-		</footer>
-		<script src="assets/js/script.js"></script>
-	</body>
+        <button class="projects__nav--btn projects__nav--prev">&xlarr;</button>
+        <button class="projects__nav--btn projects__nav--next">&xrarr;</button>
+      </div>
+    </section>
+    <section id="contact" class="section contact">
+      <h2 class="section-title font-h2 font-h2--big">
+        <span class="guides"></span>Contact me
+      </h2>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        action=""
+        class="contact__wrapper row wrap"
+        autocomplete="on"
+      >
+        <div class="contact__wrapper__inner row wrap">
+          <div class="contact-box styled-box">
+            <label class="styled-box__title font-p font-p--big" for="name"
+              >Name:</label
+            >
+            <input
+              class="contact-box__input font-p font-p--big"
+              name="name"
+              id="name"
+              type="text"
+              placeholder="your name here"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="contact-box styled-box">
+            <label class="styled-box__title font-p font-p--big" for="email"
+              >Email:</label
+            >
+            <input
+              class="contact-box__input font-p font-p--big"
+              name="email"
+              id="email"
+              type="email"
+              placeholder="youremail@example.com"
+              pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+              title="example@email.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+        </div>
+        <div class="contact-box styled-box">
+          <label class="styled-box__title font-p font-p--big" for="message"
+            >Message:</label
+          >
+          <textarea
+            class="contact-box__input contact-box__input--large font-p font-p--big"
+            name="message"
+            id="message"
+            rows="5"
+            placeholder="your message here :&rpar;"
+            required
+          ></textarea>
+        </div>
+        <div class="contact__btn-wrapper row">
+          <button type="submit" class="button font-h2 font-h2--small">
+            <span class="button__text">Send</span>
+          </button>
+        </div>
+      </form>
+    </section>
+    <footer class="section footer row wrap">
+      <div class="footer__logo row column">
+        <img class="logo" src="assets/base/mylogo.svg" alt="logo" />
+        <p class="font-h2 font-h2--small">Marcos_Valenzuela</p>
+      </div>
+      <div class="footer__icon-wrapper row">
+        <a
+          class="social-link font-h2 font-h2--big"
+          title="frontendmentor.io"
+          href="https://www.frontendmentor.io/profile/Dantalian5"
+          target="_blank"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M12.17 1.272a.732.732 0 0 0-.718.732v13.914a.732.732 0 0 0 .732.732a.732.732 0 0 0 .732-.732V2.004a.732.732 0 0 0-.745-.732zM23.246 5.44a.734.734 0 0 0-.277.063l-6.282 2.804a.733.733 0 0 0 0 1.336l6.282 2.813a.738.738 0 0 0 .3.065a.732.732 0 0 0 .297-1.4L18.78 8.976l4.786-2.137a.734.734 0 0 0 .37-.966a.734.734 0 0 0-.69-.433zm-22.5 5.032a.732.732 0 0 0-.722.915c1.736 6.677 7.775 11.341 14.683 11.341a.732.732 0 0 0 0-1.464A13.706 13.706 0 0 1 1.44 11.02a.732.732 0 0 0-.694-.547z"
+            /></svg
+        ></a>
+        <a
+          class="social-link font-h2 font-h2--big"
+          title="linkedin.com"
+          href="https://www.linkedin.com/in/marcos-valenzuela-coding"
+          target="_blank"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            >
+              <path
+                d="M21 8v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5ZM7 17v-7"
+              />
+              <path
+                d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011"
+              />
+            </g></svg
+        ></a>
+        <a
+          class="social-link font-h2 font-h2--big"
+          title="github.com"
+          href="https://github.com/Dantalian5"
+          target="_blank"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="currentColor"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59c.4.07.55-.17.55-.38c0-.19-.01-.82-.01-1.49c-2.01.37-2.53-.49-2.69-.94c-.09-.23-.48-.94-.82-1.13c-.28-.15-.68-.52-.01-.53c.63-.01 1.08.58 1.23.82c.72 1.21 1.87.87 2.33.66c.07-.52.28-.87.51-1.07c-1.78-.2-3.64-.89-3.64-3.95c0-.87.31-1.59.82-2.15c-.08-.2-.36-1.02.08-2.12c0 0 .67-.21 2.2.82c.64-.18 1.32-.27 2-.27c.68 0 1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82c.44 1.1.16 1.92.08 2.12c.51.56.82 1.27.82 2.15c0 3.07-1.87 3.75-3.65 3.95c.29.25.54.73.54 1.48c0 1.07-.01 1.93-.01 2.2c0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+            /></svg
+        ></a>
+      </div>
+      <div class="footer__rights">
+        <p class="font-p font-p--small">
+          <span>&copy;</span>2023 Marcos Valenzuela. <br />
+          All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
