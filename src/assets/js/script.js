@@ -219,4 +219,12 @@ searchInput.addEventListener('input', ({ target }) => {
   }
   loadCarousel(0);
 });
+document.querySelectorAll('.navlink, .homelink').forEach((button) => {
+  button.addEventListener('click', function (event) {
+    event.preventDefault();
+    const targetId = this.getAttribute('data-target');
+    document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+    // history.replaceState(null, null, ' ');
+  });
+});
 //-------------------------------------------------------
