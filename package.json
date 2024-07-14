@@ -5,7 +5,8 @@
   "source": "src/index.html",
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "postbuild": "cp public/robots.txt dist/"
   },
   "author": "Marcos Valenzuela",
   "license": "MIT",
