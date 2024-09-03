@@ -56,9 +56,9 @@
     <link rel="stylesheet" href="assets/style/style.scss" />
     <link rel="canonical" href="https://valenzuela.dev" />
   </head>
-  <body>
+  <body class="bg-space-gradient">
     <div class="navbar">
-      <nav class="top-navbar row">
+      <nav class="top-navbar row bg-single-color">
         <button
           class="top-navbar__logo row font-h2 homelink"
           data-target="#header"
@@ -267,17 +267,17 @@
             <picture>
               <source
                 srcset="
-                  assets/img/Dan/Dan_stand@600.webp  1x,
-                  assets/img/Dan/Dan_stand@1024.webp 2x
+                  url:public/assets/images/character/me.png 1x,
+                  url:public/assets/images/character/me.png 2x
                 "
                 type="image/webp"
               />
               <img
                 srcset="
-                  assets/img/Dan/Dan_stand@600.jpg  1x,
-                  assets/img/Dan/Dan_stand@1024.jpg 2x
+                  url:public/assets/image/character/me.png 1x,
+                  url:public/assets/image/character/me.png 2x
                 "
-                src="assets/img/Dan/Dan_stand@600.jpg"
+                src="url:public/assets/image/character/me.png"
                 alt="webpage screenshot"
                 loading="lazy"
               />

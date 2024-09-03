@@ -1,86 +1,46 @@
-.sotolined {
-	position: relative;
-	&::before {
-		content: "";
-		visibility: hidden;
-		width: 0%;
-		height: 0;
-		border: 1px solid var(--c-green-cyan);
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translate(-50%, 100%);
-		transition: 300ms;
-	}
-	&:hover {
-		&::before {
-			visibility: visible;
-			width: 100%;
-		}
-	}
+@media (min-width: 43.75rem) {
+  .font-h1 {
+    font-size: 3rem;
+  }
+  .top-navbar {
+    padding-block: 1.5rem;
+  }
 }
-.blink {
-	animation: 1s steps(1) infinite blink;
-}
-.button {
-	position: relative;
-	&__text {
-		position: relative;
-		&::after {
-			content: "";
-			visibility: hidden;
-			width: 0%;
-			height: 0;
-			border: 1px solid var(--c-green-cyan);
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translate(-50%, 100%);
-			transition: 300ms;
-		}
-	}
-	&:hover {
-		& .button__text {
-			&::after {
-				visibility: visible;
-				width: 100%;
-			}
-		}
-		border-color: var(--c-green-cyan);
-	}
-}
-.projects__nav--btn:active {
-	scale: 0.9;
-}
-@media (hover: hover) {
-	.social-link:hover {
-		color: var(--c-green-cyan);
-		transform: scale(1.2);
-	}
-	.footer__extra {
-		&:hover {
-			color: var(--c-green-cyan);
-		}
-	}
-	.blinked {
-		&:hover {
-			&::after {
-				animation: 1s steps(1) infinite blink;
-			}
-		}
-	}
-}
-@keyframes blink {
-	0% {
-		color: #15162a;
-		background: #eaeaea;
-	}
-	50% {
-		color: #eaeaea;
-		background: none;
-	}
-	100% {
-		color: #15162a;
-		background: #eaeaea;
-	}
+@media (min-width: 62.5rem) {
+  .font-h1 {
+    font-size: 3.25rem;
+  }
+  .font-p {
+    &--big {
+      font-size: 1.125rem;
+    }
+  }
+  .top-navbar {
+    padding-block: 1.5rem;
+  }
+  .hamburger {
+    display: none;
+  }
+  .menubar {
+    &__wrapper {
+      position: static;
+      visibility: visible;
+      width: fit-content;
+      max-height: 100%;
+      padding-block: 0;
+      padding-inline: 0;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      transition: none;
+      transform: translate(0, 0);
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
+      overflow: visible;
+    }
+    &__link {
+      font-size: 1.25rem;
+    }
+  }
 }
