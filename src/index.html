@@ -266,15 +266,20 @@
           <div class="img-block__container">
             <picture>
               <source
-                srcset="assets/img/me.png 1x, assets/img/me.png 2x"
+                srcset="
+                  assets/img/me.png?as=webp&width=600  1x,
+                  assets/img/me.png?as=webp&width=1200 2x
+                "
                 type="image/webp"
               />
-              <img
-                srcset="assets/img/me.png 1x, assets/img/me.png 2x"
-                src="assets/img/me.png"
-                alt="webpage screenshot"
-                loading="lazy"
+              <source
+                srcset="
+                  assets/img/me.png?as=png&width=600  1x,
+                  assets/img/me.png?as=png&width=1200 2x
+                "
+                type="image/png"
               />
+              <img src="assets/img/me.png?width=300" alt="test image" />
             </picture>
           </div>
         </div>
