@@ -224,7 +224,6 @@ document.querySelectorAll('.navlink, .homelink').forEach((button) => {
     event.preventDefault();
     const targetId = this.getAttribute('data-target');
     document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
-    // history.replaceState(null, null, ' ');
   });
 });
 //-------------------------------------------------------

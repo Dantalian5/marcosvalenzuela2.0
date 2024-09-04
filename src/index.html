@@ -141,8 +141,111 @@
         </div>
       </nav>
     </div>
-    <header id="header" class="section header row wrap">
-      <div class="hero__info">
+    <header id="header" class="section">
+      <div class="header-ctn flex wrap">
+        <div class="header-ctn__info hero-info">
+          <div class="hero-info__text">
+            <p class="font-p font-p--big">
+              <span class="guides"></span>Hi, I&#x2019;m
+            </p>
+            <p class="font-h2 font-h2--big">
+              <span class="guides"></span>Marcos Valenzuela
+            </p>
+            <h1 class="font-h1">
+              <span class="guides"></span>Full-Stack Developer
+            </h1>
+          </div>
+          <div class="hero-info__cta flex wrap">
+            <button
+              class="button font-h2 font-h2--small navlink"
+              data-target="#contact"
+            >
+              <p class="button__text">Contact Me</p>
+            </button>
+            <div class="button-wrapper">
+              <a
+                class="button font-h2 font-h2--small"
+                href="assets/docs/CVal.pdf"
+                download="Curriculum Vitae Marcos Valenzuela"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"
+                  />
+                </svg>
+                <p class="button__text">CV</p>
+              </a>
+              <span class="wget"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="36"
+                  viewBox="0 0 33 36"
+                  fill="none"
+                >
+                  <path
+                    d="M1.37503 10.1836L10.905 1.0327L20.435 10.2332"
+                    stroke="currentColor"
+                    stroke-opacity="0.3"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.905 1.03268V15.7138C10.905 25.8492 19.4381 34.0874 29.9649 34.1148L31.8709 34.1197"
+                    stroke="currentColor"
+                    stroke-opacity="0.3"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="wget__text">:wget -i</span></span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="header-ctn__img">
+          <div class="hero-img">
+            <picture>
+              <source
+                srcset="
+                  assets/img/Dan_coding@1024.webp?as=webp&width=600  1x,
+                  assets/img/Dan_coding@1024.webp?as=webp&width=1024 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  assets/img/Dan_coding@1024.webp?as=png&width=600  1x,
+                  assets/img/Dan_coding@1024.webp?as=png&width=1024 2x
+                "
+                type="image/png"
+              />
+              <img
+                srcset="
+                  assets/img/Dan_coding@1024.webp?as=jpg&width=600  1x,
+                  assets/img/Dan_coding@1024.webp?as=jpg&width=1024 2x
+                "
+                src="assets/img/Dan_coding@1024.webp?as=jpg&width=600"
+                alt="illustration of a person showing a program"
+              />
+            </picture>
+            <div class="hero-img__bg bg-glass"></div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="hero__info">
         <div class="hero__info__text">
           <p class="font-p font-p--big">
             <span class="guides"></span>Hi, I&#x2019;m
@@ -230,25 +333,25 @@
           />
         </picture>
         <div class="hero__img__bg"></div>
-      </div>
+      </div> -->
     </header>
-    <section id="about" class="section about row wrap">
+    <section id="about" class="section about">
       <h2 class="section-title font-h2 font-h2--big">
         <span class="guides"></span>About Me
       </h2>
-      <div class="about__wrapper row wrap">
-        <div class="info-block">
+      <div class="flex wrap about-cnt">
+        <div class="about-cnt__info">
           <button
             id="js-buttonReadMore"
             class="read-more__btn font-p font-p--big"
           >
             Read More
           </button>
-          <p class="info-block__text font-p font-p--big">
+          <p class="about__text font-p font-p--big">
             <span class="guides"></span>Hi there! I'm Marcos Valenzuela, a web
             developer based in Italy. My passion for design and programming has
             led me to dive into the exciting world of web development.
-            <br /><span class="info-block__alt"
+            <br /><span class="toggleable"
               >I enjoy creating visually appealing and functional web designs.
               Although my journey is still relatively short, I am eager to
               continue learning and improving my skills in the field. My goal is
@@ -262,8 +365,8 @@
             >
           </p>
         </div>
-        <div class="img-block">
-          <div class="img-block__container">
+        <div class="about-cnt__img">
+          <div class="portrait">
             <picture>
               <source
                 srcset="
@@ -279,7 +382,11 @@
                 "
                 type="image/png"
               />
-              <img src="assets/img/me.png?width=300" alt="test image" />
+              <img
+                class="portrait__img"
+                src="assets/img/me.png?width=300"
+                alt="test image"
+              />
             </picture>
           </div>
         </div>
@@ -289,14 +396,14 @@
       <h2 class="section-title font-h2 font-h2--big">
         <span class="guides"></span>Skills
       </h2>
-      <div class="skills__info row wrap">
-        <div class="styled-box skill-wrapper">
+      <div class="skills-cnt flex wrap">
+        <div class="styled-box skill-box">
           <div class="styled-box__title">
             <h3 class="font-p font-p--big">Code:</h3>
           </div>
-          <div class="skill-wrapper__items row wrap">
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+          <div class="skill-box__wrapper flex wrap">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -310,8 +417,8 @@
                 </svg> </span
               >Html
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -325,8 +432,8 @@
                 </svg> </span
               >Css
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -340,8 +447,8 @@
                 </svg> </span
               >JavaScript
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -355,8 +462,8 @@
                 </svg> </span
               >Typescript
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -381,8 +488,8 @@
                   /></svg></span
               >React.js
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -399,8 +506,8 @@
                   /></svg></span
               >Next.js
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -413,8 +520,8 @@
                   /></svg></span
               >Node.js
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -427,8 +534,8 @@
                   /></svg></span
               >Express.js
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -450,8 +557,8 @@
                 </svg> </span
               >Bootstrap
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -471,13 +578,13 @@
             </p>
           </div>
         </div>
-        <div class="styled-box skill-wrapper">
+        <div class="styled-box skill-box">
           <div class="styled-box__title">
             <h3 class="font-p font-p--big">Tools:</h3>
           </div>
-          <div class="skill-wrapper__items row wrap">
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+          <div class="skill-box__wrapper row wrap">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -491,8 +598,8 @@
                 </svg> </span
               >MongoDB
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -506,8 +613,8 @@
                 </svg> </span
               >PostgreSQL
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -521,8 +628,8 @@
                 </svg> </span
               >Git
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -536,8 +643,8 @@
                 </svg> </span
               >Github
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -553,8 +660,8 @@
                 </svg> </span
               >Figma
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -568,8 +675,8 @@
                 </svg> </span
               >Inkscape
             </p>
-            <p class="skill-box row font-p font-p--big">
-              <span class="skill-box__icon">
+            <p class="skill-box__item flex font-p font-p--big">
+              <span class="skill-box__item__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
