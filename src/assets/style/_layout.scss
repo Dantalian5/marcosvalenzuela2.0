@@ -11,16 +11,6 @@
   display: flex;
   align-items: center;
 }
-.column {
-  flex-direction: column;
-  justify-content: center;
-}
-// .wrapet {
-//   flex-wrap: wrap;
-//   & > * {
-//     flex: 1 1 auto;
-//   }
-// }
 .navbar,
 .section {
   max-width: 90rem;
@@ -85,32 +75,29 @@
   }
 }
 .skills-cnt {
+  width: 100%;
   gap: 2rem;
   align-items: stretch;
   justify-content: center;
 }
-
-.contact {
-  &__wrapper {
-    width: 100%;
+.contact-ctn {
+  width: 100%;
+  gap: 2rem;
+  &__column {
+    flex: 1 1 100%;
     gap: 2rem;
-    &__inner {
-      width: 100%;
-      gap: 2rem;
-    }
   }
-  &__btn-wrapper {
+  &__item {
+    flex: 1 1 auto;
+    gap: 2rem;
+  }
+  &__action {
     width: 100%;
-    justify-content: flex-end;
   }
 }
 .footer {
   gap: 2.5rem;
   justify-content: space-evenly;
-  &__logo {
-    max-width: fit-content;
-    gap: 0.5rem;
-  }
   &__icon-wrapper {
     justify-content: center;
     width: 100%;

@@ -259,13 +259,24 @@
     }
   }
 }
+.submit-button {
+  margin-left: auto;
+  &__text {
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
 .logo {
   width: 2.5rem;
 }
-
-.bg-single-color {
-  background-color: transparentize(#0a0f1f, 0.5);
-  backdrop-filter: blur(24px);
+.logo-big {
+  flex-direction: column;
+  align-items: center;
+  max-width: fit-content;
+  gap: 0.5rem;
+}
+.raised {
   border-bottom: 1px solid var(--c-border);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }

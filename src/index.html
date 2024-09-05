@@ -58,7 +58,7 @@
   </head>
   <body class="bg-space-gradient">
     <div class="navbar">
-      <nav class="top-navbar row bg-single-color">
+      <nav class="top-navbar flex raised bg-glass">
         <button
           class="top-navbar__logo row font-h2 homelink"
           data-target="#header"
@@ -79,7 +79,6 @@
             M_<span class="blink">V</span>
           </p>
         </button>
-
         <div class="menubar">
           <button id="js-hamburgerMenu" class="hamburger">
             <svg
@@ -1265,11 +1264,11 @@
         method="POST"
         data-netlify="true"
         action=""
-        class="contact__wrapper row wrap"
+        class="contact-ctn flex wrap"
         autocomplete="on"
       >
-        <div class="contact__wrapper__inner row wrap">
-          <div class="contact-box styled-box">
+        <div class="contact-ctn__column flex wrap">
+          <div class="contact-ctn__item contact-box styled-box">
             <label class="styled-box__title font-p font-p--big" for="name"
               >Name:</label
             >
@@ -1283,7 +1282,7 @@
               required
             />
           </div>
-          <div class="contact-box styled-box">
+          <div class="contact-ctn__item contact-box styled-box">
             <label class="styled-box__title font-p font-p--big" for="email"
               >Email:</label
             >
@@ -1300,7 +1299,7 @@
             />
           </div>
         </div>
-        <div class="contact-box styled-box">
+        <div class="contact-ctn__item contact-box styled-box">
           <label class="styled-box__title font-p font-p--big" for="message"
             >Message:</label
           >
@@ -1313,15 +1312,34 @@
             required
           ></textarea>
         </div>
-        <div class="contact__btn-wrapper row">
-          <button type="submit" class="button font-h2 font-h2--small">
-            <span class="button__text">Send</span>
+        <div class="contact-ctn__action">
+          <button
+            type="submit"
+            class="button submit-button font-h2 font-h2--small"
+          >
+            <span class="button__text submit-button__text flex"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2"
+                /></svg
+              >Send</span
+            >
           </button>
         </div>
       </form>
     </section>
     <footer class="section footer row wrap">
-      <div class="footer__logo row column">
+      <div class="logo-big flex">
         <img class="logo" src="assets/base/mylogo.svg" alt="logo" />
         <p class="font-h2 font-h2--small">Marcos_Valenzuela</p>
       </div>
