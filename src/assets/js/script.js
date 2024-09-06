@@ -2,6 +2,7 @@
 //-------------------------------------------------------
 // Variables:
 const hamburgerMenu = document.getElementById('js-hamburgerMenu');
+const menuBox = document.getElementById('js-menuItems');
 const carousel = document.querySelector('.project-carousel');
 const searchInput = document.querySelector('.search-box__input');
 const carouselTagedItems = document.querySelectorAll('.project-carousel__item');
@@ -114,11 +115,13 @@ loadCarousel(0);
 // Event Handlers :
 //-Hamburger Menu EventListeners-
 document.addEventListener('click', (event) => {
-  // if clicked outside the menu, close the menu, if clicked in the menu, togle
+  // if clicked outside the menu, close the menu, if clicked in the menu, toggle
   if (!event.target.closest('#js-hamburgerMenu, #js-menuItems')) {
     hamburgerMenu.classList.remove('active');
+    menuBox.classList.remove('active');
   } else if (event.target.closest('#js-hamburgerMenu')) {
     hamburgerMenu.classList.toggle('active');
+    menuBox.classList.toggle('active');
   }
 });
 document.getElementById('js-buttonReadMore').onclick = function () {
@@ -224,7 +227,37 @@ document.querySelectorAll('.navlink, .homelink').forEach((button) => {
     event.preventDefault();
     const targetId = this.getAttribute('data-target');
     document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
-    // history.replaceState(null, null, ' ');
   });
 });
 //-------------------------------------------------------
+// Form Validation:
+const form = document.querySelector('form[name="contact"]');
+const inputs = form.querySelectorAll('input, textarea');
+
+inputs.forEach((input) => {
+  input.addEventListener('input', function () {
+    if (input.checkValidity()) {
+      clearError(input);
+    }
+  });
+});
+form.addEventListener('submit', function (e) {
+  let valid = true;
+  inputs.forEach((input) => {
+    if (!input.checkValidity()) {
+      showError(input);
+      valid = false;
+    }
+  });
+  if (!valid) {
+    e.preventDefault();
+  }
+});
+function showError(input) {
+  input.classList.add('input--error');
+  input.nextElementSibling.textContent = input.validationMessage;
+}
+function clearError(input) {
+  input.classList.remove('input--error');
+  input.nextElementSibling.textContent = '';
+}

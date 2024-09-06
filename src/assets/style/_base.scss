@@ -1,24 +1,23 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 a {
-	cursor: pointer;
-	color: inherit;
+  cursor: pointer;
+  color: inherit;
 }
 a:visited {
-	appearance: none;
+  appearance: none;
 }
 body {
-	min-height: 100vh;
-	min-height: 100svh;
-	background: var(--c-dark-blue);
+  min-height: 100vh;
+  min-height: 100svh;
 }
 img,
 svg {
-	max-width: 100%;
-	color: inherit;
-	font-size: inherit;
+  max-width: 100%;
+  color: inherit;
+  font-size: inherit;
 }
 img {
-	width: 100%;
+  width: 100%;
 }
