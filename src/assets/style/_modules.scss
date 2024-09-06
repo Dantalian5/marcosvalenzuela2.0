@@ -343,6 +343,18 @@
     }
   }
 }
+.socials {
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  gap: 2rem;
+  &__link {
+    color: var(--c-foreground);
+  }
+}
+.social-link {
+  color: var(--c-foreground);
+}
 .blink {
   animation: 1s steps(1) infinite blink;
 }
