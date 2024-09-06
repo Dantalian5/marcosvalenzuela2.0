@@ -27,21 +27,19 @@
   padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
   overflow: hidden;
   z-index: 0;
-}
-.about,
-.skills,
-.projects,
-.contact,
-.footer {
-  padding-block: 4rem;
-  margin-bottom: 4rem;
+  &--inner {
+    padding-block: 4rem;
+    margin-bottom: 4rem;
+  }
+  &--border {
+    padding-block: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 .header-ctn {
   width: 100%;
-  padding-block: 2rem;
   min-height: 100vh;
   min-height: 100svh;
-  margin-bottom: 2rem;
   align-items: center;
   justify-items: center;
   gap: 4rem;
@@ -95,10 +93,12 @@
     width: 100%;
   }
 }
-.footer {
+.footer-ctn {
   gap: 2.5rem;
+  align-items: center;
   justify-content: space-evenly;
-  &__icon-wrapper {
+  &__socials {
+    align-items: center;
     justify-content: center;
     width: 100%;
     gap: 2rem;

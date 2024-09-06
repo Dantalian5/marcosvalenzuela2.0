@@ -7,8 +7,8 @@
   :root {
     --section-inline-value: 12%;
   }
-  .footer {
-    &__icon-wrapper {
+  .footer-ctn {
+    &__socials {
       max-width: fit-content;
     }
   }
@@ -36,8 +36,8 @@
   .hamburger {
     display: none;
   }
-  .menubar {
-    &__wrapper {
+  .menu {
+    &__box {
       position: static;
       visibility: visible;
       width: fit-content;
@@ -53,8 +53,10 @@
       border: none;
       border-radius: 0;
       overflow: visible;
+      background: none;
+      backdrop-filter: none;
     }
-    &__link {
+    & .navlink {
       font-size: 1.25rem;
     }
   }

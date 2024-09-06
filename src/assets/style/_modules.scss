@@ -48,7 +48,6 @@
     line-height: normal;
   }
 }
-//----------------------------------------------------------
 .top-navbar {
   width: 100%;
   align-items: stretch;
@@ -65,8 +64,8 @@
     }
   }
 }
-.menubar {
-  &__wrapper {
+.menu {
+  &__box {
     position: absolute;
     visibility: hidden;
     top: calc(50vh + 50%);
@@ -86,17 +85,25 @@
     gap: 2rem;
     box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.25);
     overflow: scroll;
+    background-color: transparentize(#0a0f1f, 0.05);
+    backdrop-filter: blur(24px);
+
+    &.active {
+      visibility: visible;
+      transition: 500ms;
+      max-height: 100vh;
+      max-height: calc(100svh - 100%);
+      padding-block: 4rem;
+    }
   }
-  &__link > .navlink::after {
-    content: '/';
-  }
+}
+.stylelink::after {
+  content: '/';
 }
 .navlink {
   display: flex;
   max-width: fit-content;
 }
-
-//----------------------------------
 .hero-info {
   & > :not(:last-child) {
     margin-bottom: 1rem;
@@ -166,7 +173,6 @@
     display: inline;
   }
 }
-
 .portrait {
   width: 100%;
   position: relative;
@@ -203,7 +209,8 @@
 }
 .styled-box {
   position: relative;
-  border: 1px solid var(--c-green-cyan);
+  border: 1px solid;
+  border-color: var(--c-green-cyan);
   border-radius: 0.5rem;
   &__title {
     display: block;
@@ -212,7 +219,7 @@
     max-width: 100%;
     transform: translate(0, -0.8em);
     padding-inline: 0.5rem;
-    background: var(--c-dark-blue);
+    backdrop-filter: blur(2px);
     &--centered {
       margin-inline: auto;
       width: 100%;
@@ -254,9 +261,38 @@
     word-wrap: break-word;
     word-break: break-all;
     color: var(--c-dark-blue);
-    &:required:focus:invalid {
+    &:required:focus {
       border-color: red;
     }
+  }
+}
+.input {
+  padding-block: 0 0.5rem;
+  padding-inline: 0.5rem;
+  &__input {
+    outline: none;
+    color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    border-radius: 0.3125rem;
+    border: 1px solid;
+    background: #d9d9d9;
+    padding: 0.25rem 1rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: var(--c-dark-blue);
+    &:focus {
+      border-color: var(--c-green-cyan);
+    }
+    &.input--error {
+      border-color: red;
+    }
+  }
+  &__error {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    color: red;
+    margin-top: 0.25rem;
   }
 }
 .submit-button {

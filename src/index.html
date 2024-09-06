@@ -79,7 +79,7 @@
             M_<span class="blink">V</span>
           </p>
         </button>
-        <div class="menubar">
+        <div class="menu">
           <button id="js-hamburgerMenu" class="hamburger">
             <svg
               class="hamburger__box font-h2 font-h2--big"
@@ -115,24 +115,36 @@
               ></rect>
             </svg>
           </button>
-          <ul id="js-menuItems" class="menubar__wrapper row">
-            <li class="menubar__link font-h2 font-h2--big">
-              <button class="sotolined blinked navlink" data-target="#about">
+          <ul id="js-menuItems" class="menu__box flex">
+            <li class="font-h2 font-h2--big">
+              <button
+                class="sotolined blinked navlink stylelink"
+                data-target="#about"
+              >
                 About
               </button>
             </li>
-            <li class="menubar__link font-h2 font-h2--big">
-              <button class="sotolined blinked navlink" data-target="#skills">
+            <li class="font-h2 font-h2--big">
+              <button
+                class="sotolined blinked navlink stylelink"
+                data-target="#skills"
+              >
                 Skills
               </button>
             </li>
-            <li class="menubar__link font-h2 font-h2--big">
-              <button class="sotolined blinked navlink" data-target="#projects">
+            <li class="font-h2 font-h2--big">
+              <button
+                class="sotolined blinked navlink stylelink"
+                data-target="#projects"
+              >
                 Projects
               </button>
             </li>
-            <li class="menubar__link font-h2 font-h2--big">
-              <button class="sotolined blinked navlink" data-target="#contact">
+            <li class="font-h2 font-h2--big">
+              <button
+                class="sotolined blinked navlink stylelink"
+                data-target="#contact"
+              >
                 Contact
               </button>
             </li>
@@ -140,7 +152,7 @@
         </div>
       </nav>
     </div>
-    <header id="header" class="section">
+    <header id="header" class="section section--border">
       <div class="header-ctn flex wrap">
         <div class="header-ctn__info hero-info">
           <div class="hero-info__text">
@@ -334,7 +346,7 @@
         <div class="hero__img__bg"></div>
       </div> -->
     </header>
-    <section id="about" class="section about">
+    <section id="about" class="section section--inner">
       <h2 class="section-title font-h2 font-h2--big">
         <span class="guides"></span>About Me
       </h2>
@@ -391,7 +403,7 @@
         </div>
       </div>
     </section>
-    <section id="skills" class="section skills">
+    <section id="skills" class="section section--inner">
       <h2 class="section-title font-h2 font-h2--big">
         <span class="guides"></span>Skills
       </h2>
@@ -693,7 +705,7 @@
         </div>
       </div>
     </section>
-    <section id="projects" class="section projects">
+    <section id="projects" class="section section--inner">
       <h2 class="section-title font-h2 font-h2--big">
         <span class="guides"></span>Projects
       </h2>
@@ -1255,7 +1267,7 @@
         <button class="projects__nav--btn projects__nav--next">&xrarr;</button>
       </div>
     </section>
-    <section id="contact" class="section contact">
+    <section id="contact" class="section section--inner">
       <h2 class="section-title font-h2 font-h2--big">
         <span class="guides"></span>Contact me
       </h2>
@@ -1266,28 +1278,25 @@
         action=""
         class="contact-ctn flex wrap"
         autocomplete="on"
+        novalidate
       >
         <div class="contact-ctn__column flex wrap">
-          <div class="contact-ctn__item contact-box styled-box">
-            <label class="styled-box__title font-p font-p--big" for="name"
-              >Name:</label
-            >
+          <label class="contact-ctn__item input styled-box">
+            <span class="styled-box__title font-p font-p--big">Name:</span>
             <input
-              class="contact-box__input font-p font-p--big"
+              class="input__input font-p font-p--big"
               name="name"
               id="name"
               type="text"
               placeholder="your name here"
               autocomplete="name"
-              required
-            />
-          </div>
-          <div class="contact-ctn__item contact-box styled-box">
-            <label class="styled-box__title font-p font-p--big" for="email"
-              >Email:</label
-            >
+              required />
+            <span class="input__error font-error"></span
+          ></label>
+          <label class="contact-ctn__item input styled-box">
+            <span class="styled-box__title font-p font-p--big">Email:</span>
             <input
-              class="contact-box__input font-p font-p--big"
+              class="input__input font-p font-p--big"
               name="email"
               id="email"
               type="email"
@@ -1295,23 +1304,22 @@
               pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
               title="example@email.com"
               autocomplete="email"
-              required
-            />
-          </div>
+              required />
+            <span class="input__error font-error"></span
+          ></label>
         </div>
-        <div class="contact-ctn__item contact-box styled-box">
-          <label class="styled-box__title font-p font-p--big" for="message"
-            >Message:</label
-          >
+        <label class="contact-ctn__item styled-box input"
+          ><span class="styled-box__title font-p font-p--big">Message:</span>
           <textarea
-            class="contact-box__input contact-box__input--large font-p font-p--big"
+            class="input__input font-p font-p--big"
             name="message"
             id="message"
             rows="5"
             placeholder="your message here :&rpar;"
             required
           ></textarea>
-        </div>
+          <span class="input__error font-error"></span>
+        </label>
         <div class="contact-ctn__action">
           <button
             type="submit"
@@ -1338,12 +1346,12 @@
         </div>
       </form>
     </section>
-    <footer class="section footer row wrap">
+    <footer class="section section--border footer-ctn flex wrap">
       <div class="logo-big flex">
         <img class="logo" src="assets/base/mylogo.svg" alt="logo" />
         <p class="font-h2 font-h2--small">Marcos_Valenzuela</p>
       </div>
-      <div class="footer__icon-wrapper row">
+      <div class="footer-ctn__socials flex">
         <a
           class="social-link font-h2 font-h2--big"
           title="frontendmentor.io"
@@ -1403,7 +1411,7 @@
             /></svg
         ></a>
       </div>
-      <div class="footer__rights">
+      <div class="footer-ctn__rights">
         <p class="font-p font-p--small">
           <span>&copy;</span>2024 Marcos Valenzuela. <br />
           All rights reserved.
