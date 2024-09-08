@@ -1,8 +1,7 @@
 'use strict';
 //-------------------------------------------------------
 // Variables:
-const hamburgerMenu = document.getElementById('js-hamburgerMenu');
-const menuBox = document.getElementById('js-menuItems');
+
 const carousel = document.querySelector('.project-carousel');
 const searchInput = document.querySelector('.search-box__input');
 const carouselTagedItems = document.querySelectorAll('.project-carousel__item');
@@ -113,17 +112,7 @@ function setLaterals(carouselItems, Nfocused) {
 loadCarousel(0);
 //-------------------------------------------------------
 // Event Handlers :
-//-Hamburger Menu EventListeners-
-document.addEventListener('click', (event) => {
-  // if clicked outside the menu, close the menu, if clicked in the menu, toggle
-  if (!event.target.closest('#js-hamburgerMenu, #js-menuItems')) {
-    hamburgerMenu.classList.remove('active');
-    menuBox.classList.remove('active');
-  } else if (event.target.closest('#js-hamburgerMenu')) {
-    hamburgerMenu.classList.toggle('active');
-    menuBox.classList.toggle('active');
-  }
-});
+
 document.getElementById('js-buttonReadMore').onclick = function () {
   this.classList.toggle('active');
   this.innerText = this.classList.contains('active')
@@ -222,6 +211,21 @@ searchInput.addEventListener('input', ({ target }) => {
   }
   loadCarousel(0);
 });
+//-------------------------------------------------------
+// Hamburger Menu:
+const menuBtn = document.getElementById('js-hamburgerMenu');
+const menuBox = document.getElementById('js-menuItems');
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('#js-hamburgerMenu, #js-menuItems')) {
+    menuBtn.classList.remove('active');
+    menuBox.classList.remove('active');
+  } else if (event.target.closest('#js-hamburgerMenu')) {
+    menuBtn.classList.toggle('active');
+    menuBox.classList.toggle('active');
+  }
+});
+//-------------------------------------------------------
+// Smooth Scroll:
 document.querySelectorAll('.navlink, .homelink').forEach((button) => {
   button.addEventListener('click', function (event) {
     event.preventDefault();

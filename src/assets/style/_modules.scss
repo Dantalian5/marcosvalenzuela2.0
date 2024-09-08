@@ -61,6 +61,9 @@
     &__text {
       margin-left: 0.5rem;
       line-height: 1;
+      & > .m {
+        letter-spacing: 0.2em;
+      }
     }
   }
 }
@@ -104,19 +107,19 @@
   display: flex;
   max-width: fit-content;
 }
-.hero-info {
-  & > :not(:last-child) {
-    margin-bottom: 1rem;
-  }
-  &__text {
-    & > :not(:last-child) {
-      margin-bottom: 1rem;
-    }
+.hero {
+  &__cover {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
   }
   &__cta {
-    padding-block: 1.5rem;
     padding-right: 2rem;
     gap: 2rem;
+  }
+  &__socials {
+    gap: 2rem;
+    margin-top: 4rem;
   }
 }
 .hero-img {
@@ -144,21 +147,6 @@
     border-left: 2px solid var(--c-accent);
     border-right: 2px solid var(--c-accent);
     transform: skew(-5deg, -5deg);
-  }
-}
-.guides {
-  position: relative;
-  z-index: -1;
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(calc(-100% - 0.25rem), -100%);
-    width: calc(1.5rem - 0.25rem);
-    height: 100vh;
-    border-bottom: 1px dotted var(--c-accent);
-    border-left: 1px dotted var(--c-accent);
   }
 }
 .read-more__btn {
@@ -203,9 +191,21 @@
 }
 
 .section-title {
-  padding-left: calc(2rem + 0.25rem);
-  margin-bottom: calc(4rem);
+  margin-bottom: 4rem;
+  padding-inline: 0.5rem;
+  padding-block: 0.125rem;
   width: fit-content;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    border-left: 1px dotted;
+    border-top: 1px dotted;
+    border-color: var(--c-accent);
+  }
 }
 .styled-box {
   position: relative;
@@ -345,15 +345,11 @@
 }
 .socials {
   align-items: center;
-  margin-top: 2rem;
   font-size: 2rem;
   gap: 2rem;
   &__link {
     color: var(--c-foreground);
   }
-}
-.social-link {
-  color: var(--c-foreground);
 }
 .blink {
   animation: 1s steps(1) infinite blink;
@@ -389,7 +385,7 @@
   scale: 0.9;
 }
 @media (hover: hover) {
-  .social-link:hover {
+  .socials__link:hover {
     color: var(--c-accent);
     transform: scale(1.2);
   }

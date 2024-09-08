@@ -23,10 +23,7 @@
       property="og:image"
       content="https://github.com/Dantalian5/marcosvalenzuela2.0/blob/main/screenshot-og.jpg?raw=true"
     />
-    <meta
-      property="og:image:alt"
-      content="a small screenshot of a web portfolio"
-    />
+    <meta property="og:image:alt" content="Marcos Valenzuela web portfolio" />
     <!-- Favicons setup -->
     <link
       rel="icon"
@@ -76,7 +73,7 @@
             />
           </svg>
           <p class="font-h2--big top-navbar__logo__text">
-            M_<span class="blink">V</span>
+            <span class="m">M</span><span class="blink">V</span>
           </p>
         </button>
         <div class="menu">
@@ -152,21 +149,12 @@
         </div>
       </nav>
     </div>
-    <header id="header" class="section section--border">
+    <header id="header" class="header">
       <div class="header-ctn flex wrap">
-        <div class="header-ctn__info hero-info">
-          <div class="hero-info__text">
-            <p class="font-p font-p--big">
-              <span class="guides"></span>Hi, I&#x2019;m
-            </p>
-            <p class="font-h2 font-h2--big">
-              <span class="guides"></span>Marcos Valenzuela
-            </p>
-            <h1 class="font-h1">
-              <span class="guides"></span>Full-Stack Developer
-            </h1>
-          </div>
-          <div class="hero-info__cta flex wrap">
+        <div class="header-ctn__info hero__cover flex">
+          <p class="hero__name font-h2 font-h2--big">Marcos Valenzuela</p>
+          <h1 class="hero__title font-h1">Full-Stack Developer</h1>
+          <div class="hero__cta flex wrap">
             <button
               class="button font-h2 font-h2--small navlink"
               data-target="#contact"
@@ -225,7 +213,7 @@
               >
             </div>
           </div>
-          <div class="socials flex">
+          <div class="hero__socials socials flex">
             <a
               class="socials__link"
               title="github.com"
@@ -286,7 +274,7 @@
             ></a>
           </div>
         </div>
-        <div class="header-ctn__img">
+        <div class="header-ctn__img flex">
           <div class="hero-img">
             <picture>
               <source
@@ -316,100 +304,9 @@
           </div>
         </div>
       </div>
-      <!-- <div class="hero__info">
-        <div class="hero__info__text">
-          <p class="font-p font-p--big">
-            <span class="guides"></span>Hi, I&#x2019;m
-          </p>
-          <p class="font-h2 font-h2--big">
-            <span class="guides"></span>Marcos Valenzuela
-          </p>
-          <h1 class="font-h1">
-            <span class="guides"></span>Full-Stack Developer
-          </h1>
-        </div>
-        <div class="hero__info__cta row wrap">
-          <a class="button font-h2 font-h2--small" href="#contact"
-            ><p class="button__text">Contact Me</p></a
-          >
-          <div class="button-wrapper">
-            <a
-              class="button font-h2 font-h2--small"
-              href="assets/docs/CVal.pdf"
-              download="Curriculum Vitae Marcos Valenzuela"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill="currentColor"
-                  d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"
-                />
-              </svg>
-              <p class="button__text">CV</p>
-            </a>
-            <span class="wget"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="33"
-                height="36"
-                viewBox="0 0 33 36"
-                fill="none"
-              >
-                <path
-                  d="M1.37503 10.1836L10.905 1.0327L20.435 10.2332"
-                  stroke="currentColor"
-                  stroke-opacity="0.3"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.905 1.03268V15.7138C10.905 25.8492 19.4381 34.0874 29.9649 34.1148L31.8709 34.1197"
-                  stroke="currentColor"
-                  stroke-opacity="0.3"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <span class="wget__text">:wget -i</span></span
-            >
-          </div>
-        </div>
-      </div>
-      <div class="hero__img">
-        <picture>
-          <source
-            srcset="
-              assets/img/Dan/Dan_coding@600.webp  1x,
-              assets/img/Dan/Dan_coding@1024.webp 2x
-            "
-            type="image/webp"
-          />
-          <img
-            srcset="
-              assets/img/Dan/Dan_coding@600.jpg  1x,
-              assets/img/Dan/Dan_coding@1024.jpg 2x
-            "
-            src="assets/img/Dan/Dan_coding@600.jpg"
-            alt="illustration of a person showing a program"
-          />
-        </picture>
-        <div class="hero__img__bg"></div>
-      </div> -->
     </header>
-    <section id="about" class="section section--inner">
-      <h2 class="section-title font-h2 font-h2--big">
-        <span class="guides"></span>About Me
-      </h2>
+    <section id="about" class="section">
+      <h2 class="section-title font-h2 font-h2--big">About Me</h2>
       <div class="flex wrap about-cnt">
         <div class="about-cnt__info">
           <button
@@ -419,10 +316,9 @@
             Read More
           </button>
           <p class="about__text font-p font-p--big">
-            <span class="guides"></span>Hi there! I'm Marcos Valenzuela, a web
-            developer based in Italy. My passion for design and programming has
-            led me to dive into the exciting world of web development.
-            <br /><span class="toggleable"
+            Hi there! I'm Marcos Valenzuela, a web developer based in Italy. My
+            passion for design and programming has led me to dive into the
+            exciting world of web development. <br /><span class="toggleable"
               >I enjoy creating visually appealing and functional web designs.
               Although my journey is still relatively short, I am eager to
               continue learning and improving my skills in the field. My goal is
@@ -463,10 +359,8 @@
         </div>
       </div>
     </section>
-    <section id="skills" class="section section--inner">
-      <h2 class="section-title font-h2 font-h2--big">
-        <span class="guides"></span>Skills
-      </h2>
+    <section id="skills" class="section">
+      <h2 class="section-title font-h2 font-h2--big">Skills</h2>
       <div class="skills-cnt flex wrap">
         <div class="styled-box skill-box">
           <div class="styled-box__title">
@@ -765,7 +659,7 @@
         </div>
       </div>
     </section>
-    <section id="projects" class="section section--inner">
+    <section id="projects" class="section">
       <h2 class="section-title font-h2 font-h2--big">
         <span class="guides"></span>Projects
       </h2>
@@ -1327,7 +1221,7 @@
         <button class="projects__nav--btn projects__nav--next">&xrarr;</button>
       </div>
     </section>
-    <section id="contact" class="section section--inner">
+    <section id="contact" class="section">
       <h2 class="section-title font-h2 font-h2--big">
         <span class="guides"></span>Contact me
       </h2>
@@ -1406,14 +1300,14 @@
         </div>
       </form>
     </section>
-    <footer class="section section--border footer-ctn flex wrap">
+    <footer class="section section footer-ctn flex wrap">
       <div class="logo-big flex">
         <img class="logo" src="assets/base/mylogo.svg" alt="logo" />
         <p class="font-h2 font-h2--small">Marcos_Valenzuela</p>
       </div>
       <div class="footer-ctn__socials flex">
         <a
-          class="social-link font-h2 font-h2--big"
+          class="socials__link font-h2 font-h2--big"
           title="frontendmentor.io"
           href="https://www.frontendmentor.io/profile/Dantalian5"
           target="_blank"
@@ -1429,7 +1323,7 @@
             /></svg
         ></a>
         <a
-          class="social-link font-h2 font-h2--big"
+          class="socials__link font-h2 font-h2--big"
           title="linkedin.com"
           href="https://www.linkedin.com/in/marcos-valenzuela-coding"
           target="_blank"
@@ -1455,7 +1349,7 @@
             </g></svg
         ></a>
         <a
-          class="social-link font-h2 font-h2--big"
+          class="socials__link font-h2 font-h2--big"
           title="github.com"
           href="https://github.com/Dantalian5"
           target="_blank"

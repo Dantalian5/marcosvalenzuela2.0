@@ -23,35 +23,38 @@
   right: 0;
   z-index: 100;
 }
+.header {
+  padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
+  overflow: hidden;
+  z-index: 0;
+  margin-bottom: 2rem;
+  padding-block: 2rem;
+  scroll-margin-top: 2.5rem;
+}
 .section {
   padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
   overflow: hidden;
   z-index: 0;
-  &--inner {
-    padding-block: 4rem;
-    margin-bottom: 4rem;
-  }
-  &--border {
-    padding-block: 2rem;
-    margin-bottom: 2rem;
-  }
+  margin-block: 2rem;
+  padding-block: 4rem;
+  scroll-margin-top: 2.5rem;
 }
 .header-ctn {
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
-  align-items: center;
+  min-height: calc(100vh - 4rem);
+  min-height: calc(100svh - 4rem);
+  align-items: stretch;
   justify-items: center;
   gap: 4rem;
   &__info {
     max-width: fit-content;
     flex: 1 1 auto;
-    padding-left: calc(2rem + 0.25rem);
   }
   &__img {
     max-width: 30rem;
     flex: 1 1 20rem;
     margin-inline: auto;
+    align-items: center;
   }
 }
 .about-cnt {
@@ -60,6 +63,20 @@
   justify-content: center;
   column-gap: 4rem;
   row-gap: 9rem;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    width: 1.25rem;
+    height: calc(50% + 4rem);
+    border-bottom: 1px dotted;
+    border-left: 1px dotted;
+    border-color: var(--c-accent);
+    z-index: -1;
+  }
+
   &__info {
     padding-inline: calc(2rem + 0.25rem) 2rem;
     position: relative;
@@ -77,10 +94,50 @@
   gap: 2rem;
   align-items: stretch;
   justify-content: center;
+  position: relative;
+  padding-inline: 2rem;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    width: 1.25rem;
+    height: calc(50% + 4rem);
+    border-bottom: 1px dotted;
+    border-left: 1px dotted;
+    border-color: var(--c-accent);
+    z-index: -1;
+  }
 }
 .contact-ctn {
   width: 100%;
   gap: 2rem;
+  position: relative;
+  padding: 1rem;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 0;
+    height: 4rem;
+    border-bottom: 1px dotted;
+    border-left: 1px dotted;
+    border-color: var(--c-accent);
+    z-index: -1;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    border-bottom: 1px dotted;
+    border-left: 1px dotted;
+    border-color: var(--c-accent);
+    z-index: -1;
+  }
   &__column {
     flex: 1 1 100%;
     gap: 2rem;
