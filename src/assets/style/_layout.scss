@@ -21,7 +21,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 9999;
 }
 .header {
   padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
@@ -38,6 +38,17 @@
   margin-block: 2rem;
   padding-block: 4rem;
   scroll-margin-top: 2.5rem;
+}
+.projects {
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  margin-block: 2rem;
+  padding-block: 4rem;
+  scroll-margin-top: 2.5rem;
+  &__title {
+    margin-inline: clamp(1rem, var(--section-inline-value), 8rem);
+  }
 }
 .header-ctn {
   width: 100%;
