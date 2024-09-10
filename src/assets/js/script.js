@@ -126,19 +126,18 @@ const items = document.querySelectorAll('.carousel__item');
 const carouselRect = carousel.getBoundingClientRect();
 const borderLeft = carouselRect.left;
 const borderRight = carouselRect.right;
-
 function updateCarousel() {
   items.forEach((item) => {
     const itemRect = item.getBoundingClientRect();
-    const itemLeft = itemRect.left;
-    const itemRight = itemRect.right;
+    const itemLeft = Math.round(itemRect.left);
+    const itemRight = Math.round(itemRect.right);
     const cont = Math.ceil((-itemLeft - borderLeft) / 300);
-    if (itemLeft < borderLeft) {
+    if (itemLeft < borderLeft + 16) {
       const zIndex = Math.round(100 - cont);
       item.style.transform = `scale(${0.8}) perspective(100px) rotateY(1deg)`;
       item.style.zIndex = zIndex;
       item.style.opacity = 0.8;
-    } else if (itemRight > borderRight) {
+    } else if (itemRight > borderRight - 16) {
       const zIndex = Math.round(100 - cont);
       item.style.transform = `scale(${0.8}) perspective(100px) rotateY(-1deg)`;
       item.style.zIndex = zIndex;
@@ -158,17 +157,15 @@ function scrollToElement(direction) {
   const elements = Array.from(
     carousel.querySelectorAll('.carousel__item:not(.inactive)')
   );
-
+  const center = borderLeft + (borderRight - borderLeft) / 2;
   const firstVisibleElement = elements.find((element) => {
     const rect = element.getBoundingClientRect();
-    return rect.left >= borderLeft && rect.left < borderRight;
+    return rect.left <= center && rect.right > center;
   });
   const lastVisibleElement = elements.findLast((element) => {
     const rect = element.getBoundingClientRect();
-    return rect.left >= borderLeft && rect.left < borderRight;
+    return rect.left <= center && rect.right > center;
   });
-  console.log(lastVisibleElement);
-
   if (
     direction === 'next' &&
     firstVisibleElement &&
@@ -177,7 +174,7 @@ function scrollToElement(direction) {
     firstVisibleElement.nextElementSibling.scrollIntoView({
       behavior: 'smooth',
       block: 'nearest',
-      inline: 'start',
+      inline: 'center',
     });
   } else if (
     direction === 'prev' &&
@@ -187,7 +184,7 @@ function scrollToElement(direction) {
     lastVisibleElement.previousElementSibling.scrollIntoView({
       behavior: 'smooth',
       block: 'nearest',
-      inline: 'end',
+      inline: 'center',
     });
   }
 }
@@ -195,14 +192,12 @@ function scrollToElement(direction) {
 // Evento para el botón "Next"
 document.querySelector('#nextBtn').addEventListener('click', function (event) {
   event.preventDefault();
-  console.log('next');
   scrollToElement('next');
 });
 
 // Evento para el botón "Prev"
 document.querySelector('#prevBtn').addEventListener('click', function (event) {
   event.preventDefault();
-  console.log('prev');
   scrollToElement('prev');
 });
 
