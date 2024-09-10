@@ -30,24 +30,7 @@
     }
   }
 }
-.wget {
-  display: block;
-  position: absolute;
-  width: max-content;
-  top: 120%;
-  left: 90%;
-  transform-origin: top left;
-  rotate: z -30deg;
-  color: rgba(82, 196, 196, 0.3);
-  user-select: none;
-  cursor: default;
-  &__text {
-    font-family: 'Fira Code', monospace;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: normal;
-  }
-}
+
 .top-navbar {
   width: 100%;
   align-items: stretch;
@@ -111,15 +94,41 @@
   &__cover {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
   }
+  &__name,
+  &__title {
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 1rem;
+  }
   &__cta {
-    padding-right: 2rem;
+    //padding-right: 2rem;
     gap: 2rem;
   }
   &__socials {
     gap: 2rem;
     margin-top: 4rem;
+  }
+}
+.wget {
+  display: block;
+  position: absolute;
+  width: max-content;
+  top: 120%;
+  left: 10%;
+  transform-origin: top left;
+  rotate: z 5deg;
+  color: rgba(82, 196, 196, 0.3);
+  user-select: none;
+  cursor: default;
+  &__text {
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: normal;
   }
 }
 .hero-img {

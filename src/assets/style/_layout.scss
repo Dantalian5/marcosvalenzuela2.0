@@ -24,7 +24,7 @@
   z-index: 9999;
 }
 .header {
-  padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
+  padding-inline: clamp(1.5rem, var(--section-inline-value), 8rem);
   overflow: hidden;
   z-index: 0;
   margin-bottom: 2rem;
@@ -32,7 +32,7 @@
   scroll-margin-top: 2.5rem;
 }
 .section {
-  padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
+  padding-inline: clamp(1.5rem, var(--section-inline-value), 8rem);
   overflow: hidden;
   z-index: 0;
   margin-block: 2rem;
@@ -47,7 +47,7 @@
   padding-block: 4rem;
   scroll-margin-top: 2.5rem;
   &__title {
-    margin-inline: clamp(1rem, var(--section-inline-value), 8rem);
+    margin-inline: clamp(1.5rem, var(--section-inline-value), 8rem);
   }
 }
 .header-ctn {
@@ -56,10 +56,12 @@
   min-height: calc(100svh - 4rem);
   align-items: stretch;
   justify-items: center;
-  gap: 4rem;
+  column-gap: 4rem;
+  row-gap: 6rem;
   &__info {
     max-width: fit-content;
     flex: 1 1 auto;
+    margin-inline: auto;
   }
   &__img {
     max-width: 30rem;

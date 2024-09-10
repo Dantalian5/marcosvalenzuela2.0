@@ -3,7 +3,7 @@
     --section-inline-value: 6%;
   }
 }
-@media (min-width: 62.5rem) {
+@media (min-width: 64rem) {
   :root {
     --section-inline-value: 12%;
   }
@@ -11,6 +11,26 @@
     &__socials {
       max-width: fit-content;
     }
+  }
+  .hero {
+    &__cover {
+      align-items: start;
+    }
+    &__name,
+    &__title {
+      text-align: start;
+    }
+    &__cta {
+      padding-right: 2rem;
+    }
+    &__socials {
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+  }
+  .wget {
+    rotate: z -30deg;
+    left: 90%;
   }
 }
 @media (min-width: 43.75rem) {
