@@ -54,20 +54,20 @@
   width: 100%;
   min-height: calc(100vh - 4rem);
   min-height: calc(100svh - 4rem);
-  align-items: stretch;
-  justify-items: center;
-  column-gap: 4rem;
-  row-gap: 6rem;
+  position: relative;
   &__info {
     max-width: fit-content;
     flex: 1 1 auto;
     margin-inline: auto;
   }
   &__img {
-    max-width: 30rem;
-    flex: 1 1 20rem;
-    margin-inline: auto;
-    align-items: center;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    width: max-content;
+    transform: translateX(50%);
   }
 }
 .about-cnt {
