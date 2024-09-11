@@ -72,34 +72,25 @@
 }
 .about-cnt {
   width: 100%;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  column-gap: 4rem;
+  column-gap: 1rem;
   row-gap: 9rem;
   position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 50%;
-    width: 1.25rem;
-    height: calc(50% + 4rem);
-    border-bottom: 1px dotted;
-    border-left: 1px dotted;
-    border-color: var(--c-accent);
-    z-index: -1;
-  }
-
-  &__info {
-    padding-inline: calc(2rem + 0.25rem) 2rem;
+  &__info,
+  &__img {
+    flex: 1 1 100%;
     position: relative;
-    flex: 1 1 18.75rem;
+  }
+  &__info {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 1rem;
   }
   &__img {
-    max-width: 400px;
+    max-width: 420px;
     padding-inline: calc(2rem + 0.25rem);
     margin-inline: auto;
-    flex: 1 1 18.75rem;
   }
 }
 .skills-cnt {

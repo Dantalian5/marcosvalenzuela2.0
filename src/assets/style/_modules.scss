@@ -151,20 +151,18 @@
     line-height: normal;
   }
 }
-.read-more__btn {
-  position: absolute;
-  bottom: -2rem;
-  transform: translate(0%, 50%);
-  color: var(--c-accent);
-  cursor: pointer;
-}
-.active.read-more__btn {
-  & ~ .about__text > .toggleable {
-    display: inline;
+.about-text {
+  &__read-more {
+    color: var(--c-accent);
+    cursor: pointer;
+    &.active ~ .about-text__text > .toggleable {
+      display: inline;
+    }
   }
 }
 .portrait {
   width: 100%;
+  margin: auto;
   position: relative;
   &::after {
     content: '';

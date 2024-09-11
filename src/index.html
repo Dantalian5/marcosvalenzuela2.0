@@ -305,31 +305,33 @@
     <section id="about" class="section">
       <h2 class="section-title font-h2 font-h2--big">About Me</h2>
       <div class="flex wrap about-cnt">
-        <div class="about-cnt__info">
+        <div class="about-cnt__info flex">
           <button
             id="js-buttonReadMore"
-            class="read-more__btn font-p font-p--big"
+            class="about-text__read-more font-p font-p--big"
           >
             Read More
           </button>
-          <p class="about__text font-p font-p--big">
-            Hi there! I'm Marcos Valenzuela, a web developer based in Italy. My
-            passion for design and programming has led me to dive into the
-            exciting world of web development. <br /><span class="toggleable"
-              >I enjoy creating visually appealing and functional web designs.
-              Although my journey is still relatively short, I am eager to
-              continue learning and improving my skills in the field. My goal is
-              to create intuitive and visually engaging websites that provide a
-              great user experience. I love taking on new challenges and finding
-              creative solutions to overcome them. If you're looking for an
-              enthusiastic web developer ready to grow alongside your project,
-              feel free to contact me! I'm excited to be part of new projects
-              and contribute my skills. I look forward to the opportunity to
-              work with you and bring your digital vision to life!</span
+          <p class="about-text__text font-p font-p--big">
+            Hey! I’m Marcos Valenzuela, a web developer based in Italy, a coding
+            enthusiast with a love for manga, scale rockets, motorcycles, and
+            robotics.
+            <span class="toggleable"
+              ><br /><br />With a solid foundation in mathematics and science, I
+              enjoy finding creative and practical solutions in web development
+              and programming in general. I’m passionate about creating
+              applications and websites that are both visually appealing and
+              functional, always aiming to provide a smooth user experience. I
+              also have experience in algorithm design, physical simulations,
+              and image processing.<br /><br />
+              If you’re looking for someone eager to grow alongside your
+              project, here I am! I love being part of new adventures and using
+              my skills to bring your ideas to life in the digital world. Shall
+              we talk? I’m ready to help bring your vision to reality.</span
             >
           </p>
         </div>
-        <div class="about-cnt__img">
+        <div class="about-cnt__img flex">
           <div class="portrait">
             <picture>
               <source
@@ -339,15 +341,12 @@
                 "
                 type="image/webp"
               />
-              <source
+              <img
+                class="portrait__img"
                 srcset="
                   assets/img/me.png?as=png&width=600  1x,
                   assets/img/me.png?as=png&width=1200 2x
                 "
-                type="image/png"
-              />
-              <img
-                class="portrait__img"
                 src="assets/img/me.png?width=300"
                 alt="test image"
               />
