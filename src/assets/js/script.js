@@ -120,13 +120,12 @@ function errorFilterProjects() {
 searchInput.addEventListener('input', debounce(filterProjects));
 //-------------------------------------------------------
 // Project Carousel v2:
-
 const carousel = document.querySelector('.carousel');
 const items = document.querySelectorAll('.carousel__item');
-const carouselRect = carousel.getBoundingClientRect();
-const borderLeft = carouselRect.left;
-const borderRight = carouselRect.right;
 function updateCarousel() {
+  const carouselRect = carousel.getBoundingClientRect();
+  const borderLeft = carouselRect.left;
+  const borderRight = carouselRect.right;
   items.forEach((item) => {
     const itemRect = item.getBoundingClientRect();
     const itemLeft = Math.round(itemRect.left);
@@ -154,6 +153,9 @@ updateCarousel();
 carousel.addEventListener('scroll', debounce(updateCarousel));
 
 function scrollToElement(direction) {
+  const carouselRect = carousel.getBoundingClientRect();
+  const borderLeft = carouselRect.left;
+  const borderRight = carouselRect.right;
   const elements = Array.from(
     carousel.querySelectorAll('.carousel__item:not(.inactive)')
   );
@@ -371,6 +373,4 @@ document.querySelector('#prevBtn').addEventListener('click', function (event) {
 // });
 //-------------------------------------------------------
 // Window Resize:
-window.addEventListener('resize', function () {
-  updateCarousel();
-});
+window.addEventListener('resize', updateCarousel());
