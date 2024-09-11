@@ -19,6 +19,21 @@
       }
     }
   }
+  .skills-cnt {
+    padding-inline: 2rem;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 50%;
+      width: 1.25rem;
+      height: calc(50% + 4rem);
+      border-bottom: 1px dotted;
+      border-left: 1px dotted;
+      border-color: var(--c-accent);
+      z-index: -1;
+    }
+  }
 }
 @media (min-width: 43.75rem) {
   .font-h1 {
