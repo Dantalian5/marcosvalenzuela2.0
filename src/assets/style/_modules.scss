@@ -112,11 +112,17 @@
     margin-top: 4rem;
   }
   &__img {
-    width: 100%;
+    display: block;
+    max-width: none;
+    max-height: 100%;
+    width: auto;
+    height: 100%;
     position: relative;
     mix-blend-mode: multiply;
     opacity: 0.1;
     margin: auto;
+    object-fit: contain;
+    object-position: center center;
   }
 }
 .overlay {
@@ -220,6 +226,7 @@
     transform: translate(0, -0.8em);
     padding-inline: 0.5rem;
     backdrop-filter: blur(2px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     &--centered {
       margin-inline: auto;
       width: 100%;
@@ -416,5 +423,28 @@
   100% {
     color: #15162a;
     background: #eaeaea;
+  }
+}
+.bg-svg {
+  position: absolute;
+  color: var(--c-foreground);
+  font-size: 3rem;
+  opacity: 0.05;
+  &--bottomleft {
+    bottom: 10%;
+    left: 2%;
+  }
+  &--topright {
+    top: 10%;
+    right: 2%;
+  }
+  &--upercenter {
+    top: 20%;
+    left: 55%;
+  }
+  &--center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
   }
 }
