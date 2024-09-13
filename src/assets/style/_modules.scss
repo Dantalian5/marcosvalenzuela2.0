@@ -26,7 +26,7 @@
   background: transparent;
   &:hover {
     & ~ .wget {
-      color: rgba(82, 196, 196, 1);
+      color: var(--c-accent);
     }
   }
 }
@@ -44,10 +44,28 @@
     &__text {
       margin-left: 0.5rem;
       line-height: 1;
-      & > .m {
-        letter-spacing: 0.2em;
-      }
     }
+  }
+}
+.mv {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  width: calc(2ch + 0.2em);
+  transition: width 0.5s steps(10, end);
+  &__m {
+    letter-spacing: 0.2em;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1ch;
+    animation: 1s steps(1) infinite blink;
+    mix-blend-mode: difference;
   }
 }
 .menu {
@@ -360,9 +378,6 @@
     color: var(--c-foreground);
   }
 }
-.blink {
-  animation: 1s steps(1) infinite blink;
-}
 .button {
   position: relative;
   &__text {
@@ -413,16 +428,16 @@
 }
 @keyframes blink {
   0% {
-    color: #15162a;
-    background: #eaeaea;
+    color: var(--c-background);
+    background: var(--c-foreground);
   }
   50% {
-    color: #eaeaea;
+    color: var(--c-foreground);
     background: none;
   }
   100% {
-    color: #15162a;
-    background: #eaeaea;
+    color: var(--c-background);
+    background: var(--c-foreground);
   }
 }
 .bg-svg {
@@ -430,9 +445,14 @@
   color: var(--c-foreground);
   font-size: 3rem;
   opacity: 0.05;
+  z-index: -1;
   &--bottomleft {
     bottom: 10%;
     left: 2%;
+  }
+  &--bottomright {
+    bottom: 10%;
+    right: 2%;
   }
   &--topright {
     top: 10%;
