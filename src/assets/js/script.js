@@ -134,15 +134,24 @@ function updateCarousel() {
     if (itemLeft < borderLeft + 16) {
       const zIndex = Math.round(100 - cont);
       item.style.transform = `scale(${0.8}) perspective(100px) rotateY(1deg)`;
+      item.style.WebkitTransform = `scale(${0.8}) perspective(100px) rotateY(1deg)`;
+      item.style.MozTransform = `scale(${0.8}) perspective(100px) rotateY(1deg)`;
+      item.style.msTransform = `scale(${0.8}) perspective(100px) rotateY(1deg)`;
       item.style.zIndex = zIndex;
       item.style.opacity = 0.8;
     } else if (itemRight > borderRight - 16) {
       const zIndex = Math.round(100 - cont);
       item.style.transform = `scale(${0.8}) perspective(100px) rotateY(-1deg)`;
+      item.style.WebkitTransform = `scale(${0.8}) perspective(100px) rotateY(-1deg)`;
+      item.style.MozTransform = `scale(${0.8}) perspective(100px) rotateY(-1deg)`;
+      item.style.msTransform = `scale(${0.8}) perspective(100px) rotateY(-1deg)`;
       item.style.zIndex = zIndex;
       item.style.opacity = 0.8;
     } else {
       item.style.transform = 'scale(1) rotateY(0)';
+      item.style.WebkitTransform = 'scale(1) rotateY(0)';
+      item.style.MozTransform = 'scale(1) rotateY(0)';
+      item.style.msTransform = 'scale(1) rotateY(0)';
       item.style.zIndex = 100;
       item.style.opacity = 1;
     }
