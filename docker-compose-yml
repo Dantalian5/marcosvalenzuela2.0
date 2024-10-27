@@ -1,0 +1,15 @@
+version: '3'
+services:
+  portfolio:
+    build:
+      context: .  # Esto indica que Docker debe construir la imagen desde el Dockerfile en esta carpeta
+    container_name: portfolio
+    restart: unless-stopped
+    ports:
+      - "3000:80"  # Acceso en el puerto 3000 de tu VPS
+    networks:
+      - proxy-network
+
+networks:
+  proxy-network:
+    external: true
